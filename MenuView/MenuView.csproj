@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B9E9D063-9751-4CFD-A81E-1443547B114F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MenuView</RootNamespace>
+    <AssemblyName>MenuView</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="menuView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menuView.Designer.cs">
+      <DependentUpon>menuView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="selecionarAdministracao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="selecionarAdministracao.Designer.cs">
+      <DependentUpon>selecionarAdministracao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelecionarHistorico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelecionarHistorico.Designer.cs">
+      <DependentUpon>SelecionarHistorico.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="menuView.resx">
+      <DependentUpon>menuView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="selecionarAdministracao.resx">
+      <DependentUpon>selecionarAdministracao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelecionarHistorico.resx">
+      <DependentUpon>SelecionarHistorico.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CadastrarColaboradorView\CadastrarColaboradorView.csproj">
+      <Project>{1fa5ddb7-e2d7-40d7-aae0-e162de13cb87}</Project>
+      <Name>CadastrarColaboradorView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CadastrarInsumoView\CadastrarInsumoView.csproj">
+      <Project>{19dfd216-1b50-49da-ac42-a95f9463c1e3}</Project>
+      <Name>CadastrarInsumoView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CadastrarUsuarioView\CadastrarUsuarioView.csproj">
+      <Project>{5ea1020f-cde3-4ba6-a1fa-ab4f78651360}</Project>
+      <Name>CadastrarUsuarioView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EstoqueView\EsoqueView.csproj">
+      <Project>{303b7d5d-2592-422e-aed1-f9c12f7bb52f}</Project>
+      <Name>EsoqueView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HistoricoView\HistoricoView.csproj">
+      <Project>{6bec3381-eaa7-45d8-8c91-49af9b6721b5}</Project>
+      <Name>HistoricoView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UsuariosModel\UsuariosModel.csproj">
+      <Project>{f3ebe711-1e84-488b-93e9-3b8ccee6cb3e}</Project>
+      <Name>UsuariosModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\safety.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

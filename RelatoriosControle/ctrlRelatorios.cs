@@ -21,19 +21,18 @@ namespace RelatoriosControle
     {
 
 
-        public bool gerarRelatorioMovimentacao()
+        public bool gerarRelatorioMovimentacao(string caminho, DataTable query)
         {
             ctrlHistorico _ctrHistorico = new ctrlHistorico();
             Document document = new Document(PageSize.A4);
             document.SetMargins(40, 40, 40, 80);
             document.AddCreationDate();
-            string caminho = @"C:\Users\infra\Desktop\" + "CONTRATO.pdf";
-            PdfWriter writer = PdfWriter.GetInstance(document, new
-            FileStream(caminho, FileMode.Create));
+            PdfWriter.GetInstance(document, new
+            FileStream(caminho ,FileMode.Create));
 
             document.Open();
 
-            DataTable dados = _ctrHistorico.ExibirHistorico();
+            DataTable dados = query;
 
             Paragraph paragrafo = new Paragraph();
             paragrafo.Add("HISTORICO DE MOVIMENTAÇÃO");

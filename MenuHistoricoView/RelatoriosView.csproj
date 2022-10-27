@@ -87,6 +87,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HistoricoControle\HistoricoControle.csproj">
+      <Project>{03ea7777-02a3-4b31-848c-a56215ab68dc}</Project>
+      <Name>HistoricoControle</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RelatoriosControle\RelatoriosControle.csproj">
       <Project>{61411014-d4fa-4e7c-bdc7-2e333943aeb2}</Project>
       <Name>RelatoriosControle</Name>

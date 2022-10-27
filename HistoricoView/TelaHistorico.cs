@@ -25,15 +25,27 @@ namespace HistoricoView
         } 
         private void btnEntrada_Click_1(object sender, EventArgs e)
         {
+
             ctrlHistorico _ctrlHistorico = new ctrlHistorico();
             var tabela = _ctrlHistorico.ExibirEntrada();
             grdHistorico.DataSource = tabela;
+
         }
         private void btnSaida_Click_1(object sender, EventArgs e)
         {
+            string Arquivo = "tabela";
             ctrlHistorico _ctrlHistorico = new ctrlHistorico();
             var tabela = _ctrlHistorico.ExibirSaida();
             grdHistorico.DataSource = tabela;
+
+
+            if (grdHistorico.Rows.Count > 0)
+            {
+                SaveFileDialog pdf = new SaveFileDialog();
+                pdf.Filter = "PDF (.pdf) | * .pdf";
+                pdf.FileName = Arquivo;
+
+            }
         }
         private void btnPesquisarEntrada_Click(object sender, EventArgs e)
         {

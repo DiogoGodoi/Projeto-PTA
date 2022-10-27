@@ -147,6 +147,7 @@
             this.btnRelatorios.TabIndex = 6;
             this.btnRelatorios.Text = "Relatorios";
             this.btnRelatorios.UseVisualStyleBackColor = false;
+            this.btnRelatorios.Click += new System.EventHandler(this.btnRelatorios_Click);
             // 
             // pctAdministracao
             // 

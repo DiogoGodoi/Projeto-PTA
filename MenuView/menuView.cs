@@ -12,6 +12,7 @@ using EstoqueView;
 using UsuariosModel;
 using HistoricoView;
 using Almoxarifado;
+using MenuHistoricoView;
 
 namespace MenuView
 {
@@ -104,6 +105,16 @@ namespace MenuView
             }
         }
 
+        private void btnRelatorios_Click(object sender, EventArgs e)
+        {
+            _thred = new Thread(abrirJanelaRelatorios);
+            _thred.SetApartmentState(ApartmentState.STA);
+            _thred.Start();
+        }
 
+        private void abrirJanelaRelatorios()
+        {
+            Application.Run(new TelaRelatorios());
+        }
     }
 }

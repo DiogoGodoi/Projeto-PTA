@@ -13,6 +13,7 @@ using iTextSharp.text;
 using iTextSharp.text.pdf;
 using RelatoriosControle;
 using HistoricoControle;
+using System.Security.Cryptography;
 
 namespace MenuHistoricoView
 {
@@ -99,5 +100,59 @@ namespace MenuHistoricoView
             }
         }
 
+        private void btnBuscarPorData_Click(object sender, EventArgs e)
+        {
+            var dia = Convert.ToDateTime(txtDataMovimentacao.Text);
+
+            try
+            {
+
+                SaveFileDialog arquivo = new SaveFileDialog();
+                arquivo.FileName = "Arquivo";
+                arquivo.Filter = "PDF (.pdf) | *.pdf";
+
+                if (arquivo.ShowDialog() == DialogResult.OK)
+                {
+                    _ctrlRelatorios.gerarRelatorioMovimentacao(arquivo.FileName, _ctrlHistorico.PesquisarEntrada(dia));
+                    MessageBox.Show("Arquivo salvo");
+                }
+                else
+                {
+                    MessageBox.Show("Operação cancelada");
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Erro interno");
+            }
+        }
+
+        private void btnGerarSaidas_Click(object sender, EventArgs e)
+        {
+            var dia = Convert.ToDateTime(txtDataMovimentacao.Text);
+
+            try
+            {
+
+                SaveFileDialog arquivo = new SaveFileDialog();
+                arquivo.FileName = "Arquivo";
+                arquivo.Filter = "PDF (.pdf) | *.pdf";
+
+                if (arquivo.ShowDialog() == DialogResult.OK)
+                {
+                    _ctrlRelatorios.gerarRelatorioMovimentacao(arquivo.FileName, _ctrlHistorico.PesquisarSaida(dia));
+                    MessageBox.Show("Arquivo salvo");
+                }
+                else
+                {
+                    MessageBox.Show("Operação cancelada");
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Erro interno");
+            }
+        }
     }
 }
+

@@ -111,39 +111,39 @@
             this.groupBox1.ForeColor = System.Drawing.Color.Navy;
             this.groupBox1.Location = new System.Drawing.Point(242, 38);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(422, 195);
+            this.groupBox1.Size = new System.Drawing.Size(481, 195);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Pesquisa";
+            this.groupBox1.Text = "Gerar por filtro";
             // 
             // lblRequisitante
             // 
             this.lblRequisitante.AutoSize = true;
             this.lblRequisitante.Location = new System.Drawing.Point(15, 111);
             this.lblRequisitante.Name = "lblRequisitante";
-            this.lblRequisitante.Size = new System.Drawing.Size(149, 19);
+            this.lblRequisitante.Size = new System.Drawing.Size(219, 19);
             this.lblRequisitante.TabIndex = 6;
-            this.lblRequisitante.Text = "Crachá do requisitante";
+            this.lblRequisitante.Text = "filtrar pelo crachá do requisitante";
             // 
             // lblData
             // 
             this.lblData.AutoSize = true;
             this.lblData.Location = new System.Drawing.Point(15, 69);
             this.lblData.Name = "lblData";
-            this.lblData.Size = new System.Drawing.Size(154, 19);
+            this.lblData.Size = new System.Drawing.Size(219, 19);
             this.lblData.TabIndex = 5;
-            this.lblData.Text = "Data da movimentação";
+            this.lblData.Text = "filtrar por data da movimentação";
             // 
             // txtCrachaRequisitante
             // 
-            this.txtCrachaRequisitante.Location = new System.Drawing.Point(193, 108);
+            this.txtCrachaRequisitante.Location = new System.Drawing.Point(240, 108);
             this.txtCrachaRequisitante.Name = "txtCrachaRequisitante";
             this.txtCrachaRequisitante.Size = new System.Drawing.Size(122, 26);
             this.txtCrachaRequisitante.TabIndex = 4;
             // 
             // txtDataMovimentacao
             // 
-            this.txtDataMovimentacao.Location = new System.Drawing.Point(193, 62);
+            this.txtDataMovimentacao.Location = new System.Drawing.Point(240, 62);
             this.txtDataMovimentacao.Name = "txtDataMovimentacao";
             this.txtDataMovimentacao.Size = new System.Drawing.Size(122, 26);
             this.txtDataMovimentacao.TabIndex = 3;
@@ -154,11 +154,11 @@
             this.btnBuscarPorRequisitante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarPorRequisitante.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarPorRequisitante.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarPorRequisitante.Location = new System.Drawing.Point(339, 109);
+            this.btnBuscarPorRequisitante.Location = new System.Drawing.Point(386, 109);
             this.btnBuscarPorRequisitante.Name = "btnBuscarPorRequisitante";
             this.btnBuscarPorRequisitante.Size = new System.Drawing.Size(65, 26);
             this.btnBuscarPorRequisitante.TabIndex = 2;
-            this.btnBuscarPorRequisitante.Text = " Buscar";
+            this.btnBuscarPorRequisitante.Text = "Gerar";
             this.btnBuscarPorRequisitante.UseVisualStyleBackColor = false;
             // 
             // btnBuscarPorData
@@ -167,18 +167,18 @@
             this.btnBuscarPorData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarPorData.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarPorData.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarPorData.Location = new System.Drawing.Point(339, 60);
+            this.btnBuscarPorData.Location = new System.Drawing.Point(386, 60);
             this.btnBuscarPorData.Name = "btnBuscarPorData";
             this.btnBuscarPorData.Size = new System.Drawing.Size(65, 28);
             this.btnBuscarPorData.TabIndex = 0;
-            this.btnBuscarPorData.Text = "Buscar";
+            this.btnBuscarPorData.Text = "Gerar";
             this.btnBuscarPorData.UseVisualStyleBackColor = false;
             // 
             // TelaRelatorios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 266);
+            this.ClientSize = new System.Drawing.Size(754, 266);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grpMovimentacoes);
             this.Name = "TelaRelatorios";

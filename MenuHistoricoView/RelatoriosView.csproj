@@ -87,6 +87,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ColaboradoresControle\ColaboradoresControle.csproj">
+      <Project>{49a991b7-a6f0-4e25-bc6c-5c1875fabe3d}</Project>
+      <Name>ColaboradoresControle</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HistoricoControle\HistoricoControle.csproj">
       <Project>{03ea7777-02a3-4b31-848c-a56215ab68dc}</Project>
       <Name>HistoricoControle</Name>

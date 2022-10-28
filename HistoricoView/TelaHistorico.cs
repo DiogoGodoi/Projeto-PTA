@@ -56,7 +56,7 @@ namespace HistoricoView
             var tabela = _ctrlHistorico.PesquisarEntrada(data);
             grdHistorico.DataSource = tabela;
             }
-            catch (Exception formato)
+            catch (Exception)
             {
                 MessageBox.Show("Digite a data por favor, no formato dia/mês/ano", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

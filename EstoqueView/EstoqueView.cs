@@ -26,7 +26,6 @@ namespace Almoxarifado
         ctrlHistorico _ctrlHistorico = new ctrlHistorico();
         mdlHistorico _mdlHistorico = new mdlHistorico();
         ctrlColaboradores _ctrlColaboradores = new ctrlColaboradores();
-        Thread _thread;
         public frmEstoque()
         {
             InitializeComponent();

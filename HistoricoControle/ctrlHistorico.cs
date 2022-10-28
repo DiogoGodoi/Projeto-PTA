@@ -238,7 +238,7 @@ namespace HistoricoControle
             try
             {
                 abrirConn.Open();
-                string query = "SELECT * FROM historico WHERE dataModificacao =@data AND natureza ='Saida' ORDER BY dataModificacao ASC";
+                string query = "SELECT * FROM historico WHERE dataModificacao =@data AND natureza ='Saída' ORDER BY dataModificacao ASC";
                 SqlCommand comando = new SqlCommand(query, abrirConn);
 
                 comando.Parameters.AddWithValue("@data", data);
@@ -274,6 +274,102 @@ namespace HistoricoControle
                 SqlCommand comando = new SqlCommand(query, abrirConn);
 
                 comando.Parameters.AddWithValue("@data", data);
+
+                comando.CommandType = CommandType.Text;
+                SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+                DataTable tabela = new DataTable();
+                adaptador.Fill(tabela);
+                return tabela;
+
+            }
+            catch (Exception ex)
+            {
+                abrirConn.Close();
+                return null;
+                throw new Exception("Erro ao exibir " + ex.Message);
+            }
+            finally
+            {
+                abrirConn.Close();
+            }
+
+        }
+        public DataTable PesquisarEntradaPorNome(string requisitante)
+        {
+            Conexao.ConexaoDB.conectar();
+            var abrirConn = Conexao.ConexaoDB.conectar();
+
+            try
+            {
+                abrirConn.Open();
+                string query = "SELECT * FROM historico WHERE requisitante=@requisitante AND natureza='Entrada' ORDER BY dataModificacao ASC";
+                SqlCommand comando = new SqlCommand(query, abrirConn);
+
+                comando.Parameters.AddWithValue("@requisitante", requisitante);
+
+                comando.CommandType = CommandType.Text;
+                SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+                DataTable tabela = new DataTable();
+                adaptador.Fill(tabela);
+                return tabela;
+
+            }
+            catch (Exception ex)
+            {
+                abrirConn.Close();
+                return null;
+                throw new Exception("Erro ao exibir " + ex.Message);
+            }
+            finally
+            {
+                abrirConn.Close();
+            }
+
+        }
+        public DataTable PesquisarSaidaPorNome(string requisitante)
+        {
+            Conexao.ConexaoDB.conectar();
+            var abrirConn = Conexao.ConexaoDB.conectar();
+
+            try
+            {
+                abrirConn.Open();
+                string query = "SELECT * FROM historico WHERE requisitante=@requisitante AND natureza='Saída' ORDER BY dataModificacao ASC";
+                SqlCommand comando = new SqlCommand(query, abrirConn);
+
+                comando.Parameters.AddWithValue("@requisitante", requisitante);
+
+                comando.CommandType = CommandType.Text;
+                SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+                DataTable tabela = new DataTable();
+                adaptador.Fill(tabela);
+                return tabela;
+
+            }
+            catch (Exception ex)
+            {
+                abrirConn.Close();
+                return null;
+                throw new Exception("Erro ao exibir " + ex.Message);
+            }
+            finally
+            {
+                abrirConn.Close();
+            }
+
+        }
+        public DataTable PesquisarDevolucaoPorNome(string requisitante)
+        {
+            Conexao.ConexaoDB.conectar();
+            var abrirConn = Conexao.ConexaoDB.conectar();
+
+            try
+            {
+                abrirConn.Open();
+                string query = "SELECT * FROM historico WHERE requisitante=@requisitante AND natureza='Devolução' ORDER BY dataModificacao ASC";
+                SqlCommand comando = new SqlCommand(query, abrirConn);
+
+                comando.Parameters.AddWithValue("@requisitante", requisitante);
 
                 comando.CommandType = CommandType.Text;
                 SqlDataAdapter adaptador = new SqlDataAdapter(comando);

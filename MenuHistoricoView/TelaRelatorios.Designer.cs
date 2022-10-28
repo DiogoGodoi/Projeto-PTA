@@ -33,10 +33,19 @@
             this.btnExibirSaidas = new System.Windows.Forms.Button();
             this.btnExibirEntradas = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnGerarSaidas = new System.Windows.Forms.Button();
             this.lblData = new System.Windows.Forms.Label();
             this.txtDataMovimentacao = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtCracha = new System.Windows.Forms.TextBox();
             this.btnBuscarPorData = new System.Windows.Forms.Button();
-            this.btnGerarSaidas = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtNomeRequisitante = new System.Windows.Forms.TextBox();
+            this.btnGerarSaidaCracha = new System.Windows.Forms.Button();
+            this.btnGerarEntradaCracha = new System.Windows.Forms.Button();
+            this.btnGerarDevolucoesCracha = new System.Windows.Forms.Button();
+            this.btnGerarDevolucoes = new System.Windows.Forms.Button();
+            this.btnGerarDevolucao = new System.Windows.Forms.Button();
             this.grpMovimentacoes.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -57,6 +66,7 @@
             // 
             // grpMovimentacoes
             // 
+            this.grpMovimentacoes.Controls.Add(this.btnGerarDevolucao);
             this.grpMovimentacoes.Controls.Add(this.btnExibirSaidas);
             this.grpMovimentacoes.Controls.Add(this.btnExibirEntradas);
             this.grpMovimentacoes.Controls.Add(this.btnRelatorioHistorico);
@@ -64,10 +74,10 @@
             this.grpMovimentacoes.ForeColor = System.Drawing.Color.Navy;
             this.grpMovimentacoes.Location = new System.Drawing.Point(25, 38);
             this.grpMovimentacoes.Name = "grpMovimentacoes";
-            this.grpMovimentacoes.Size = new System.Drawing.Size(181, 195);
+            this.grpMovimentacoes.Size = new System.Drawing.Size(181, 221);
             this.grpMovimentacoes.TabIndex = 1;
             this.grpMovimentacoes.TabStop = false;
-            this.grpMovimentacoes.Text = "Movimentações";
+            this.grpMovimentacoes.Text = "Movimentações Gerais";
             // 
             // btnExibirSaidas
             // 
@@ -75,7 +85,7 @@
             this.btnExibirSaidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExibirSaidas.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExibirSaidas.ForeColor = System.Drawing.Color.White;
-            this.btnExibirSaidas.Location = new System.Drawing.Point(20, 141);
+            this.btnExibirSaidas.Location = new System.Drawing.Point(20, 127);
             this.btnExibirSaidas.Name = "btnExibirSaidas";
             this.btnExibirSaidas.Size = new System.Drawing.Size(139, 28);
             this.btnExibirSaidas.TabIndex = 3;
@@ -89,7 +99,7 @@
             this.btnExibirEntradas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExibirEntradas.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExibirEntradas.ForeColor = System.Drawing.Color.White;
-            this.btnExibirEntradas.Location = new System.Drawing.Point(20, 88);
+            this.btnExibirEntradas.Location = new System.Drawing.Point(20, 81);
             this.btnExibirEntradas.Name = "btnExibirEntradas";
             this.btnExibirEntradas.Size = new System.Drawing.Size(139, 28);
             this.btnExibirEntradas.TabIndex = 2;
@@ -99,6 +109,14 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnGerarDevolucoes);
+            this.groupBox1.Controls.Add(this.btnGerarDevolucoesCracha);
+            this.groupBox1.Controls.Add(this.btnGerarEntradaCracha);
+            this.groupBox1.Controls.Add(this.btnGerarSaidaCracha);
+            this.groupBox1.Controls.Add(this.txtNomeRequisitante);
+            this.groupBox1.Controls.Add(this.btnBuscar);
+            this.groupBox1.Controls.Add(this.txtCracha);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnGerarSaidas);
             this.groupBox1.Controls.Add(this.lblData);
             this.groupBox1.Controls.Add(this.txtDataMovimentacao);
@@ -107,40 +125,10 @@
             this.groupBox1.ForeColor = System.Drawing.Color.Navy;
             this.groupBox1.Location = new System.Drawing.Point(242, 38);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(521, 195);
+            this.groupBox1.Size = new System.Drawing.Size(431, 221);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Gerar por filtro";
-            // 
-            // lblData
-            // 
-            this.lblData.AutoSize = true;
-            this.lblData.Location = new System.Drawing.Point(15, 69);
-            this.lblData.Name = "lblData";
-            this.lblData.Size = new System.Drawing.Size(106, 19);
-            this.lblData.TabIndex = 5;
-            this.lblData.Text = "Filtrar por data";
-            // 
-            // txtDataMovimentacao
-            // 
-            this.txtDataMovimentacao.Location = new System.Drawing.Point(137, 66);
-            this.txtDataMovimentacao.Name = "txtDataMovimentacao";
-            this.txtDataMovimentacao.Size = new System.Drawing.Size(122, 26);
-            this.txtDataMovimentacao.TabIndex = 3;
-            // 
-            // btnBuscarPorData
-            // 
-            this.btnBuscarPorData.BackColor = System.Drawing.Color.Green;
-            this.btnBuscarPorData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarPorData.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarPorData.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarPorData.Location = new System.Drawing.Point(275, 66);
-            this.btnBuscarPorData.Name = "btnBuscarPorData";
-            this.btnBuscarPorData.Size = new System.Drawing.Size(106, 28);
-            this.btnBuscarPorData.TabIndex = 0;
-            this.btnBuscarPorData.Text = "Gerar Entradas";
-            this.btnBuscarPorData.UseVisualStyleBackColor = false;
-            this.btnBuscarPorData.Click += new System.EventHandler(this.btnBuscarPorData_Click);
             // 
             // btnGerarSaidas
             // 
@@ -148,23 +136,162 @@
             this.btnGerarSaidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGerarSaidas.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGerarSaidas.ForeColor = System.Drawing.Color.White;
-            this.btnGerarSaidas.Location = new System.Drawing.Point(387, 66);
+            this.btnGerarSaidas.Location = new System.Drawing.Point(157, 83);
             this.btnGerarSaidas.Name = "btnGerarSaidas";
-            this.btnGerarSaidas.Size = new System.Drawing.Size(106, 28);
+            this.btnGerarSaidas.Size = new System.Drawing.Size(103, 28);
             this.btnGerarSaidas.TabIndex = 6;
             this.btnGerarSaidas.Text = "Gerar Saidas";
             this.btnGerarSaidas.UseVisualStyleBackColor = false;
             this.btnGerarSaidas.Click += new System.EventHandler(this.btnGerarSaidas_Click);
             // 
+            // lblData
+            // 
+            this.lblData.AutoSize = true;
+            this.lblData.Location = new System.Drawing.Point(15, 41);
+            this.lblData.Name = "lblData";
+            this.lblData.Size = new System.Drawing.Size(106, 19);
+            this.lblData.TabIndex = 5;
+            this.lblData.Text = "Filtrar por data";
+            // 
+            // txtDataMovimentacao
+            // 
+            this.txtDataMovimentacao.Location = new System.Drawing.Point(141, 38);
+            this.txtDataMovimentacao.Name = "txtDataMovimentacao";
+            this.txtDataMovimentacao.Size = new System.Drawing.Size(259, 26);
+            this.txtDataMovimentacao.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 132);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 19);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Filtrar por crachá";
+            // 
+            // txtCracha
+            // 
+            this.txtCracha.Location = new System.Drawing.Point(141, 127);
+            this.txtCracha.Name = "txtCracha";
+            this.txtCracha.Size = new System.Drawing.Size(51, 26);
+            this.txtCracha.TabIndex = 8;
+            // 
+            // btnBuscarPorData
+            // 
+            this.btnBuscarPorData.BackColor = System.Drawing.Color.Green;
+            this.btnBuscarPorData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarPorData.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarPorData.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarPorData.Location = new System.Drawing.Point(19, 83);
+            this.btnBuscarPorData.Name = "btnBuscarPorData";
+            this.btnBuscarPorData.Size = new System.Drawing.Size(103, 28);
+            this.btnBuscarPorData.TabIndex = 0;
+            this.btnBuscarPorData.Text = "Gerar Entradas";
+            this.btnBuscarPorData.UseVisualStyleBackColor = false;
+            this.btnBuscarPorData.Click += new System.EventHandler(this.btnBuscarPorData_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.Green;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(198, 127);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(49, 28);
+            this.btnBuscar.TabIndex = 9;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtNomeRequisitante
+            // 
+            this.txtNomeRequisitante.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeRequisitante.Location = new System.Drawing.Point(263, 129);
+            this.txtNomeRequisitante.Name = "txtNomeRequisitante";
+            this.txtNomeRequisitante.Size = new System.Drawing.Size(137, 21);
+            this.txtNomeRequisitante.TabIndex = 10;
+            // 
+            // btnGerarSaidaCracha
+            // 
+            this.btnGerarSaidaCracha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnGerarSaidaCracha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGerarSaidaCracha.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGerarSaidaCracha.ForeColor = System.Drawing.Color.White;
+            this.btnGerarSaidaCracha.Location = new System.Drawing.Point(154, 172);
+            this.btnGerarSaidaCracha.Name = "btnGerarSaidaCracha";
+            this.btnGerarSaidaCracha.Size = new System.Drawing.Size(106, 28);
+            this.btnGerarSaidaCracha.TabIndex = 12;
+            this.btnGerarSaidaCracha.Text = "Gerar Saidas";
+            this.btnGerarSaidaCracha.UseVisualStyleBackColor = false;
+            this.btnGerarSaidaCracha.Click += new System.EventHandler(this.btnGerarSaidaCracha_Click);
+            // 
+            // btnGerarEntradaCracha
+            // 
+            this.btnGerarEntradaCracha.BackColor = System.Drawing.Color.Green;
+            this.btnGerarEntradaCracha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGerarEntradaCracha.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGerarEntradaCracha.ForeColor = System.Drawing.Color.White;
+            this.btnGerarEntradaCracha.Location = new System.Drawing.Point(19, 172);
+            this.btnGerarEntradaCracha.Name = "btnGerarEntradaCracha";
+            this.btnGerarEntradaCracha.Size = new System.Drawing.Size(106, 28);
+            this.btnGerarEntradaCracha.TabIndex = 13;
+            this.btnGerarEntradaCracha.Text = "Gerar Entradas";
+            this.btnGerarEntradaCracha.UseVisualStyleBackColor = false;
+            this.btnGerarEntradaCracha.Click += new System.EventHandler(this.btnGerarEntradaCracha_Click);
+            // 
+            // btnGerarDevolucoesCracha
+            // 
+            this.btnGerarDevolucoesCracha.BackColor = System.Drawing.Color.Yellow;
+            this.btnGerarDevolucoesCracha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGerarDevolucoesCracha.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGerarDevolucoesCracha.ForeColor = System.Drawing.Color.Black;
+            this.btnGerarDevolucoesCracha.Location = new System.Drawing.Point(294, 172);
+            this.btnGerarDevolucoesCracha.Name = "btnGerarDevolucoesCracha";
+            this.btnGerarDevolucoesCracha.Size = new System.Drawing.Size(106, 28);
+            this.btnGerarDevolucoesCracha.TabIndex = 14;
+            this.btnGerarDevolucoesCracha.Text = "Gerar Devoluções";
+            this.btnGerarDevolucoesCracha.UseVisualStyleBackColor = false;
+            this.btnGerarDevolucoesCracha.Click += new System.EventHandler(this.btnGerarDevolucoesCracha_Click);
+            // 
+            // btnGerarDevolucoes
+            // 
+            this.btnGerarDevolucoes.BackColor = System.Drawing.Color.Yellow;
+            this.btnGerarDevolucoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGerarDevolucoes.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGerarDevolucoes.ForeColor = System.Drawing.Color.Black;
+            this.btnGerarDevolucoes.Location = new System.Drawing.Point(297, 83);
+            this.btnGerarDevolucoes.Name = "btnGerarDevolucoes";
+            this.btnGerarDevolucoes.Size = new System.Drawing.Size(103, 28);
+            this.btnGerarDevolucoes.TabIndex = 15;
+            this.btnGerarDevolucoes.Text = "Gerar Devoluções";
+            this.btnGerarDevolucoes.UseVisualStyleBackColor = false;
+            this.btnGerarDevolucoes.Click += new System.EventHandler(this.btnGerarDevolucoes_Click);
+            // 
+            // btnGerarDevolucao
+            // 
+            this.btnGerarDevolucao.BackColor = System.Drawing.Color.Navy;
+            this.btnGerarDevolucao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGerarDevolucao.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGerarDevolucao.ForeColor = System.Drawing.Color.White;
+            this.btnGerarDevolucao.Location = new System.Drawing.Point(20, 175);
+            this.btnGerarDevolucao.Name = "btnGerarDevolucao";
+            this.btnGerarDevolucao.Size = new System.Drawing.Size(139, 28);
+            this.btnGerarDevolucao.TabIndex = 4;
+            this.btnGerarDevolucao.Text = "Gerar Devolução";
+            this.btnGerarDevolucao.UseVisualStyleBackColor = false;
+            this.btnGerarDevolucao.Click += new System.EventHandler(this.btnGerarDevolucao_Click);
+            // 
             // TelaRelatorios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(826, 266);
+            this.ClientSize = new System.Drawing.Size(714, 290);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grpMovimentacoes);
             this.Name = "TelaRelatorios";
             this.Text = "Relatorios";
+            this.Load += new System.EventHandler(this.TelaRelatorios_Load);
             this.grpMovimentacoes.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -179,10 +306,19 @@
         private System.Windows.Forms.Button btnExibirSaidas;
         private System.Windows.Forms.Button btnExibirEntradas;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnBuscarPorData;
         private System.Windows.Forms.TextBox txtDataMovimentacao;
         private System.Windows.Forms.Label lblData;
         private System.Windows.Forms.Button btnGerarSaidas;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtCracha;
+        private System.Windows.Forms.Button btnGerarSaidaCracha;
+        private System.Windows.Forms.TextBox txtNomeRequisitante;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnBuscarPorData;
+        private System.Windows.Forms.Button btnGerarEntradaCracha;
+        private System.Windows.Forms.Button btnGerarDevolucoesCracha;
+        private System.Windows.Forms.Button btnGerarDevolucoes;
+        private System.Windows.Forms.Button btnGerarDevolucao;
     }
 }
 

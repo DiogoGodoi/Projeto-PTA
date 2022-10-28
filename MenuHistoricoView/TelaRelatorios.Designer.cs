@@ -45,12 +45,16 @@
             this.lblData = new System.Windows.Forms.Label();
             this.txtDataMovimentacao = new System.Windows.Forms.TextBox();
             this.btnBuscarPorData = new System.Windows.Forms.Button();
+            this.grpTitulo = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.grpMovimentacoes.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.grpTitulo.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnRelatorioHistorico
             // 
+            this.btnRelatorioHistorico.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRelatorioHistorico.BackColor = System.Drawing.Color.Navy;
             this.btnRelatorioHistorico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRelatorioHistorico.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -65,13 +69,14 @@
             // 
             // grpMovimentacoes
             // 
+            this.grpMovimentacoes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grpMovimentacoes.Controls.Add(this.btnGerarDevolucao);
             this.grpMovimentacoes.Controls.Add(this.btnExibirSaidas);
             this.grpMovimentacoes.Controls.Add(this.btnExibirEntradas);
             this.grpMovimentacoes.Controls.Add(this.btnRelatorioHistorico);
             this.grpMovimentacoes.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpMovimentacoes.ForeColor = System.Drawing.Color.Navy;
-            this.grpMovimentacoes.Location = new System.Drawing.Point(25, 38);
+            this.grpMovimentacoes.Location = new System.Drawing.Point(25, 132);
             this.grpMovimentacoes.Name = "grpMovimentacoes";
             this.grpMovimentacoes.Size = new System.Drawing.Size(181, 221);
             this.grpMovimentacoes.TabIndex = 1;
@@ -80,6 +85,7 @@
             // 
             // btnGerarDevolucao
             // 
+            this.btnGerarDevolucao.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGerarDevolucao.BackColor = System.Drawing.Color.Navy;
             this.btnGerarDevolucao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGerarDevolucao.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -94,6 +100,7 @@
             // 
             // btnExibirSaidas
             // 
+            this.btnExibirSaidas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnExibirSaidas.BackColor = System.Drawing.Color.Navy;
             this.btnExibirSaidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExibirSaidas.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -108,6 +115,7 @@
             // 
             // btnExibirEntradas
             // 
+            this.btnExibirEntradas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnExibirEntradas.BackColor = System.Drawing.Color.Navy;
             this.btnExibirEntradas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExibirEntradas.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -122,6 +130,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.btnGerarDevolucoes);
             this.groupBox1.Controls.Add(this.btnGerarDevolucoesCracha);
             this.groupBox1.Controls.Add(this.btnGerarSaidaCracha);
@@ -135,15 +144,16 @@
             this.groupBox1.Controls.Add(this.btnBuscarPorData);
             this.groupBox1.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Navy;
-            this.groupBox1.Location = new System.Drawing.Point(242, 38);
+            this.groupBox1.Location = new System.Drawing.Point(242, 132);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(431, 221);
+            this.groupBox1.Size = new System.Drawing.Size(402, 221);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Gerar por filtro";
             // 
             // btnGerarDevolucoes
             // 
+            this.btnGerarDevolucoes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGerarDevolucoes.BackColor = System.Drawing.Color.Yellow;
             this.btnGerarDevolucoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGerarDevolucoes.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -158,6 +168,7 @@
             // 
             // btnGerarDevolucoesCracha
             // 
+            this.btnGerarDevolucoesCracha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGerarDevolucoesCracha.BackColor = System.Drawing.Color.Yellow;
             this.btnGerarDevolucoesCracha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGerarDevolucoesCracha.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -172,6 +183,7 @@
             // 
             // btnGerarSaidaCracha
             // 
+            this.btnGerarSaidaCracha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGerarSaidaCracha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnGerarSaidaCracha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGerarSaidaCracha.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -186,6 +198,7 @@
             // 
             // txtNomeRequisitante
             // 
+            this.txtNomeRequisitante.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNomeRequisitante.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomeRequisitante.Location = new System.Drawing.Point(213, 131);
             this.txtNomeRequisitante.Name = "txtNomeRequisitante";
@@ -194,6 +207,7 @@
             // 
             // btnBuscar
             // 
+            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnBuscar.BackColor = System.Drawing.Color.Green;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -208,6 +222,7 @@
             // 
             // txtCracha
             // 
+            this.txtCracha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCracha.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCracha.Location = new System.Drawing.Point(114, 131);
             this.txtCracha.Name = "txtCracha";
@@ -216,6 +231,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(15, 132);
@@ -226,6 +242,7 @@
             // 
             // btnGerarSaidas
             // 
+            this.btnGerarSaidas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGerarSaidas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnGerarSaidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGerarSaidas.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -240,6 +257,7 @@
             // 
             // lblData
             // 
+            this.lblData.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblData.AutoSize = true;
             this.lblData.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblData.Location = new System.Drawing.Point(15, 41);
@@ -250,6 +268,7 @@
             // 
             // txtDataMovimentacao
             // 
+            this.txtDataMovimentacao.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDataMovimentacao.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDataMovimentacao.Location = new System.Drawing.Point(114, 40);
             this.txtDataMovimentacao.Name = "txtDataMovimentacao";
@@ -258,6 +277,7 @@
             // 
             // btnBuscarPorData
             // 
+            this.btnBuscarPorData.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnBuscarPorData.BackColor = System.Drawing.Color.Green;
             this.btnBuscarPorData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarPorData.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -270,11 +290,34 @@
             this.btnBuscarPorData.UseVisualStyleBackColor = false;
             this.btnBuscarPorData.Click += new System.EventHandler(this.btnBuscarPorData_Click);
             // 
+            // grpTitulo
+            // 
+            this.grpTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.grpTitulo.Controls.Add(this.label2);
+            this.grpTitulo.Location = new System.Drawing.Point(25, 12);
+            this.grpTitulo.Name = "grpTitulo";
+            this.grpTitulo.Size = new System.Drawing.Size(619, 100);
+            this.grpTitulo.TabIndex = 3;
+            this.grpTitulo.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Bernard MT Condensed", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Navy;
+            this.label2.Location = new System.Drawing.Point(239, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(140, 38);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Relatórios";
+            // 
             // TelaRelatorios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(714, 290);
+            this.ClientSize = new System.Drawing.Size(667, 378);
+            this.Controls.Add(this.grpTitulo);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grpMovimentacoes);
             this.Name = "TelaRelatorios";
@@ -283,6 +326,8 @@
             this.grpMovimentacoes.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.grpTitulo.ResumeLayout(false);
+            this.grpTitulo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -306,6 +351,8 @@
         private System.Windows.Forms.Button btnGerarDevolucoesCracha;
         private System.Windows.Forms.Button btnGerarDevolucoes;
         private System.Windows.Forms.Button btnGerarDevolucao;
+        private System.Windows.Forms.GroupBox grpTitulo;
+        private System.Windows.Forms.Label label2;
     }
 }
 

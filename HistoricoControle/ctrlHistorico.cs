@@ -87,7 +87,7 @@ namespace HistoricoControle
             try
             {
                 abrirConn.Open();
-                string query = "SELECT * FROM historico ORDER BY dataModificacao, requisitante ASC";
+                string query = "SELECT * FROM historico ORDER BY dataModificacao ASC";
                 SqlCommand comando = new SqlCommand(query, abrirConn);
 
                 comando.CommandType = CommandType.Text;
@@ -206,7 +206,7 @@ namespace HistoricoControle
             try
             {
                 abrirConn.Open();
-                string query = "SELECT * FROM historico WHERE dataModificacao =@data ORDER BY dataModificacao ASC";
+                string query = "SELECT * FROM historico WHERE dataModificacao =@data ORDER BY natureza, requisitante DSC";
                 SqlCommand comando = new SqlCommand(query, abrirConn);
 
                 comando.Parameters.AddWithValue("@data", data);
@@ -334,7 +334,7 @@ namespace HistoricoControle
             try
             {
                 abrirConn.Open();
-                string query = "SELECT * FROM historico WHERE requisitante=@requisitante ORDER BY dataModificacao ASC";
+                string query = "SELECT * FROM historico WHERE requisitante=@requisitante ORDER BY dataModificacao, natureza DSC";
                 SqlCommand comando = new SqlCommand(query, abrirConn);
 
                 comando.Parameters.AddWithValue("@requisitante", requisitante);

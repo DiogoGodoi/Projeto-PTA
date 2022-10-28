@@ -198,6 +198,38 @@ namespace HistoricoControle
             }
 
         }
+        public DataTable PesquisarTudo(DateTime data)
+        {
+            Conexao.ConexaoDB.conectar();
+            var abrirConn = Conexao.ConexaoDB.conectar();
+
+            try
+            {
+                abrirConn.Open();
+                string query = "SELECT * FROM historico WHERE dataModificacao =@data ORDER BY dataModificacao ASC";
+                SqlCommand comando = new SqlCommand(query, abrirConn);
+
+                comando.Parameters.AddWithValue("@data", data);
+
+                comando.CommandType = CommandType.Text;
+                SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+                DataTable tabela = new DataTable();
+                adaptador.Fill(tabela);
+                return tabela;
+
+            }
+            catch (Exception ex)
+            {
+                abrirConn.Close();
+                return null;
+                throw new Exception("Erro ao exibir " + ex.Message);
+            }
+            finally
+            {
+                abrirConn.Close();
+            }
+
+        }
         public DataTable PesquisarEntrada(DateTime data)
         {
             Conexao.ConexaoDB.conectar();
@@ -274,6 +306,38 @@ namespace HistoricoControle
                 SqlCommand comando = new SqlCommand(query, abrirConn);
 
                 comando.Parameters.AddWithValue("@data", data);
+
+                comando.CommandType = CommandType.Text;
+                SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+                DataTable tabela = new DataTable();
+                adaptador.Fill(tabela);
+                return tabela;
+
+            }
+            catch (Exception ex)
+            {
+                abrirConn.Close();
+                return null;
+                throw new Exception("Erro ao exibir " + ex.Message);
+            }
+            finally
+            {
+                abrirConn.Close();
+            }
+
+        }
+        public DataTable PesquisarTudoPorNome(string requisitante)
+        {
+            Conexao.ConexaoDB.conectar();
+            var abrirConn = Conexao.ConexaoDB.conectar();
+
+            try
+            {
+                abrirConn.Open();
+                string query = "SELECT * FROM historico WHERE requisitante=@requisitante ORDER BY dataModificacao ASC";
+                SqlCommand comando = new SqlCommand(query, abrirConn);
+
+                comando.Parameters.AddWithValue("@requisitante", requisitante);
 
                 comando.CommandType = CommandType.Text;
                 SqlDataAdapter adaptador = new SqlDataAdapter(comando);

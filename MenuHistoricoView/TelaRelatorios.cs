@@ -126,12 +126,39 @@ namespace MenuHistoricoView
                 MessageBox.Show("Erro interno");
             }
         }
+
+        private void btnGerarTudoData_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                var data = Convert.ToDateTime(txtDataMovimentacao.Text);
+                SaveFileDialog arquivo = new SaveFileDialog();
+                arquivo.FileName = "Arquivo";
+                arquivo.Filter = "PDF (.pdf) | *.pdf";
+
+                if (arquivo.ShowDialog() == DialogResult.OK)
+                {
+                    _ctrlRelatorios.gerarRelatorioMovimentacao(arquivo.FileName, _ctrlHistorico.PesquisarTudo(data));
+                    MessageBox.Show("Arquivo salvo");
+                }
+                else
+                {
+                    MessageBox.Show("Operação cancelada");
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Por favor insira uma data");
+            }
+        }
         private void btnBuscarPorData_Click(object sender, EventArgs e)
         {
-            var dia = Convert.ToDateTime(txtDataMovimentacao.Text);
 
             try
             {
+                
+                var dia = Convert.ToDateTime(txtDataMovimentacao.Text);
 
                 SaveFileDialog arquivo = new SaveFileDialog();
                 arquivo.FileName = "Arquivo";
@@ -146,19 +173,23 @@ namespace MenuHistoricoView
                 {
                     MessageBox.Show("Operação cancelada");
                 }
+                
+                {
+                    MessageBox.Show("Por favor insira a data");
+                }
             }
             catch (Exception)
             {
-                MessageBox.Show("Erro interno");
+                MessageBox.Show("Por favor insira uma data");
             }
         }
         private void btnGerarSaidas_Click(object sender, EventArgs e)
         {
-            var dia = Convert.ToDateTime(txtDataMovimentacao.Text);
 
             try
             {
 
+                var dia = Convert.ToDateTime(txtDataMovimentacao.Text);
                 SaveFileDialog arquivo = new SaveFileDialog();
                 arquivo.FileName = "Arquivo";
                 arquivo.Filter = "PDF (.pdf) | *.pdf";
@@ -175,16 +206,16 @@ namespace MenuHistoricoView
             }
             catch (Exception)
             {
-                MessageBox.Show("Erro interno");
+                MessageBox.Show("Por favor insira uma data");
             }
         }
-        private void btnGerarDevolucoes_Click(object sender, EventArgs e)
+        private void btnGerarDevolucaoData_Click(object sender, EventArgs e)
         {
-            var data = Convert.ToDateTime(txtDataMovimentacao.Text);    
 
             try
             {
 
+                var data = Convert.ToDateTime(txtDataMovimentacao.Text);
                 SaveFileDialog arquivo = new SaveFileDialog();
                 arquivo.FileName = "Arquivo";
                 arquivo.Filter = "PDF (.pdf) | *.pdf";
@@ -201,26 +232,35 @@ namespace MenuHistoricoView
             }
             catch (Exception)
             {
-                MessageBox.Show("Erro interno");
+                MessageBox.Show("Por favor insira uma data");
             }
         }
-        private void btnGerarEntradaCracha_Click(object sender, EventArgs e)
+
+        private void btnGerarTudoCraha_Click(object sender, EventArgs e)
         {
             try
             {
-
-                SaveFileDialog arquivo = new SaveFileDialog();
-                arquivo.FileName = "Arquivo";
-                arquivo.Filter = "PDF (.pdf) | *.pdf";
-
-                if (arquivo.ShowDialog() == DialogResult.OK)
+                if (txtCracha.Text == String.Empty)
                 {
-                    _ctrlRelatorios.gerarRelatorioMovimentacao(arquivo.FileName, _ctrlHistorico.PesquisarEntradaPorNome(txtNomeRequisitante.Text));
-                    MessageBox.Show("Arquivo salvo");
+                    MessageBox.Show("Por favor digite o crachá do colaborador");
                 }
                 else
                 {
-                    MessageBox.Show("Operação cancelada");
+
+
+                    SaveFileDialog arquivo = new SaveFileDialog();
+                    arquivo.FileName = "Arquivo";
+                    arquivo.Filter = "PDF (.pdf) | *.pdf";
+
+                    if (arquivo.ShowDialog() == DialogResult.OK)
+                    {
+                        _ctrlRelatorios.gerarRelatorioMovimentacao(arquivo.FileName, _ctrlHistorico.PesquisarTudoPorNome(txtNomeRequisitante.Text));
+                        MessageBox.Show("Arquivo salvo");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Operação cancelada");
+                    }
                 }
             }
             catch (Exception)
@@ -232,7 +272,14 @@ namespace MenuHistoricoView
         {
             try
             {
+                if (txtCracha.Text == String.Empty)
+                {
+                    MessageBox.Show("Por favor digite o crachá do colaborador");
+                }
+                else
+                {
 
+            
                 SaveFileDialog arquivo = new SaveFileDialog();
                 arquivo.FileName = "Arquivo";
                 arquivo.Filter = "PDF (.pdf) | *.pdf";
@@ -246,6 +293,7 @@ namespace MenuHistoricoView
                 {
                     MessageBox.Show("Operação cancelada");
                 }
+                }
             }
             catch (Exception)
             {
@@ -256,19 +304,25 @@ namespace MenuHistoricoView
         {
             try
             {
-
-                SaveFileDialog arquivo = new SaveFileDialog();
-                arquivo.FileName = "Arquivo";
-                arquivo.Filter = "PDF (.pdf) | *.pdf";
-
-                if (arquivo.ShowDialog() == DialogResult.OK)
+                if (txtCracha.Text == String.Empty)
                 {
-                    _ctrlRelatorios.gerarRelatorioMovimentacao(arquivo.FileName, _ctrlHistorico.PesquisarDevolucaoPorNome(txtNomeRequisitante.Text));
-                    MessageBox.Show("Arquivo salvo");
+                    MessageBox.Show("Por favor digite o crachá do colaborador");
                 }
                 else
                 {
-                    MessageBox.Show("Operação cancelada");
+                    SaveFileDialog arquivo = new SaveFileDialog();
+                    arquivo.FileName = "Arquivo";
+                    arquivo.Filter = "PDF (.pdf) | *.pdf";
+
+                    if (arquivo.ShowDialog() == DialogResult.OK)
+                    {
+                        _ctrlRelatorios.gerarRelatorioMovimentacao(arquivo.FileName, _ctrlHistorico.PesquisarDevolucaoPorNome(txtNomeRequisitante.Text));
+                        MessageBox.Show("Arquivo salvo");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Operação cancelada");
+                    }
                 }
             }
             catch (Exception)
@@ -276,6 +330,8 @@ namespace MenuHistoricoView
                 MessageBox.Show("Erro interno");
             }
         }
+
+
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             try
@@ -301,8 +357,6 @@ namespace MenuHistoricoView
         {
             txtNomeRequisitante.Enabled = false;
         }
-
-        
     }
 }
 

@@ -71,10 +71,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HistoricoCONN.Designer.cs">
+    <Compile Include="HistoricoDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HistoricoCONN.xsd</DependentUpon>
+      <DependentUpon>HistoricoDB.xsd</DependentUpon>
     </Compile>
     <Compile Include="TelaHistorico.cs">
       <SubType>Form</SubType>
@@ -96,16 +96,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="HistoricoCONN.xsc">
-      <DependentUpon>HistoricoCONN.xsd</DependentUpon>
+    <None Include="HistoricoDB.xsc">
+      <DependentUpon>HistoricoDB.xsd</DependentUpon>
     </None>
-    <None Include="HistoricoCONN.xsd">
+    <None Include="HistoricoDB.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HistoricoCONN.Designer.cs</LastGenOutput>
+      <LastGenOutput>HistoricoDB.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="HistoricoCONN.xss">
-      <DependentUpon>HistoricoCONN.xsd</DependentUpon>
+    <None Include="HistoricoDB.xss">
+      <DependentUpon>HistoricoDB.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

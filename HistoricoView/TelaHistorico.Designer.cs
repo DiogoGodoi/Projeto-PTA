@@ -31,14 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grdHistorico = new System.Windows.Forms.DataGridView();
-            this.dataModificacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.itemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.naturezaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.operadorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.requisitanteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.historicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.historicoCONN = new HistoricoView.HistoricoCONN();
             this.grpPesquisar = new System.Windows.Forms.GroupBox();
             this.btnDevolucao = new System.Windows.Forms.Button();
             this.lblFormato = new System.Windows.Forms.Label();
@@ -51,12 +43,20 @@
             this.btnSaida = new System.Windows.Forms.Button();
             this.btnExibir = new System.Windows.Forms.Button();
             this.btnEntrada = new System.Windows.Forms.Button();
-            this.historicoTableAdapter = new HistoricoView.HistoricoCONNTableAdapters.historicoTableAdapter();
+            this.historicoDB = new HistoricoView.HistoricoDB();
+            this.historicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.historicoTableAdapter = new HistoricoView.HistoricoDBTableAdapters.historicoTableAdapter();
+            this.dataModificacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.naturezaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.operadorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.requisitanteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdHistorico)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.historicoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.historicoCONN)).BeginInit();
             this.grpPesquisar.SuspendLayout();
             this.grpExibir.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.historicoDB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.historicoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // grdHistorico
@@ -88,60 +88,6 @@
             this.grdHistorico.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
             this.grdHistorico.Size = new System.Drawing.Size(705, 248);
             this.grdHistorico.TabIndex = 0;
-            // 
-            // dataModificacaoDataGridViewTextBoxColumn
-            // 
-            this.dataModificacaoDataGridViewTextBoxColumn.DataPropertyName = "dataModificacao";
-            this.dataModificacaoDataGridViewTextBoxColumn.HeaderText = "Data";
-            this.dataModificacaoDataGridViewTextBoxColumn.Name = "dataModificacaoDataGridViewTextBoxColumn";
-            this.dataModificacaoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // itemDataGridViewTextBoxColumn
-            // 
-            this.itemDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.itemDataGridViewTextBoxColumn.DataPropertyName = "item";
-            this.itemDataGridViewTextBoxColumn.HeaderText = "Item";
-            this.itemDataGridViewTextBoxColumn.Name = "itemDataGridViewTextBoxColumn";
-            this.itemDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // quantidadeDataGridViewTextBoxColumn
-            // 
-            this.quantidadeDataGridViewTextBoxColumn.DataPropertyName = "quantidade";
-            this.quantidadeDataGridViewTextBoxColumn.HeaderText = "Quantidade";
-            this.quantidadeDataGridViewTextBoxColumn.Name = "quantidadeDataGridViewTextBoxColumn";
-            this.quantidadeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // naturezaDataGridViewTextBoxColumn
-            // 
-            this.naturezaDataGridViewTextBoxColumn.DataPropertyName = "natureza";
-            this.naturezaDataGridViewTextBoxColumn.HeaderText = "Natureza";
-            this.naturezaDataGridViewTextBoxColumn.Name = "naturezaDataGridViewTextBoxColumn";
-            this.naturezaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // operadorDataGridViewTextBoxColumn
-            // 
-            this.operadorDataGridViewTextBoxColumn.DataPropertyName = "operador";
-            this.operadorDataGridViewTextBoxColumn.HeaderText = "Operador";
-            this.operadorDataGridViewTextBoxColumn.Name = "operadorDataGridViewTextBoxColumn";
-            this.operadorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // requisitanteDataGridViewTextBoxColumn
-            // 
-            this.requisitanteDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.requisitanteDataGridViewTextBoxColumn.DataPropertyName = "requisitante";
-            this.requisitanteDataGridViewTextBoxColumn.HeaderText = "Requisitante";
-            this.requisitanteDataGridViewTextBoxColumn.Name = "requisitanteDataGridViewTextBoxColumn";
-            this.requisitanteDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // historicoBindingSource
-            // 
-            this.historicoBindingSource.DataMember = "historico";
-            this.historicoBindingSource.DataSource = this.historicoCONN;
-            // 
-            // historicoCONN
-            // 
-            this.historicoCONN.DataSetName = "HistoricoCONN";
-            this.historicoCONN.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // grpPesquisar
             // 
@@ -304,9 +250,63 @@
             this.btnEntrada.UseVisualStyleBackColor = false;
             this.btnEntrada.Click += new System.EventHandler(this.btnEntrada_Click_1);
             // 
+            // historicoDB
+            // 
+            this.historicoDB.DataSetName = "HistoricoDB";
+            this.historicoDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // historicoBindingSource
+            // 
+            this.historicoBindingSource.DataMember = "historico";
+            this.historicoBindingSource.DataSource = this.historicoDB;
+            // 
             // historicoTableAdapter
             // 
             this.historicoTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataModificacaoDataGridViewTextBoxColumn
+            // 
+            this.dataModificacaoDataGridViewTextBoxColumn.DataPropertyName = "dataModificacao";
+            this.dataModificacaoDataGridViewTextBoxColumn.HeaderText = "Data";
+            this.dataModificacaoDataGridViewTextBoxColumn.Name = "dataModificacaoDataGridViewTextBoxColumn";
+            this.dataModificacaoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // itemDataGridViewTextBoxColumn
+            // 
+            this.itemDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.itemDataGridViewTextBoxColumn.DataPropertyName = "item";
+            this.itemDataGridViewTextBoxColumn.HeaderText = "Item";
+            this.itemDataGridViewTextBoxColumn.Name = "itemDataGridViewTextBoxColumn";
+            this.itemDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // quantidadeDataGridViewTextBoxColumn
+            // 
+            this.quantidadeDataGridViewTextBoxColumn.DataPropertyName = "quantidade";
+            this.quantidadeDataGridViewTextBoxColumn.HeaderText = "Quantidade";
+            this.quantidadeDataGridViewTextBoxColumn.Name = "quantidadeDataGridViewTextBoxColumn";
+            this.quantidadeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // naturezaDataGridViewTextBoxColumn
+            // 
+            this.naturezaDataGridViewTextBoxColumn.DataPropertyName = "natureza";
+            this.naturezaDataGridViewTextBoxColumn.HeaderText = "Natureza";
+            this.naturezaDataGridViewTextBoxColumn.Name = "naturezaDataGridViewTextBoxColumn";
+            this.naturezaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // operadorDataGridViewTextBoxColumn
+            // 
+            this.operadorDataGridViewTextBoxColumn.DataPropertyName = "operador";
+            this.operadorDataGridViewTextBoxColumn.HeaderText = "Operador";
+            this.operadorDataGridViewTextBoxColumn.Name = "operadorDataGridViewTextBoxColumn";
+            this.operadorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // requisitanteDataGridViewTextBoxColumn
+            // 
+            this.requisitanteDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.requisitanteDataGridViewTextBoxColumn.DataPropertyName = "requisitante";
+            this.requisitanteDataGridViewTextBoxColumn.HeaderText = "Requisitante";
+            this.requisitanteDataGridViewTextBoxColumn.Name = "requisitanteDataGridViewTextBoxColumn";
+            this.requisitanteDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // TelaHistorico
             // 
@@ -320,11 +320,11 @@
             this.Text = "Historico";
             this.Load += new System.EventHandler(this.TelaHistorico_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdHistorico)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.historicoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.historicoCONN)).EndInit();
             this.grpPesquisar.ResumeLayout(false);
             this.grpPesquisar.PerformLayout();
             this.grpExibir.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.historicoDB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.historicoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -351,9 +351,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private HistoricoCONN historicoCONN;
+        private HistoricoDB historicoDB;
         private System.Windows.Forms.BindingSource historicoBindingSource;
-        private HistoricoCONNTableAdapters.historicoTableAdapter historicoTableAdapter;
+        private HistoricoDBTableAdapters.historicoTableAdapter historicoTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataModificacaoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeDataGridViewTextBoxColumn;

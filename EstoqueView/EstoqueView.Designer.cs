@@ -36,7 +36,6 @@ namespace Almoxarifado
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grdEstoque = new System.Windows.Forms.DataGridView();
-            this.estoqueBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.grpExibirEstoque = new System.Windows.Forms.GroupBox();
             this.btnOrdenar = new System.Windows.Forms.Button();
             this.btnEstoqueZerado = new System.Windows.Forms.Button();
@@ -61,15 +60,14 @@ namespace Almoxarifado
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnAnterior = new System.Windows.Forms.Button();
             this.btnProximo = new System.Windows.Forms.Button();
-            this.estoqueDB = new EstoqueView.estoqueDB();
-            this.estoqueBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.estoqueTableAdapter = new EstoqueView.estoqueDBTableAdapters.EstoqueTableAdapter();
+            this.estoqueDB = new EstoqueView.EstoqueDB();
+            this.estoqueBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.estoqueTableAdapter = new EstoqueView.EstoqueDBTableAdapters.EstoqueTableAdapter();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdEstoque)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.estoqueBindingSource)).BeginInit();
             this.grpExibirEstoque.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -77,7 +75,7 @@ namespace Almoxarifado
             this.grpPaginação.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.estoqueDB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.estoqueBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estoqueBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // grdEstoque
@@ -105,7 +103,7 @@ namespace Almoxarifado
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn12});
-            this.grdEstoque.DataSource = this.estoqueBindingSource1;
+            this.grdEstoque.DataSource = this.estoqueBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -434,13 +432,13 @@ namespace Almoxarifado
             // 
             // estoqueDB
             // 
-            this.estoqueDB.DataSetName = "estoqueDB";
+            this.estoqueDB.DataSetName = "EstoqueDB";
             this.estoqueDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // estoqueBindingSource1
+            // estoqueBindingSource
             // 
-            this.estoqueBindingSource1.DataMember = "Estoque";
-            this.estoqueBindingSource1.DataSource = this.estoqueDB;
+            this.estoqueBindingSource.DataMember = "Estoque";
+            this.estoqueBindingSource.DataSource = this.estoqueDB;
             // 
             // estoqueTableAdapter
             // 
@@ -495,7 +493,6 @@ namespace Almoxarifado
             this.Text = "Estoque";
             this.Load += new System.EventHandler(this.frmEstoque_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdEstoque)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.estoqueBindingSource)).EndInit();
             this.grpExibirEstoque.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -506,7 +503,7 @@ namespace Almoxarifado
             this.grpPaginação.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.estoqueDB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.estoqueBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estoqueBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -550,11 +547,10 @@ namespace Almoxarifado
         private System.Windows.Forms.Label lblRequisitante;
         private System.Windows.Forms.Button btnBuscarColaborador;
         private System.Windows.Forms.TextBox txtNomeRequisitante;
-        private System.Windows.Forms.BindingSource estoqueBindingSource;
         private System.Windows.Forms.Label lblCracha;
-        private EstoqueView.estoqueDB estoqueDB;
-        private System.Windows.Forms.BindingSource estoqueBindingSource1;
-        private EstoqueView.estoqueDBTableAdapters.EstoqueTableAdapter estoqueTableAdapter;
+        private EstoqueView.EstoqueDB estoqueDB;
+        private System.Windows.Forms.BindingSource estoqueBindingSource;
+        private EstoqueView.EstoqueDBTableAdapters.EstoqueTableAdapter estoqueTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;

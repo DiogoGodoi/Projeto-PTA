@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="estoqueDB" targetNamespace="http://tempuri.org/estoqueDB1.xsd" xmlns:mstns="http://tempuri.org/estoqueDB1.xsd" xmlns="http://tempuri.org/estoqueDB1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="EstoqueDB" targetNamespace="http://tempuri.org/EstoqueDB.xsd" xmlns:mstns="http://tempuri.org/EstoqueDB.xsd" xmlns="http://tempuri.org/EstoqueDB.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -70,7 +70,7 @@ SELECT codigo, nome, unidade, quantidade FROM Estoque WHERE (codigo = @codigo)</
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="estoqueDB" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="estoqueDB" msprop:Generator_DataSetName="estoqueDB">
+  <xs:element name="EstoqueDB" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="EstoqueDB" msprop:Generator_DataSetName="EstoqueDB">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="Estoque" msprop:Generator_RowEvHandlerName="EstoqueRowChangeEventHandler" msprop:Generator_RowDeletedName="EstoqueRowDeleted" msprop:Generator_RowDeletingName="EstoqueRowDeleting" msprop:Generator_RowEvArgName="EstoqueRowChangeEvent" msprop:Generator_TablePropName="Estoque" msprop:Generator_RowChangedName="EstoqueRowChanged" msprop:Generator_RowChangingName="EstoqueRowChanging" msprop:Generator_TableClassName="EstoqueDataTable" msprop:Generator_RowClassName="EstoqueRow" msprop:Generator_TableVarName="tableEstoque" msprop:Generator_UserTableName="Estoque">

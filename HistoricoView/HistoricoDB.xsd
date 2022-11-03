@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="HistoricoCONN" targetNamespace="http://tempuri.org/HistoricoCONN.xsd" xmlns:mstns="http://tempuri.org/HistoricoCONN.xsd" xmlns="http://tempuri.org/HistoricoCONN.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="HistoricoDB" targetNamespace="http://tempuri.org/HistoricoDB.xsd" xmlns:mstns="http://tempuri.org/HistoricoDB.xsd" xmlns="http://tempuri.org/HistoricoDB.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -86,7 +86,7 @@ SELECT codTransacao, dataModificacao, item, quantidade, natureza, operador, requ
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="HistoricoCONN" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="HistoricoCONN" msprop:Generator_DataSetName="HistoricoCONN">
+  <xs:element name="HistoricoDB" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="HistoricoDB" msprop:Generator_DataSetName="HistoricoDB">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="historico" msprop:Generator_RowEvHandlerName="historicoRowChangeEventHandler" msprop:Generator_RowDeletedName="historicoRowDeleted" msprop:Generator_RowDeletingName="historicoRowDeleting" msprop:Generator_RowEvArgName="historicoRowChangeEvent" msprop:Generator_TablePropName="historico" msprop:Generator_RowChangedName="historicoRowChanged" msprop:Generator_RowChangingName="historicoRowChanging" msprop:Generator_TableClassName="historicoDataTable" msprop:Generator_RowClassName="historicoRow" msprop:Generator_TableVarName="tablehistorico" msprop:Generator_UserTableName="historico">

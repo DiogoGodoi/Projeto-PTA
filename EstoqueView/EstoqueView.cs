@@ -202,6 +202,8 @@ namespace Almoxarifado
         }
         private void frmEstoque_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'estoqueDB.Estoque'. Você pode movê-la ou removê-la conforme necessário.
+            this.estoqueTableAdapter.Fill(this.estoqueDB.Estoque);
             ctrlEstoque _ctrlEstoque = new ctrlEstoque();
             DataTable tabela = _ctrlEstoque.Exibir();
             grdEstoque.DataSource = tabela;

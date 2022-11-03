@@ -85,10 +85,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="estoqueDB.Designer.cs">
+    <Compile Include="EstoqueDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>estoqueDB.xsd</DependentUpon>
+      <DependentUpon>EstoqueDB.xsd</DependentUpon>
     </Compile>
     <Compile Include="EstoqueView.cs">
       <SubType>Form</SubType>
@@ -111,16 +111,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="estoqueDB.xsc">
-      <DependentUpon>estoqueDB.xsd</DependentUpon>
+    <None Include="EstoqueDB.xsc">
+      <DependentUpon>EstoqueDB.xsd</DependentUpon>
     </None>
-    <None Include="estoqueDB.xsd">
+    <None Include="EstoqueDB.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>estoqueDB.Designer.cs</LastGenOutput>
+      <LastGenOutput>EstoqueDB.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="estoqueDB.xss">
-      <DependentUpon>estoqueDB.xsd</DependentUpon>
+    <None Include="EstoqueDB.xss">
+      <DependentUpon>EstoqueDB.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

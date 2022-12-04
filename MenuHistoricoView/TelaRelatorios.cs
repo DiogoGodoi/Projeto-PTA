@@ -126,6 +126,30 @@ namespace MenuHistoricoView
                 MessageBox.Show("Erro interno");
             }
         }
+        private void btnEstoqueMin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                SaveFileDialog arquivo = new SaveFileDialog();
+                arquivo.FileName = "Arquivo";
+                arquivo.Filter = "PDF (.pdf) | *.pdf";
+
+                if (arquivo.ShowDialog() == DialogResult.OK)
+                {
+                    _ctrlRelatorios.relatorioEstoqueMin(arquivo.FileName, _ctrlHistorico.ExibirMinimo());
+                    MessageBox.Show("Arquivo salvo");
+                }
+                else
+                {
+                    MessageBox.Show("Operação cancelada");
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Erro interno");
+            }
+        }
 
         private void btnGerarTudoData_Click(object sender, EventArgs e)
         {
@@ -330,8 +354,6 @@ namespace MenuHistoricoView
                 MessageBox.Show("Erro interno");
             }
         }
-
-
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             try
@@ -357,6 +379,7 @@ namespace MenuHistoricoView
         {
             txtNomeRequisitante.Enabled = false;
         }
+
     }
 }
 

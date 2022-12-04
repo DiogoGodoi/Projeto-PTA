@@ -54,7 +54,7 @@ namespace MenuView
         }
         private void abrirJanelaHistorico()
         {
-            Application.Run(new frmSelecionarHistorico());
+            Application.Run(new TelaHistorico());
         }
         private void abrirJanelaAdministracao()
         {
@@ -66,7 +66,6 @@ namespace MenuView
             if(mdlUsuarios.getNivel() == "1")
             {
                 btnAdm.Enabled = true;
-                btnEpi.Enabled = true;
                 btnAlmoxarifado.Enabled = true;
                 btnRelatorios.Enabled = true;
                 btnHistorico.Enabled = true;
@@ -76,27 +75,7 @@ namespace MenuView
             {
                 btnAdm.Enabled = false;
                 btnAdm.BackColor = Color.Red;
-
-                btnEpi.Enabled = false;
-                btnEpi.BackColor = Color.Red;
-
                 btnAlmoxarifado.Enabled = true;
-                btnRelatorios.Enabled = true;
-
-                btnHistorico.Enabled = false;
-                btnHistorico.BackColor = Color.Red;
-                lblUsuario.Text = mdlUsuarios.getNome();
-            }
-            else if (mdlUsuarios.getNivel() == "3")
-            {
-                btnAdm.Enabled = false;
-                btnAdm.BackColor = Color.Red;
-
-                btnEpi.Enabled = true;
-
-                btnAlmoxarifado.Enabled = false;
-                btnAlmoxarifado.BackColor = Color.Red;
-
                 btnRelatorios.Enabled = true;
 
                 btnHistorico.Enabled = false;

@@ -44,5 +44,16 @@ namespace EstoqueView.Properties {
                 return ((string)(this["AlmoxarifadoConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=dgodoi.database.windows.net;Initial Catalog=dbGaleria;Persist Securit" +
+            "y Info=True;User ID=Dgodoi")]
+        public string dbGaleriaAzure {
+            get {
+                return ((string)(this["dbGaleriaAzure"]));
+            }
+        }
     }
 }

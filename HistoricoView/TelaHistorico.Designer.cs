@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grdHistorico = new System.Windows.Forms.DataGridView();
             this.grpPesquisar = new System.Windows.Forms.GroupBox();
             this.btnDevolucao = new System.Windows.Forms.Button();
@@ -43,9 +44,9 @@
             this.btnSaida = new System.Windows.Forms.Button();
             this.btnExibir = new System.Windows.Forms.Button();
             this.btnEntrada = new System.Windows.Forms.Button();
-            this.historicoDB = new HistoricoView.HistoricoDB();
+            this.dbHistorico = new HistoricoView.dbHistorico();
             this.historicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.historicoTableAdapter = new HistoricoView.HistoricoDBTableAdapters.historicoTableAdapter();
+            this.historicoTableAdapter = new HistoricoView.dbHistoricoTableAdapters.historicoTableAdapter();
             this.dataModificacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,7 +56,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdHistorico)).BeginInit();
             this.grpPesquisar.SuspendLayout();
             this.grpExibir.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.historicoDB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbHistorico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.historicoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,13 +81,15 @@
             this.operadorDataGridViewTextBoxColumn,
             this.requisitanteDataGridViewTextBoxColumn});
             this.grdHistorico.DataSource = this.historicoBindingSource;
-            this.grdHistorico.Location = new System.Drawing.Point(43, 157);
+            this.grdHistorico.Location = new System.Drawing.Point(57, 193);
+            this.grdHistorico.Margin = new System.Windows.Forms.Padding(4);
             this.grdHistorico.Name = "grdHistorico";
             this.grdHistorico.ReadOnly = true;
+            this.grdHistorico.RowHeadersWidth = 51;
             this.grdHistorico.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.grdHistorico.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Navy;
             this.grdHistorico.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
-            this.grdHistorico.Size = new System.Drawing.Size(705, 248);
+            this.grdHistorico.Size = new System.Drawing.Size(940, 305);
             this.grdHistorico.TabIndex = 0;
             // 
             // grpPesquisar
@@ -100,9 +103,11 @@
             this.grpPesquisar.Controls.Add(this.btnPesquisarEntrada);
             this.grpPesquisar.Font = new System.Drawing.Font("Bernard MT Condensed", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpPesquisar.ForeColor = System.Drawing.Color.Navy;
-            this.grpPesquisar.Location = new System.Drawing.Point(43, 24);
+            this.grpPesquisar.Location = new System.Drawing.Point(57, 30);
+            this.grpPesquisar.Margin = new System.Windows.Forms.Padding(4);
             this.grpPesquisar.Name = "grpPesquisar";
-            this.grpPesquisar.Size = new System.Drawing.Size(357, 102);
+            this.grpPesquisar.Padding = new System.Windows.Forms.Padding(4);
+            this.grpPesquisar.Size = new System.Drawing.Size(476, 126);
             this.grpPesquisar.TabIndex = 4;
             this.grpPesquisar.TabStop = false;
             this.grpPesquisar.Text = "Pesquisar";
@@ -113,9 +118,10 @@
             this.btnDevolucao.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDevolucao.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDevolucao.ForeColor = System.Drawing.Color.White;
-            this.btnDevolucao.Location = new System.Drawing.Point(249, 63);
+            this.btnDevolucao.Location = new System.Drawing.Point(332, 78);
+            this.btnDevolucao.Margin = new System.Windows.Forms.Padding(4);
             this.btnDevolucao.Name = "btnDevolucao";
-            this.btnDevolucao.Size = new System.Drawing.Size(89, 23);
+            this.btnDevolucao.Size = new System.Drawing.Size(119, 28);
             this.btnDevolucao.TabIndex = 13;
             this.btnDevolucao.Text = "Devoluções";
             this.btnDevolucao.UseVisualStyleBackColor = false;
@@ -126,9 +132,10 @@
             this.lblFormato.AutoSize = true;
             this.lblFormato.Font = new System.Drawing.Font("Bernard MT Condensed", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFormato.ForeColor = System.Drawing.Color.Navy;
-            this.lblFormato.Location = new System.Drawing.Point(143, 14);
+            this.lblFormato.Location = new System.Drawing.Point(191, 17);
+            this.lblFormato.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFormato.Name = "lblFormato";
-            this.lblFormato.Size = new System.Drawing.Size(94, 15);
+            this.lblFormato.Size = new System.Drawing.Size(113, 18);
             this.lblFormato.TabIndex = 12;
             this.lblFormato.Text = "Fomato: d/m/a";
             // 
@@ -138,9 +145,10 @@
             this.btnPesquisarSaida.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPesquisarSaida.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPesquisarSaida.ForeColor = System.Drawing.Color.White;
-            this.btnPesquisarSaida.Location = new System.Drawing.Point(162, 63);
+            this.btnPesquisarSaida.Location = new System.Drawing.Point(216, 78);
+            this.btnPesquisarSaida.Margin = new System.Windows.Forms.Padding(4);
             this.btnPesquisarSaida.Name = "btnPesquisarSaida";
-            this.btnPesquisarSaida.Size = new System.Drawing.Size(64, 23);
+            this.btnPesquisarSaida.Size = new System.Drawing.Size(85, 28);
             this.btnPesquisarSaida.TabIndex = 11;
             this.btnPesquisarSaida.Text = "Saidas";
             this.btnPesquisarSaida.UseVisualStyleBackColor = false;
@@ -148,9 +156,10 @@
             // 
             // txtData
             // 
-            this.txtData.Location = new System.Drawing.Point(57, 32);
+            this.txtData.Location = new System.Drawing.Point(76, 39);
+            this.txtData.Margin = new System.Windows.Forms.Padding(4);
             this.txtData.Name = "txtData";
-            this.txtData.Size = new System.Drawing.Size(281, 22);
+            this.txtData.Size = new System.Drawing.Size(373, 25);
             this.txtData.TabIndex = 10;
             // 
             // lblData
@@ -158,9 +167,10 @@
             this.lblData.AutoSize = true;
             this.lblData.Font = new System.Drawing.Font("Bernard MT Condensed", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblData.ForeColor = System.Drawing.Color.Navy;
-            this.lblData.Location = new System.Drawing.Point(15, 35);
+            this.lblData.Location = new System.Drawing.Point(20, 43);
+            this.lblData.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblData.Name = "lblData";
-            this.lblData.Size = new System.Drawing.Size(41, 15);
+            this.lblData.Size = new System.Drawing.Size(49, 18);
             this.lblData.TabIndex = 9;
             this.lblData.Text = "Data: ";
             // 
@@ -170,9 +180,10 @@
             this.btnPesquisarEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPesquisarEntrada.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPesquisarEntrada.ForeColor = System.Drawing.Color.White;
-            this.btnPesquisarEntrada.Location = new System.Drawing.Point(57, 63);
+            this.btnPesquisarEntrada.Location = new System.Drawing.Point(76, 78);
+            this.btnPesquisarEntrada.Margin = new System.Windows.Forms.Padding(4);
             this.btnPesquisarEntrada.Name = "btnPesquisarEntrada";
-            this.btnPesquisarEntrada.Size = new System.Drawing.Size(78, 23);
+            this.btnPesquisarEntrada.Size = new System.Drawing.Size(104, 28);
             this.btnPesquisarEntrada.TabIndex = 8;
             this.btnPesquisarEntrada.Text = "Entradas";
             this.btnPesquisarEntrada.UseVisualStyleBackColor = false;
@@ -187,9 +198,11 @@
             this.grpExibir.Controls.Add(this.btnEntrada);
             this.grpExibir.Font = new System.Drawing.Font("Bernard MT Condensed", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpExibir.ForeColor = System.Drawing.Color.Navy;
-            this.grpExibir.Location = new System.Drawing.Point(436, 24);
+            this.grpExibir.Location = new System.Drawing.Point(581, 30);
+            this.grpExibir.Margin = new System.Windows.Forms.Padding(4);
             this.grpExibir.Name = "grpExibir";
-            this.grpExibir.Size = new System.Drawing.Size(312, 102);
+            this.grpExibir.Padding = new System.Windows.Forms.Padding(4);
+            this.grpExibir.Size = new System.Drawing.Size(416, 126);
             this.grpExibir.TabIndex = 5;
             this.grpExibir.TabStop = false;
             this.grpExibir.Text = "Exibir";
@@ -200,9 +213,10 @@
             this.btnExibirDevolucoes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExibirDevolucoes.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExibirDevolucoes.ForeColor = System.Drawing.Color.White;
-            this.btnExibirDevolucoes.Location = new System.Drawing.Point(207, 63);
+            this.btnExibirDevolucoes.Location = new System.Drawing.Point(276, 78);
+            this.btnExibirDevolucoes.Margin = new System.Windows.Forms.Padding(4);
             this.btnExibirDevolucoes.Name = "btnExibirDevolucoes";
-            this.btnExibirDevolucoes.Size = new System.Drawing.Size(89, 23);
+            this.btnExibirDevolucoes.Size = new System.Drawing.Size(119, 28);
             this.btnExibirDevolucoes.TabIndex = 14;
             this.btnExibirDevolucoes.Text = "Devoluções";
             this.btnExibirDevolucoes.UseVisualStyleBackColor = false;
@@ -214,9 +228,10 @@
             this.btnSaida.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSaida.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaida.ForeColor = System.Drawing.Color.White;
-            this.btnSaida.Location = new System.Drawing.Point(115, 63);
+            this.btnSaida.Location = new System.Drawing.Point(153, 78);
+            this.btnSaida.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaida.Name = "btnSaida";
-            this.btnSaida.Size = new System.Drawing.Size(75, 23);
+            this.btnSaida.Size = new System.Drawing.Size(100, 28);
             this.btnSaida.TabIndex = 8;
             this.btnSaida.Text = "Saidas";
             this.btnSaida.UseVisualStyleBackColor = false;
@@ -228,9 +243,10 @@
             this.btnExibir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExibir.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExibir.ForeColor = System.Drawing.Color.White;
-            this.btnExibir.Location = new System.Drawing.Point(19, 27);
+            this.btnExibir.Location = new System.Drawing.Point(25, 33);
+            this.btnExibir.Margin = new System.Windows.Forms.Padding(4);
             this.btnExibir.Name = "btnExibir";
-            this.btnExibir.Size = new System.Drawing.Size(277, 23);
+            this.btnExibir.Size = new System.Drawing.Size(369, 28);
             this.btnExibir.TabIndex = 6;
             this.btnExibir.Text = "Exibir tudo";
             this.btnExibir.UseVisualStyleBackColor = false;
@@ -242,23 +258,24 @@
             this.btnEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEntrada.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrada.ForeColor = System.Drawing.Color.White;
-            this.btnEntrada.Location = new System.Drawing.Point(19, 63);
+            this.btnEntrada.Location = new System.Drawing.Point(25, 78);
+            this.btnEntrada.Margin = new System.Windows.Forms.Padding(4);
             this.btnEntrada.Name = "btnEntrada";
-            this.btnEntrada.Size = new System.Drawing.Size(75, 23);
+            this.btnEntrada.Size = new System.Drawing.Size(100, 28);
             this.btnEntrada.TabIndex = 7;
             this.btnEntrada.Text = "Entradas";
             this.btnEntrada.UseVisualStyleBackColor = false;
             this.btnEntrada.Click += new System.EventHandler(this.btnEntrada_Click_1);
             // 
-            // historicoDB
+            // dbHistorico
             // 
-            this.historicoDB.DataSetName = "HistoricoDB";
-            this.historicoDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dbHistorico.DataSetName = "dbHistorico";
+            this.dbHistorico.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // historicoBindingSource
             // 
             this.historicoBindingSource.DataMember = "historico";
-            this.historicoBindingSource.DataSource = this.historicoDB;
+            this.historicoBindingSource.DataSource = this.dbHistorico;
             // 
             // historicoTableAdapter
             // 
@@ -267,15 +284,21 @@
             // dataModificacaoDataGridViewTextBoxColumn
             // 
             this.dataModificacaoDataGridViewTextBoxColumn.DataPropertyName = "dataModificacao";
+            dataGridViewCellStyle2.Format = "d";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dataModificacaoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataModificacaoDataGridViewTextBoxColumn.HeaderText = "Data";
+            this.dataModificacaoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dataModificacaoDataGridViewTextBoxColumn.Name = "dataModificacaoDataGridViewTextBoxColumn";
             this.dataModificacaoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataModificacaoDataGridViewTextBoxColumn.Width = 125;
             // 
             // itemDataGridViewTextBoxColumn
             // 
             this.itemDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.itemDataGridViewTextBoxColumn.DataPropertyName = "item";
             this.itemDataGridViewTextBoxColumn.HeaderText = "Item";
+            this.itemDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.itemDataGridViewTextBoxColumn.Name = "itemDataGridViewTextBoxColumn";
             this.itemDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -283,39 +306,47 @@
             // 
             this.quantidadeDataGridViewTextBoxColumn.DataPropertyName = "quantidade";
             this.quantidadeDataGridViewTextBoxColumn.HeaderText = "Quantidade";
+            this.quantidadeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.quantidadeDataGridViewTextBoxColumn.Name = "quantidadeDataGridViewTextBoxColumn";
             this.quantidadeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.quantidadeDataGridViewTextBoxColumn.Width = 125;
             // 
             // naturezaDataGridViewTextBoxColumn
             // 
             this.naturezaDataGridViewTextBoxColumn.DataPropertyName = "natureza";
             this.naturezaDataGridViewTextBoxColumn.HeaderText = "Natureza";
+            this.naturezaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.naturezaDataGridViewTextBoxColumn.Name = "naturezaDataGridViewTextBoxColumn";
             this.naturezaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.naturezaDataGridViewTextBoxColumn.Width = 125;
             // 
             // operadorDataGridViewTextBoxColumn
             // 
             this.operadorDataGridViewTextBoxColumn.DataPropertyName = "operador";
             this.operadorDataGridViewTextBoxColumn.HeaderText = "Operador";
+            this.operadorDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.operadorDataGridViewTextBoxColumn.Name = "operadorDataGridViewTextBoxColumn";
             this.operadorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.operadorDataGridViewTextBoxColumn.Width = 125;
             // 
             // requisitanteDataGridViewTextBoxColumn
             // 
             this.requisitanteDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.requisitanteDataGridViewTextBoxColumn.DataPropertyName = "requisitante";
             this.requisitanteDataGridViewTextBoxColumn.HeaderText = "Requisitante";
+            this.requisitanteDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.requisitanteDataGridViewTextBoxColumn.Name = "requisitanteDataGridViewTextBoxColumn";
             this.requisitanteDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // TelaHistorico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 498);
+            this.ClientSize = new System.Drawing.Size(1067, 613);
             this.Controls.Add(this.grpExibir);
             this.Controls.Add(this.grpPesquisar);
             this.Controls.Add(this.grdHistorico);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TelaHistorico";
             this.Text = "Historico";
             this.Load += new System.EventHandler(this.TelaHistorico_Load);
@@ -323,7 +354,7 @@
             this.grpPesquisar.ResumeLayout(false);
             this.grpPesquisar.PerformLayout();
             this.grpExibir.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.historicoDB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbHistorico)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.historicoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -351,9 +382,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private HistoricoDB historicoDB;
+        private dbHistorico dbHistorico;
         private System.Windows.Forms.BindingSource historicoBindingSource;
-        private HistoricoDBTableAdapters.historicoTableAdapter historicoTableAdapter;
+        private dbHistoricoTableAdapters.historicoTableAdapter historicoTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataModificacaoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeDataGridViewTextBoxColumn;

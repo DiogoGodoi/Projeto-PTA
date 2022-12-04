@@ -29,8 +29,9 @@ namespace CadastrarInsumoView
             string nome = txtNome.Text;
             string unidade;
             int quantidade = Convert.ToInt32(txtQuantidade.Text);
+            int quantidadeMin = Convert.ToInt32(txtQtdMin.Text);
 
-                if(radBD.Checked == true)
+                if (radBD.Checked == true)
                 {
                     unidade = "BD";
                     _mdlEstoque.unidade = unidade;
@@ -65,10 +66,16 @@ namespace CadastrarInsumoView
                     unidade = "UN";
                     _mdlEstoque.unidade = unidade;
                 }
+                else if (radMt.Checked == true)
+                {
+                    unidade = "MT";
+                    _mdlEstoque.unidade = unidade;
+                }
 
                 _mdlEstoque.codigo = codigo;
                 _mdlEstoque.nome = nome.ToUpper();
                 _mdlEstoque.quantidade = quantidade;
+                _mdlEstoque.qtdMinima = quantidadeMin;
 
                 var retorno = _ctrlEstoque.CadastrarInsumo(_mdlEstoque);
 

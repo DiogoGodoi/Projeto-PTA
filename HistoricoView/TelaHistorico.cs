@@ -96,11 +96,19 @@ namespace HistoricoView
         }
         private void TelaHistorico_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'historicoDB.historico'. Você pode movê-la ou removê-la conforme necessário.
-            this.historicoTableAdapter.Fill(this.historicoDB.historico);
-            ctrlHistorico _ctrlHistorico = new ctrlHistorico();
-            DataTable tabela = _ctrlHistorico.ExibirHistorico();
-            grdHistorico.DataSource = tabela;
+            try
+            {
+            this.historicoTableAdapter.Fill(this.dbHistorico.historico);
+            }catch(Exception)
+            {
+
+            }
+            finally
+            {
+                ctrlHistorico _ctrlHistorico = new ctrlHistorico();
+                DataTable tabela = _ctrlHistorico.ExibirHistorico();
+                grdHistorico.DataSource = tabela;
+            }
         }
     }
 }

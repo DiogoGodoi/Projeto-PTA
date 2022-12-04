@@ -17,6 +17,7 @@ using System.Threading;
 using ColaboradoresControle;
 using colaboradoreModel;
 using UsuariosModel;
+using EstoqueView;
 
 namespace Almoxarifado
 {
@@ -26,6 +27,8 @@ namespace Almoxarifado
         ctrlHistorico _ctrlHistorico = new ctrlHistorico();
         mdlHistorico _mdlHistorico = new mdlHistorico();
         ctrlColaboradores _ctrlColaboradores = new ctrlColaboradores();
+        Thread _thread;
+        
         public frmEstoque()
         {
             InitializeComponent();
@@ -95,6 +98,7 @@ namespace Almoxarifado
         }
         private void btnSaida_Click(object sender, EventArgs e)
         {
+            /*
             string nome = txtProcurar.Text;
             string nomeRequisitante = txtNomeRequisitante.Text;
             string quantidade = txtQuantidade.Text;
@@ -129,6 +133,10 @@ namespace Almoxarifado
             {
                 MessageBox.Show("Erro na entrada: " + erro, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            */
+            _thread = new Thread(TelaSaida);
+            _thread.SetApartmentState(ApartmentState.STA);
+            _thread.Start();
         }
         private void btnDevolucao_Click(object sender, EventArgs e)
         {
@@ -202,12 +210,21 @@ namespace Almoxarifado
         }
         private void frmEstoque_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'estoqueDB.Estoque'. Você pode movê-la ou removê-la conforme necessário.
-            this.estoqueTableAdapter.Fill(this.estoqueDB.Estoque);
+            try
+            {
+            // TODO: esta linha de código carrega dados na tabela 'dbGaleria.Estoque'. Você pode movê-la ou removê-la conforme necessário.
+            this.estoqueTableAdapter.Fill(this.dbGaleria.Estoque);
+            }catch(Exception)
+            {
+
+            }
+            finally
+            {
             ctrlEstoque _ctrlEstoque = new ctrlEstoque();
             DataTable tabela = _ctrlEstoque.Exibir();
             grdEstoque.DataSource = tabela;
             txtNomeRequisitante.Enabled = false;
+            }
         }
         private void grdEstoque_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -217,6 +234,9 @@ namespace Almoxarifado
         {
             Application.Run(new TelaHistorico());
         }
-
+        public void TelaSaida()
+        {
+            Application.Run(new SaidaView());
+        }
     }
 }

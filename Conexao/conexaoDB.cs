@@ -11,7 +11,7 @@ namespace Conexao
 {
     public class ConexaoDB
     {
-        private static string acessoDB = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=T:\Almoxarifado.mdf; Integrated Security=SSPI; Connect Timeout=30";
+        private static string acessoDB = @"Server=tcp:dgodoi.database.windows.net,1433;Initial Catalog=dbGaleria;Persist Security Info=False;User ID=Dgodoi;Password=Aparecido154*;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         
         public static SqlConnection conectar ()
         {

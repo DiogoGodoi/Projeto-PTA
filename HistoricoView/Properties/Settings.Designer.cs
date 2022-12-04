@@ -33,5 +33,28 @@ namespace HistoricoView.Properties {
                 return ((string)(this["AlmoxarifadoConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLSERVER;AttachDbFilename=\"C:\\Program Files\\Microsoft SQL Server\\M" +
+            "SSQL15.SQLSERVER\\MSSQL\\DATA\\ControleDeEstoque.mdf\";Integrated Security=True;Conn" +
+            "ect Timeout=30")]
+        public string DbControleEstoque {
+            get {
+                return ((string)(this["DbControleEstoque"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=dgodoi.database.windows.net;Initial Catalog=dbGaleria;Persist Securit" +
+            "y Info=True;User ID=Dgodoi")]
+        public string dbGaleriaAzure {
+            get {
+                return ((string)(this["dbGaleriaAzure"]));
+            }
+        }
     }
 }

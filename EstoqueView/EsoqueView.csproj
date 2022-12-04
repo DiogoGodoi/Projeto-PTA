@@ -49,7 +49,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>C1422305FE90780DFADAF4180D7705ABBBC9BCDB</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>FB7A85CD3DE382683536A5AB2CC3F15689A1D731</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>EsoqueView_TemporaryKey.pfx</ManifestKeyFile>
@@ -85,10 +85,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EstoqueDB.Designer.cs">
+    <Compile Include="dbGaleria.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EstoqueDB.xsd</DependentUpon>
+      <DependentUpon>dbGaleria.xsd</DependentUpon>
     </Compile>
     <Compile Include="EstoqueView.cs">
       <SubType>Form</SubType>
@@ -98,6 +98,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaidaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaidaView.Designer.cs">
+      <DependentUpon>SaidaView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="EstoqueView.resx">
       <DependentUpon>EstoqueView.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,17 +117,21 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="EstoqueDB.xsc">
-      <DependentUpon>EstoqueDB.xsd</DependentUpon>
+    <EmbeddedResource Include="SaidaView.resx">
+      <DependentUpon>SaidaView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="dbGaleria.xsc">
+      <DependentUpon>dbGaleria.xsd</DependentUpon>
     </None>
-    <None Include="EstoqueDB.xsd">
+    <None Include="dbGaleria.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>EstoqueDB.Designer.cs</LastGenOutput>
+      <LastGenOutput>dbGaleria.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="EstoqueDB.xss">
-      <DependentUpon>EstoqueDB.xsd</DependentUpon>
+    <None Include="dbGaleria.xss">
+      <DependentUpon>dbGaleria.xsd</DependentUpon>
     </None>
+    <None Include="EsoqueView_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -148,6 +158,10 @@
       <Project>{6cddefb9-f4ff-4169-b4bc-fd958f3178f9}</Project>
       <Name>ConexaoControle</Name>
     </ProjectReference>
+    <ProjectReference Include="..\EstoqueModel\EstoqueModel.csproj">
+      <Project>{fee7bd5d-af88-4170-9a29-7f3d3a9eb8bc}</Project>
+      <Name>EstoqueModel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HistoricoControle\HistoricoControle.csproj">
       <Project>{03ea7777-02a3-4b31-848c-a56215ab68dc}</Project>
       <Name>HistoricoControle</Name>
@@ -159,6 +173,14 @@
     <ProjectReference Include="..\HistoricoView\HistoricoView.csproj">
       <Project>{6bec3381-eaa7-45d8-8c91-49af9b6721b5}</Project>
       <Name>HistoricoView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RelatoriosControle\RelatoriosControle.csproj">
+      <Project>{61411014-d4fa-4e7c-bdc7-2e333943aeb2}</Project>
+      <Name>RelatoriosControle</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SaidaControle\MovimentacaoControle.csproj">
+      <Project>{688704e4-4af0-4c95-9989-5687f3fbb0f6}</Project>
+      <Name>MovimentacaoControle</Name>
     </ProjectReference>
     <ProjectReference Include="..\UsuariosModel\UsuariosModel.csproj">
       <Project>{f3ebe711-1e84-488b-93e9-3b8ccee6cb3e}</Project>

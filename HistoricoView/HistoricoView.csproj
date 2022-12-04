@@ -71,10 +71,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HistoricoDB.Designer.cs">
+    <Compile Include="dbHistorico.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HistoricoDB.xsd</DependentUpon>
+      <DependentUpon>dbHistorico.xsd</DependentUpon>
     </Compile>
     <Compile Include="TelaHistorico.cs">
       <SubType>Form</SubType>
@@ -96,16 +96,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="HistoricoDB.xsc">
-      <DependentUpon>HistoricoDB.xsd</DependentUpon>
+    <None Include="dbHistorico.xsc">
+      <DependentUpon>dbHistorico.xsd</DependentUpon>
     </None>
-    <None Include="HistoricoDB.xsd">
+    <None Include="dbHistorico.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HistoricoDB.Designer.cs</LastGenOutput>
+      <LastGenOutput>dbHistorico.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="HistoricoDB.xss">
-      <DependentUpon>HistoricoDB.xsd</DependentUpon>
+    <None Include="dbHistorico.xss">
+      <DependentUpon>dbHistorico.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -12,6 +12,8 @@ namespace EstoqueControle
 {
     public class ctrlEstoque
     {
+        private int qtd; 
+        private string item { get; set; }
         public bool CadastrarInsumo(mdlEstoque _mdlEstoque)
         {
             Conexao.ConexaoDB.conectar();
@@ -21,7 +23,7 @@ namespace EstoqueControle
             {
                 abrirCONN.Open();
 
-                string query = "INSERT INTO Estoque (codigo, nome, unidade, quantidade) VALUES (@codigo, @nome, @unidade, @quantidade)";
+                string query = "INSERT INTO Estoque (codigo, nome, unidade, quantidade, estoqueMin) VALUES (@codigo, @nome, @unidade, @quantidade, @estoqueMin)";
                 SqlCommand comando = new SqlCommand(query, abrirCONN);
 
                 var pmtCodigo = comando.CreateParameter();
@@ -47,6 +49,12 @@ namespace EstoqueControle
                 pmtQuantidade.DbType = DbType.Int32;
                 pmtQuantidade.Value = _mdlEstoque.quantidade;
                 comando.Parameters.Add(pmtQuantidade);
+
+                var pmtQuantidadeMin = comando.CreateParameter();
+                pmtQuantidadeMin.ParameterName = "@estoqueMin";
+                pmtQuantidadeMin.DbType = DbType.Int32;
+                pmtQuantidadeMin.Value = _mdlEstoque.qtdMinima;
+                comando.Parameters.Add(pmtQuantidadeMin);
 
                 var leitura = comando.ExecuteReader();
 
@@ -81,7 +89,7 @@ namespace EstoqueControle
             try
             {
                 abrirConn.Open();
-                string query = "SELECT codigo, nome, unidade, quantidade FROM Estoque WHERE quantidade=0 ORDER BY nome ASC";
+                string query = "SELECT codigo, nome, unidade, quantidade, estoqueMin FROM Estoque WHERE quantidade=0 ORDER BY nome ASC";
                 SqlCommand comando = new SqlCommand(query, abrirConn);
 
                 comando.CommandType = CommandType.Text;
@@ -112,7 +120,7 @@ namespace EstoqueControle
             try
             {
                 abrirConn.Open();
-                string query = "SELECT nome, unidade, quantidade, codigo FROM Estoque WHERE nome LIKE @nome";
+                string query = "SELECT nome, unidade, quantidade, codigo, estoqueMin FROM Estoque WHERE nome LIKE @nome";
                 SqlCommand comando = new SqlCommand(query, abrirConn);
 
                 comando.Parameters.AddWithValue("@nome", nome + "%");
@@ -126,7 +134,8 @@ namespace EstoqueControle
 
                 if(leitura.Read() == true)
                 {
-                return tabela;
+                    qtd = Convert.ToInt32(leitura["quantidade"]);
+                    return tabela;
                 }else
                 {
                     return null;
@@ -134,6 +143,48 @@ namespace EstoqueControle
                 
                 
               
+            }
+            catch (Exception ex)
+            {
+                abrirConn.Close();
+                return null;
+                throw new Exception("Erro ao acesso a base " + ex.Message);
+            }
+            finally
+            {
+                abrirConn.Close();
+            }
+        }
+        public DataTable PesquisarPorCodigo(int codigo)
+        {
+
+            Conexao.ConexaoDB.conectar();
+            var abrirConn = Conexao.ConexaoDB.conectar();
+            try
+            {
+                abrirConn.Open();
+                string query = "SELECT nome, unidade, quantidade, codigo, estoqueMin FROM Estoque WHERE codigo LIKE @codigo";
+                SqlCommand comando = new SqlCommand(query, abrirConn);
+
+                comando.Parameters.AddWithValue("@codigo", codigo + "%");
+
+                comando.CommandType = CommandType.Text;
+                SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+                DataTable tabela = new DataTable();
+                adaptador.Fill(tabela);
+
+                var leitura = comando.ExecuteReader();
+
+                if (leitura.Read() == true)
+                {
+                    item = leitura["nome"].ToString();
+                    return tabela;
+                }
+                else
+                {
+                    return null;
+                }
+
             }
             catch (Exception ex)
             {
@@ -178,7 +229,7 @@ namespace EstoqueControle
                 abrirConn.Close();
             }
         }
-        public DataTable Saida(string codigo, string quantidade)
+        public DataTable Saida(string nome, string quantidade)
         {
             Conexao.ConexaoDB.conectar();
             var abrirConn = Conexao.ConexaoDB.conectar();
@@ -186,10 +237,10 @@ namespace EstoqueControle
             try
             {
                 abrirConn.Open();
-                string query = "UPDATE estoque SET quantidade = quantidade - @quantidade WHERE nome=@codigo";
+                string query = "UPDATE estoque SET quantidade = quantidade-@quantidade WHERE nome=@nome";
                 SqlCommand comando = new SqlCommand(query, abrirConn);
 
-                comando.Parameters.AddWithValue("@codigo", codigo);
+                comando.Parameters.AddWithValue("@nome", nome);
                 comando.Parameters.AddWithValue("@quantidade", quantidade);
 
                 comando.CommandType = CommandType.Text;
@@ -198,6 +249,7 @@ namespace EstoqueControle
                 adaptador.Fill(tabela);
 
                 return tabela;
+
 
             }
             catch (Exception ex)
@@ -242,6 +294,14 @@ namespace EstoqueControle
                 abrirConn.Close();
             }
 
+        }
+        public string getItem()
+        {
+            return item;
+        }
+        public int getQtd()
+        {
+            return qtd;
         }
     }
 }

@@ -12,6 +12,7 @@ namespace EstoqueModel
         public string nome { get; set; }
         public string unidade { get; set; }
         public int quantidade { get; set; }
+        public int qtdMinima { get; set; }
 
     }
 }

@@ -53,6 +53,15 @@
   <PropertyGroup>
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>69BBD86DFB45BFC578DCDC9E23657527F38C1772</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>MenuView_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -81,12 +90,6 @@
     <Compile Include="selecionarAdministracao.Designer.cs">
       <DependentUpon>selecionarAdministracao.cs</DependentUpon>
     </Compile>
-    <Compile Include="SelecionarHistorico.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SelecionarHistorico.Designer.cs">
-      <DependentUpon>SelecionarHistorico.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="menuView.resx">
       <DependentUpon>menuView.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,9 +106,7 @@
     <EmbeddedResource Include="selecionarAdministracao.resx">
       <DependentUpon>selecionarAdministracao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SelecionarHistorico.resx">
-      <DependentUpon>SelecionarHistorico.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include="MenuView_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

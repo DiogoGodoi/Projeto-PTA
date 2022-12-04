@@ -1,6 +1,4 @@
 ﻿using HistoricoControle;
-using iTextSharp.text.pdf;
-using iTextSharp.text;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -13,6 +11,8 @@ using System.IO;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using HistoricoControle;
+using Org.BouncyCastle.Bcpg.OpenPgp;
+using SaidaControle;
 
 namespace RelatoriosControle
 {
@@ -33,6 +33,10 @@ namespace RelatoriosControle
             document.Open();
 
             DataTable dados = query;
+
+            Image imgPdf = Image.GetInstance(@"C:\logoGaleria\índice.png");
+            imgPdf.Alignment = Element.ALIGN_CENTER;
+            document.Add(imgPdf);
 
             Paragraph header = new Paragraph("Historico de Movimentação", fonte);
             header.Alignment = Element.ALIGN_CENTER;
@@ -145,5 +149,175 @@ namespace RelatoriosControle
 
             return true;
         }
+        public bool relatorioEstoqueMin(string caminho, DataTable query)
+        {
+            Document document = new Document(PageSize.A4);
+            document.SetMargins(3, 2, 3, 2);
+            document.AddCreationDate();
+            PdfWriter.GetInstance(document, new
+            FileStream(caminho, FileMode.Create));
+
+            PdfPTable tabela = new PdfPTable(3);
+            Font fonte = FontFactory.GetFont(BaseFont.HELVETICA_BOLD, 12);
+
+            document.Open();
+
+            DataTable dados = query;
+
+            Image imgPdf = Image.GetInstance(@"C:\logoGaleria\índice.png");
+            imgPdf.Alignment = Element.ALIGN_CENTER;
+            document.Add(imgPdf);
+
+            Paragraph header = new Paragraph("Itens com estoque minimo atingido", fonte);
+            header.Alignment = Element.ALIGN_CENTER;
+            document.Add(header);
+
+            Paragraph section = new Paragraph();
+            section.Add(new Paragraph(" "));
+            document.Add(section);
+
+            Paragraph coluna1 = new Paragraph("Item", fonte);
+            coluna1.Alignment = Element.ALIGN_CENTER;
+            Paragraph coluna2 = new Paragraph("Quantidade Atual", fonte);
+            coluna2.Alignment = Element.ALIGN_CENTER;
+            Paragraph coluna3 = new Paragraph("Quantidade Minima", fonte);
+            coluna3.Alignment = Element.ALIGN_CENTER;
+
+            PdfPCell coll1 = new PdfPCell();
+            PdfPCell coll2 = new PdfPCell();
+            PdfPCell coll3 = new PdfPCell();
+
+            coll1.AddElement(coluna1);
+            coll2.AddElement(coluna2);
+            coll3.AddElement(coluna3);
+
+            tabela.AddCell(coll1);
+            tabela.AddCell(coll2);
+            tabela.AddCell(coll3);
+            
+            for (int i = 0; i < dados.Rows.Count; i++)
+            {
+
+                string item = dados.Rows[i]["nome"].ToString();
+                string quantidade = dados.Rows[i]["quantidade"].ToString();
+                string quantidadeMin = dados.Rows[i]["estoqueMin"].ToString();
+
+                Font font = FontFactory.GetFont(BaseFont.HELVETICA_BOLD, 8);
+
+                Paragraph paragrafo1 = new Paragraph(item, font);
+                Phrase itens = new Phrase(paragrafo1);
+                PdfPCell celula1 = new PdfPCell(itens);
+                celula1.HorizontalAlignment = Element.ALIGN_CENTER;
+                celula1.VerticalAlignment = Element.ALIGN_CENTER;
+                tabela.AddCell(celula1);
+
+                Paragraph paragrafo2 = new Paragraph(quantidade, font);
+                Phrase qtd = new Phrase(paragrafo2);
+                PdfPCell celula2 = new PdfPCell(qtd);
+                celula2.HorizontalAlignment = Element.ALIGN_CENTER;
+                celula2.VerticalAlignment = Element.ALIGN_CENTER;
+                tabela.AddCell(celula2);
+
+                Paragraph paragrafo3 = new Paragraph(quantidadeMin, font);
+                Phrase qtdMin = new Phrase(paragrafo3);
+                PdfPCell celula3 = new PdfPCell(qtdMin);
+                celula3.HorizontalAlignment = Element.ALIGN_CENTER;
+                celula3.VerticalAlignment = Element.ALIGN_CENTER;
+                tabela.AddCell(celula3);
+
+            }
+            document.Add(tabela);
+            document.Close();
+
+            return true;
+        }
+        public bool gerarRelatorioSaida(string caminho, string pSolicitante, List<ctrlMovimentacao> list)
+        {
+
+            Document document = new Document(PageSize.A4);
+            document.SetMargins(3, 2, 3, 2);
+            document.AddCreationDate();
+            PdfWriter.GetInstance(document, new
+            FileStream(caminho, FileMode.Create));
+
+            PdfPTable tabela = new PdfPTable(6);
+            Font fonte = FontFactory.GetFont(BaseFont.HELVETICA_BOLD, 12);
+
+            document.Open();
+
+            Image imgPdf = Image.GetInstance(@"C:\logoGaleria\índice.png");
+            imgPdf.Alignment = Element.ALIGN_CENTER;
+            document.Add(imgPdf);
+
+
+            Paragraph header = new Paragraph("Saída de materiais", fonte);
+            header.Alignment = Element.ALIGN_CENTER;
+            document.Add(header);
+            
+            Paragraph solicitante = new Paragraph("Requisitante: "+pSolicitante, fonte);
+            solicitante.Alignment = Element.ALIGN_CENTER;
+            document.Add(solicitante);
+
+            Paragraph section = new Paragraph();
+            section.Add(new Paragraph(" "));
+            document.Add(section);
+
+            Paragraph coluna1 = new Paragraph("Item", fonte);
+            coluna1.Alignment = Element.ALIGN_CENTER;
+            Paragraph coluna2 = new Paragraph("Quantidade", fonte);
+            coluna2.Alignment = Element.ALIGN_CENTER;
+            Paragraph coluna3 = new Paragraph("Operador", fonte);
+            coluna3.Alignment = Element.ALIGN_CENTER;
+            
+            PdfPCell coll1 = new PdfPCell();
+            PdfPCell coll2 = new PdfPCell();
+            PdfPCell coll3 = new PdfPCell();
+            
+            coll1.AddElement(coluna1);
+            coll2.AddElement(coluna2);
+            coll3.AddElement(coluna3);
+            
+            tabela.AddCell(coll1);
+            tabela.AddCell(coll2);
+            tabela.AddCell(coll3);
+            
+            for (int i = 0; i < list.Count; i++)
+            {
+                string item = "item";
+                string quantidade = "quantidade";
+                string operador = "operador";
+
+                Font font = FontFactory.GetFont(BaseFont.HELVETICA_BOLD, 8);
+                
+                Paragraph paragrafo2 = new Paragraph(item, font);
+                Phrase material = new Phrase(paragrafo2);
+                PdfPCell celula2 = new PdfPCell(material);
+                celula2.HorizontalAlignment = Element.ALIGN_CENTER;
+                celula2.VerticalAlignment = Element.ALIGN_CENTER;
+                tabela.AddCell(celula2);
+
+                Paragraph paragrafo3 = new Paragraph(quantidade, font);
+                paragrafo3.Alignment = Element.ALIGN_CENTER;
+                Phrase quanti = new Phrase(paragrafo3);
+                PdfPCell celula3 = new PdfPCell(quanti);
+                celula3.HorizontalAlignment = Element.ALIGN_CENTER;
+                celula3.VerticalAlignment = Element.ALIGN_CENTER;
+                tabela.AddCell(celula3);
+                
+                Paragraph paragrafo5 = new Paragraph(operador, font);
+                paragrafo5.Alignment = Element.ALIGN_CENTER;
+                Phrase op = new Phrase(paragrafo5);
+                PdfPCell celula5 = new PdfPCell(op);
+                celula5.HorizontalAlignment = Element.ALIGN_CENTER;
+                celula5.VerticalAlignment = Element.ALIGN_CENTER;
+                tabela.AddCell(celula5);
+
+            }
+            document.Add(tabela);
+            document.Close();
+
+            return true;
+        }
+
     }
 }

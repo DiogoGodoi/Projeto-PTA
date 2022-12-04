@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace EstoqueView {
+namespace HistoricoView {
     
     
     /// <summary>
@@ -20,17 +20,17 @@ namespace EstoqueView {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("EstoqueDB")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dbHistorico")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class EstoqueDB : global::System.Data.DataSet {
+    public partial class dbHistorico : global::System.Data.DataSet {
         
-        private EstoqueDataTable tableEstoque;
+        private historicoDataTable tablehistorico;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public EstoqueDB() {
+        public dbHistorico() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace EstoqueView {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected EstoqueDB(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dbHistorico(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace EstoqueView {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Estoque"] != null)) {
-                    base.Tables.Add(new EstoqueDataTable(ds.Tables["Estoque"]));
+                if ((ds.Tables["historico"] != null)) {
+                    base.Tables.Add(new historicoDataTable(ds.Tables["historico"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace EstoqueView {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public EstoqueDataTable Estoque {
+        public historicoDataTable historico {
             get {
-                return this.tableEstoque;
+                return this.tablehistorico;
             }
         }
         
@@ -127,7 +127,7 @@ namespace EstoqueView {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            EstoqueDB cln = ((EstoqueDB)(base.Clone()));
+            dbHistorico cln = ((dbHistorico)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace EstoqueView {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Estoque"] != null)) {
-                    base.Tables.Add(new EstoqueDataTable(ds.Tables["Estoque"]));
+                if ((ds.Tables["historico"] != null)) {
+                    base.Tables.Add(new historicoDataTable(ds.Tables["historico"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace EstoqueView {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableEstoque = ((EstoqueDataTable)(base.Tables["Estoque"]));
+            this.tablehistorico = ((historicoDataTable)(base.Tables["historico"]));
             if ((initTable == true)) {
-                if ((this.tableEstoque != null)) {
-                    this.tableEstoque.InitVars();
+                if ((this.tablehistorico != null)) {
+                    this.tablehistorico.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace EstoqueView {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "EstoqueDB";
+            this.DataSetName = "dbHistorico";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/EstoqueDB.xsd";
+            this.Namespace = "http://tempuri.org/dbHistorico.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableEstoque = new EstoqueDataTable();
-            base.Tables.Add(this.tableEstoque);
+            this.tablehistorico = new historicoDataTable();
+            base.Tables.Add(this.tablehistorico);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeEstoque() {
+        private bool ShouldSerializehistorico() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace EstoqueView {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            EstoqueDB ds = new EstoqueDB();
+            dbHistorico ds = new dbHistorico();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,27 +270,33 @@ namespace EstoqueView {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void EstoqueRowChangeEventHandler(object sender, EstoqueRowChangeEvent e);
+        public delegate void historicoRowChangeEventHandler(object sender, historicoRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class EstoqueDataTable : global::System.Data.TypedTableBase<EstoqueRow> {
+        public partial class historicoDataTable : global::System.Data.TypedTableBase<historicoRow> {
             
-            private global::System.Data.DataColumn columncodigo;
+            private global::System.Data.DataColumn columncodTransacao;
             
-            private global::System.Data.DataColumn columnnome;
-            
-            private global::System.Data.DataColumn columnunidade;
+            private global::System.Data.DataColumn columnitem;
             
             private global::System.Data.DataColumn columnquantidade;
             
+            private global::System.Data.DataColumn columnnatureza;
+            
+            private global::System.Data.DataColumn columnoperador;
+            
+            private global::System.Data.DataColumn columnrequisitante;
+            
+            private global::System.Data.DataColumn columndataModificacao;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public EstoqueDataTable() {
-                this.TableName = "Estoque";
+            public historicoDataTable() {
+                this.TableName = "historico";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -298,7 +304,7 @@ namespace EstoqueView {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal EstoqueDataTable(global::System.Data.DataTable table) {
+            internal historicoDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -315,32 +321,24 @@ namespace EstoqueView {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected EstoqueDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected historicoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn codigoColumn {
+            public global::System.Data.DataColumn codTransacaoColumn {
                 get {
-                    return this.columncodigo;
+                    return this.columncodTransacao;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn nomeColumn {
+            public global::System.Data.DataColumn itemColumn {
                 get {
-                    return this.columnnome;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn unidadeColumn {
-                get {
-                    return this.columnunidade;
+                    return this.columnitem;
                 }
             }
             
@@ -349,6 +347,38 @@ namespace EstoqueView {
             public global::System.Data.DataColumn quantidadeColumn {
                 get {
                     return this.columnquantidade;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn naturezaColumn {
+                get {
+                    return this.columnnatureza;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn operadorColumn {
+                get {
+                    return this.columnoperador;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn requisitanteColumn {
+                get {
+                    return this.columnrequisitante;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn dataModificacaoColumn {
+                get {
+                    return this.columndataModificacao;
                 }
             }
             
@@ -363,55 +393,58 @@ namespace EstoqueView {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public EstoqueRow this[int index] {
+            public historicoRow this[int index] {
                 get {
-                    return ((EstoqueRow)(this.Rows[index]));
+                    return ((historicoRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event EstoqueRowChangeEventHandler EstoqueRowChanging;
+            public event historicoRowChangeEventHandler historicoRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event EstoqueRowChangeEventHandler EstoqueRowChanged;
+            public event historicoRowChangeEventHandler historicoRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event EstoqueRowChangeEventHandler EstoqueRowDeleting;
+            public event historicoRowChangeEventHandler historicoRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event EstoqueRowChangeEventHandler EstoqueRowDeleted;
+            public event historicoRowChangeEventHandler historicoRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddEstoqueRow(EstoqueRow row) {
+            public void AddhistoricoRow(historicoRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public EstoqueRow AddEstoqueRow(int codigo, string nome, string unidade, int quantidade) {
-                EstoqueRow rowEstoqueRow = ((EstoqueRow)(this.NewRow()));
+            public historicoRow AddhistoricoRow(string item, int quantidade, string natureza, string operador, string requisitante, System.DateTime dataModificacao) {
+                historicoRow rowhistoricoRow = ((historicoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        codigo,
-                        nome,
-                        unidade,
-                        quantidade};
-                rowEstoqueRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowEstoqueRow);
-                return rowEstoqueRow;
+                        null,
+                        item,
+                        quantidade,
+                        natureza,
+                        operador,
+                        requisitante,
+                        dataModificacao};
+                rowhistoricoRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowhistoricoRow);
+                return rowhistoricoRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public EstoqueRow FindBycodigo(int codigo) {
-                return ((EstoqueRow)(this.Rows.Find(new object[] {
-                            codigo})));
+            public historicoRow FindBycodTransacao(int codTransacao) {
+                return ((historicoRow)(this.Rows.Find(new object[] {
+                            codTransacao})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                EstoqueDataTable cln = ((EstoqueDataTable)(base.Clone()));
+                historicoDataTable cln = ((historicoDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -419,64 +452,82 @@ namespace EstoqueView {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new EstoqueDataTable();
+                return new historicoDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columncodigo = base.Columns["codigo"];
-                this.columnnome = base.Columns["nome"];
-                this.columnunidade = base.Columns["unidade"];
+                this.columncodTransacao = base.Columns["codTransacao"];
+                this.columnitem = base.Columns["item"];
                 this.columnquantidade = base.Columns["quantidade"];
+                this.columnnatureza = base.Columns["natureza"];
+                this.columnoperador = base.Columns["operador"];
+                this.columnrequisitante = base.Columns["requisitante"];
+                this.columndataModificacao = base.Columns["dataModificacao"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columncodigo = new global::System.Data.DataColumn("codigo", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncodigo);
-                this.columnnome = new global::System.Data.DataColumn("nome", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnome);
-                this.columnunidade = new global::System.Data.DataColumn("unidade", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnunidade);
+                this.columncodTransacao = new global::System.Data.DataColumn("codTransacao", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncodTransacao);
+                this.columnitem = new global::System.Data.DataColumn("item", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnitem);
                 this.columnquantidade = new global::System.Data.DataColumn("quantidade", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnquantidade);
+                this.columnnatureza = new global::System.Data.DataColumn("natureza", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnatureza);
+                this.columnoperador = new global::System.Data.DataColumn("operador", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnoperador);
+                this.columnrequisitante = new global::System.Data.DataColumn("requisitante", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrequisitante);
+                this.columndataModificacao = new global::System.Data.DataColumn("dataModificacao", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndataModificacao);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columncodigo}, true));
-                this.columncodigo.AllowDBNull = false;
-                this.columncodigo.Unique = true;
-                this.columnnome.AllowDBNull = false;
-                this.columnnome.MaxLength = 40;
-                this.columnunidade.AllowDBNull = false;
-                this.columnunidade.MaxLength = 2;
+                                this.columncodTransacao}, true));
+                this.columncodTransacao.AutoIncrement = true;
+                this.columncodTransacao.AutoIncrementSeed = -1;
+                this.columncodTransacao.AutoIncrementStep = -1;
+                this.columncodTransacao.AllowDBNull = false;
+                this.columncodTransacao.ReadOnly = true;
+                this.columncodTransacao.Unique = true;
+                this.columnitem.AllowDBNull = false;
+                this.columnitem.MaxLength = 50;
                 this.columnquantidade.AllowDBNull = false;
+                this.columnnatureza.AllowDBNull = false;
+                this.columnnatureza.MaxLength = 9;
+                this.columnoperador.AllowDBNull = false;
+                this.columnoperador.MaxLength = 15;
+                this.columnrequisitante.AllowDBNull = false;
+                this.columnrequisitante.MaxLength = 50;
+                this.columndataModificacao.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public EstoqueRow NewEstoqueRow() {
-                return ((EstoqueRow)(this.NewRow()));
+            public historicoRow NewhistoricoRow() {
+                return ((historicoRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new EstoqueRow(builder);
+                return new historicoRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(EstoqueRow);
+                return typeof(historicoRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.EstoqueRowChanged != null)) {
-                    this.EstoqueRowChanged(this, new EstoqueRowChangeEvent(((EstoqueRow)(e.Row)), e.Action));
+                if ((this.historicoRowChanged != null)) {
+                    this.historicoRowChanged(this, new historicoRowChangeEvent(((historicoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -484,8 +535,8 @@ namespace EstoqueView {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.EstoqueRowChanging != null)) {
-                    this.EstoqueRowChanging(this, new EstoqueRowChangeEvent(((EstoqueRow)(e.Row)), e.Action));
+                if ((this.historicoRowChanging != null)) {
+                    this.historicoRowChanging(this, new historicoRowChangeEvent(((historicoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -493,8 +544,8 @@ namespace EstoqueView {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.EstoqueRowDeleted != null)) {
-                    this.EstoqueRowDeleted(this, new EstoqueRowChangeEvent(((EstoqueRow)(e.Row)), e.Action));
+                if ((this.historicoRowDeleted != null)) {
+                    this.historicoRowDeleted(this, new historicoRowChangeEvent(((historicoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -502,14 +553,14 @@ namespace EstoqueView {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.EstoqueRowDeleting != null)) {
-                    this.EstoqueRowDeleting(this, new EstoqueRowChangeEvent(((EstoqueRow)(e.Row)), e.Action));
+                if ((this.historicoRowDeleting != null)) {
+                    this.historicoRowDeleting(this, new historicoRowChangeEvent(((historicoRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveEstoqueRow(EstoqueRow row) {
+            public void RemovehistoricoRow(historicoRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -518,7 +569,7 @@ namespace EstoqueView {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                EstoqueDB ds = new EstoqueDB();
+                dbHistorico ds = new dbHistorico();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -536,7 +587,7 @@ namespace EstoqueView {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "EstoqueDataTable";
+                attribute2.FixedValue = "historicoDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -580,47 +631,36 @@ namespace EstoqueView {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class EstoqueRow : global::System.Data.DataRow {
+        public partial class historicoRow : global::System.Data.DataRow {
             
-            private EstoqueDataTable tableEstoque;
+            private historicoDataTable tablehistorico;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal EstoqueRow(global::System.Data.DataRowBuilder rb) : 
+            internal historicoRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableEstoque = ((EstoqueDataTable)(this.Table));
+                this.tablehistorico = ((historicoDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int codigo {
+            public int codTransacao {
                 get {
-                    return ((int)(this[this.tableEstoque.codigoColumn]));
+                    return ((int)(this[this.tablehistorico.codTransacaoColumn]));
                 }
                 set {
-                    this[this.tableEstoque.codigoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string nome {
-                get {
-                    return ((string)(this[this.tableEstoque.nomeColumn]));
-                }
-                set {
-                    this[this.tableEstoque.nomeColumn] = value;
+                    this[this.tablehistorico.codTransacaoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string unidade {
+            public string item {
                 get {
-                    return ((string)(this[this.tableEstoque.unidadeColumn]));
+                    return ((string)(this[this.tablehistorico.itemColumn]));
                 }
                 set {
-                    this[this.tableEstoque.unidadeColumn] = value;
+                    this[this.tablehistorico.itemColumn] = value;
                 }
             }
             
@@ -628,10 +668,54 @@ namespace EstoqueView {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int quantidade {
                 get {
-                    return ((int)(this[this.tableEstoque.quantidadeColumn]));
+                    return ((int)(this[this.tablehistorico.quantidadeColumn]));
                 }
                 set {
-                    this[this.tableEstoque.quantidadeColumn] = value;
+                    this[this.tablehistorico.quantidadeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string natureza {
+                get {
+                    return ((string)(this[this.tablehistorico.naturezaColumn]));
+                }
+                set {
+                    this[this.tablehistorico.naturezaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string operador {
+                get {
+                    return ((string)(this[this.tablehistorico.operadorColumn]));
+                }
+                set {
+                    this[this.tablehistorico.operadorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string requisitante {
+                get {
+                    return ((string)(this[this.tablehistorico.requisitanteColumn]));
+                }
+                set {
+                    this[this.tablehistorico.requisitanteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime dataModificacao {
+                get {
+                    return ((global::System.DateTime)(this[this.tablehistorico.dataModificacaoColumn]));
+                }
+                set {
+                    this[this.tablehistorico.dataModificacaoColumn] = value;
                 }
             }
         }
@@ -640,22 +724,22 @@ namespace EstoqueView {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class EstoqueRowChangeEvent : global::System.EventArgs {
+        public class historicoRowChangeEvent : global::System.EventArgs {
             
-            private EstoqueRow eventRow;
+            private historicoRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public EstoqueRowChangeEvent(EstoqueRow row, global::System.Data.DataRowAction action) {
+            public historicoRowChangeEvent(historicoRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public EstoqueRow Row {
+            public historicoRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -671,7 +755,7 @@ namespace EstoqueView {
         }
     }
 }
-namespace EstoqueView.EstoqueDBTableAdapters {
+namespace HistoricoView.dbHistoricoTableAdapters {
     
     
     /// <summary>
@@ -683,7 +767,7 @@ namespace EstoqueView.EstoqueDBTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class EstoqueTableAdapter : global::System.ComponentModel.Component {
+    public partial class historicoTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -697,7 +781,7 @@ namespace EstoqueView.EstoqueDBTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public EstoqueTableAdapter() {
+        public historicoTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -794,52 +878,63 @@ namespace EstoqueView.EstoqueDBTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Estoque";
-            tableMapping.ColumnMappings.Add("codigo", "codigo");
-            tableMapping.ColumnMappings.Add("nome", "nome");
-            tableMapping.ColumnMappings.Add("unidade", "unidade");
+            tableMapping.DataSetTable = "historico";
+            tableMapping.ColumnMappings.Add("codTransacao", "codTransacao");
+            tableMapping.ColumnMappings.Add("item", "item");
             tableMapping.ColumnMappings.Add("quantidade", "quantidade");
+            tableMapping.ColumnMappings.Add("natureza", "natureza");
+            tableMapping.ColumnMappings.Add("operador", "operador");
+            tableMapping.ColumnMappings.Add("requisitante", "requisitante");
+            tableMapping.ColumnMappings.Add("dataModificacao", "dataModificacao");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Estoque] WHERE (([codigo] = @Original_codigo) AND ([nome] = @O" +
-                "riginal_nome) AND ([unidade] = @Original_unidade) AND ([quantidade] = @Original_" +
-                "quantidade))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[historico] WHERE (([codTransacao] = @Original_codTransacao) AND ([item] = @Original_item) AND ([quantidade] = @Original_quantidade) AND ([natureza] = @Original_natureza) AND ([operador] = @Original_operador) AND ([requisitante] = @Original_requisitante) AND ([dataModificacao] = @Original_dataModificacao))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_codigo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codigo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nome", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nome", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_unidade", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "unidade", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_codTransacao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codTransacao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_item", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "item", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_quantidade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "quantidade", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_natureza", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "natureza", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_operador", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "operador", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_requisitante", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "requisitante", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dataModificacao", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dataModificacao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Estoque] ([codigo], [nome], [unidade], [quantidade]) VALUES (@" +
-                "codigo, @nome, @unidade, @quantidade);\r\nSELECT codigo, nome, unidade, quantidade" +
-                " FROM Estoque WHERE (codigo = @codigo)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[historico] ([item], [quantidade], [natureza], [operador], [requisitante], [dataModificacao]) VALUES (@item, @quantidade, @natureza, @operador, @requisitante, @dataModificacao);
+SELECT codTransacao, item, quantidade, natureza, operador, requisitante, dataModificacao FROM historico WHERE (codTransacao = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@codigo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codigo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nome", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nome", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@unidade", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "unidade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@item", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "item", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@quantidade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "quantidade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@natureza", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "natureza", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@operador", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "operador", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@requisitante", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "requisitante", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dataModificacao", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dataModificacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Estoque] SET [codigo] = @codigo, [nome] = @nome, [unidade] = @unidade, [quantidade] = @quantidade WHERE (([codigo] = @Original_codigo) AND ([nome] = @Original_nome) AND ([unidade] = @Original_unidade) AND ([quantidade] = @Original_quantidade));
-SELECT codigo, nome, unidade, quantidade FROM Estoque WHERE (codigo = @codigo)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[historico] SET [item] = @item, [quantidade] = @quantidade, [natureza] = @natureza, [operador] = @operador, [requisitante] = @requisitante, [dataModificacao] = @dataModificacao WHERE (([codTransacao] = @Original_codTransacao) AND ([item] = @Original_item) AND ([quantidade] = @Original_quantidade) AND ([natureza] = @Original_natureza) AND ([operador] = @Original_operador) AND ([requisitante] = @Original_requisitante) AND ([dataModificacao] = @Original_dataModificacao));
+SELECT codTransacao, item, quantidade, natureza, operador, requisitante, dataModificacao FROM historico WHERE (codTransacao = @codTransacao)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@codigo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codigo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nome", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nome", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@unidade", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "unidade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@item", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "item", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@quantidade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "quantidade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_codigo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codigo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nome", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nome", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_unidade", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "unidade", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@natureza", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "natureza", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@operador", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "operador", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@requisitante", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "requisitante", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dataModificacao", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dataModificacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_codTransacao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codTransacao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_item", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "item", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_quantidade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "quantidade", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_natureza", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "natureza", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_operador", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "operador", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_requisitante", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "requisitante", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dataModificacao", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dataModificacao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@codTransacao", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "codTransacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::EstoqueView.Properties.Settings.Default.AlmoxarifadoConnectionString1;
+            this._connection.ConnectionString = global::HistoricoView.Properties.Settings.Default.dbGaleriaAzure;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -848,7 +943,8 @@ SELECT codigo, nome, unidade, quantidade FROM Estoque WHERE (codigo = @codigo)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT codigo, nome, unidade, quantidade FROM dbo.Estoque";
+            this._commandCollection[0].CommandText = "SELECT codTransacao, item, quantidade, natureza, operador, requisitante, dataModi" +
+                "ficacao FROM dbo.historico";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -856,7 +952,7 @@ SELECT codigo, nome, unidade, quantidade FROM Estoque WHERE (codigo = @codigo)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(EstoqueDB.EstoqueDataTable dataTable) {
+        public virtual int Fill(dbHistorico.historicoDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -869,9 +965,9 @@ SELECT codigo, nome, unidade, quantidade FROM Estoque WHERE (codigo = @codigo)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual EstoqueDB.EstoqueDataTable GetData() {
+        public virtual dbHistorico.historicoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            EstoqueDB.EstoqueDataTable dataTable = new EstoqueDB.EstoqueDataTable();
+            dbHistorico.historicoDataTable dataTable = new dbHistorico.historicoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -879,15 +975,15 @@ SELECT codigo, nome, unidade, quantidade FROM Estoque WHERE (codigo = @codigo)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(EstoqueDB.EstoqueDataTable dataTable) {
+        public virtual int Update(dbHistorico.historicoDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(EstoqueDB dataSet) {
-            return this.Adapter.Update(dataSet, "Estoque");
+        public virtual int Update(dbHistorico dataSet) {
+            return this.Adapter.Update(dataSet, "historico");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -909,21 +1005,34 @@ SELECT codigo, nome, unidade, quantidade FROM Estoque WHERE (codigo = @codigo)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_codigo, string Original_nome, string Original_unidade, int Original_quantidade) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_codigo));
-            if ((Original_nome == null)) {
-                throw new global::System.ArgumentNullException("Original_nome");
+        public virtual int Delete(int Original_codTransacao, string Original_item, int Original_quantidade, string Original_natureza, string Original_operador, string Original_requisitante, System.DateTime Original_dataModificacao) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_codTransacao));
+            if ((Original_item == null)) {
+                throw new global::System.ArgumentNullException("Original_item");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_nome));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_item));
             }
-            if ((Original_unidade == null)) {
-                throw new global::System.ArgumentNullException("Original_unidade");
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_quantidade));
+            if ((Original_natureza == null)) {
+                throw new global::System.ArgumentNullException("Original_natureza");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_unidade));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_natureza));
             }
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_quantidade));
+            if ((Original_operador == null)) {
+                throw new global::System.ArgumentNullException("Original_operador");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_operador));
+            }
+            if ((Original_requisitante == null)) {
+                throw new global::System.ArgumentNullException("Original_requisitante");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_requisitante));
+            }
+            this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_dataModificacao));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -944,21 +1053,33 @@ SELECT codigo, nome, unidade, quantidade FROM Estoque WHERE (codigo = @codigo)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int codigo, string nome, string unidade, int quantidade) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(codigo));
-            if ((nome == null)) {
-                throw new global::System.ArgumentNullException("nome");
+        public virtual int Insert(string item, int quantidade, string natureza, string operador, string requisitante, System.DateTime dataModificacao) {
+            if ((item == null)) {
+                throw new global::System.ArgumentNullException("item");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(nome));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(item));
             }
-            if ((unidade == null)) {
-                throw new global::System.ArgumentNullException("unidade");
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(quantidade));
+            if ((natureza == null)) {
+                throw new global::System.ArgumentNullException("natureza");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(unidade));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(natureza));
             }
-            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(quantidade));
+            if ((operador == null)) {
+                throw new global::System.ArgumentNullException("operador");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(operador));
+            }
+            if ((requisitante == null)) {
+                throw new global::System.ArgumentNullException("requisitante");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(requisitante));
+            }
+            this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(dataModificacao));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -979,35 +1100,61 @@ SELECT codigo, nome, unidade, quantidade FROM Estoque WHERE (codigo = @codigo)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int codigo, string nome, string unidade, int quantidade, int Original_codigo, string Original_nome, string Original_unidade, int Original_quantidade) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(codigo));
-            if ((nome == null)) {
-                throw new global::System.ArgumentNullException("nome");
+        public virtual int Update(string item, int quantidade, string natureza, string operador, string requisitante, System.DateTime dataModificacao, int Original_codTransacao, string Original_item, int Original_quantidade, string Original_natureza, string Original_operador, string Original_requisitante, System.DateTime Original_dataModificacao, int codTransacao) {
+            if ((item == null)) {
+                throw new global::System.ArgumentNullException("item");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(nome));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(item));
             }
-            if ((unidade == null)) {
-                throw new global::System.ArgumentNullException("unidade");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(unidade));
-            }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(quantidade));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_codigo));
-            if ((Original_nome == null)) {
-                throw new global::System.ArgumentNullException("Original_nome");
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(quantidade));
+            if ((natureza == null)) {
+                throw new global::System.ArgumentNullException("natureza");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_nome));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(natureza));
             }
-            if ((Original_unidade == null)) {
-                throw new global::System.ArgumentNullException("Original_unidade");
+            if ((operador == null)) {
+                throw new global::System.ArgumentNullException("operador");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_unidade));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(operador));
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_quantidade));
+            if ((requisitante == null)) {
+                throw new global::System.ArgumentNullException("requisitante");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(requisitante));
+            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(dataModificacao));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_codTransacao));
+            if ((Original_item == null)) {
+                throw new global::System.ArgumentNullException("Original_item");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_item));
+            }
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_quantidade));
+            if ((Original_natureza == null)) {
+                throw new global::System.ArgumentNullException("Original_natureza");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_natureza));
+            }
+            if ((Original_operador == null)) {
+                throw new global::System.ArgumentNullException("Original_operador");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_operador));
+            }
+            if ((Original_requisitante == null)) {
+                throw new global::System.ArgumentNullException("Original_requisitante");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_requisitante));
+            }
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Original_dataModificacao));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(codTransacao));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1028,8 +1175,8 @@ SELECT codigo, nome, unidade, quantidade FROM Estoque WHERE (codigo = @codigo)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string nome, string unidade, int quantidade, int Original_codigo, string Original_nome, string Original_unidade, int Original_quantidade) {
-            return this.Update(Original_codigo, nome, unidade, quantidade, Original_codigo, Original_nome, Original_unidade, Original_quantidade);
+        public virtual int Update(string item, int quantidade, string natureza, string operador, string requisitante, System.DateTime dataModificacao, int Original_codTransacao, string Original_item, int Original_quantidade, string Original_natureza, string Original_operador, string Original_requisitante, System.DateTime Original_dataModificacao) {
+            return this.Update(item, quantidade, natureza, operador, requisitante, dataModificacao, Original_codTransacao, Original_item, Original_quantidade, Original_natureza, Original_operador, Original_requisitante, Original_dataModificacao, Original_codTransacao);
         }
     }
     
@@ -1045,7 +1192,7 @@ SELECT codigo, nome, unidade, quantidade FROM Estoque WHERE (codigo = @codigo)";
         
         private UpdateOrderOption _updateOrder;
         
-        private EstoqueTableAdapter _estoqueTableAdapter;
+        private historicoTableAdapter _historicoTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1067,12 +1214,12 @@ SELECT codigo, nome, unidade, quantidade FROM Estoque WHERE (codigo = @codigo)";
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public EstoqueTableAdapter EstoqueTableAdapter {
+        public historicoTableAdapter historicoTableAdapter {
             get {
-                return this._estoqueTableAdapter;
+                return this._historicoTableAdapter;
             }
             set {
-                this._estoqueTableAdapter = value;
+                this._historicoTableAdapter = value;
             }
         }
         
@@ -1095,9 +1242,9 @@ SELECT codigo, nome, unidade, quantidade FROM Estoque WHERE (codigo = @codigo)";
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._estoqueTableAdapter != null) 
-                            && (this._estoqueTableAdapter.Connection != null))) {
-                    return this._estoqueTableAdapter.Connection;
+                if (((this._historicoTableAdapter != null) 
+                            && (this._historicoTableAdapter.Connection != null))) {
+                    return this._historicoTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1112,7 +1259,7 @@ SELECT codigo, nome, unidade, quantidade FROM Estoque WHERE (codigo = @codigo)";
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._estoqueTableAdapter != null)) {
+                if ((this._historicoTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1124,14 +1271,14 @@ SELECT codigo, nome, unidade, quantidade FROM Estoque WHERE (codigo = @codigo)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(EstoqueDB dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(dbHistorico dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._estoqueTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Estoque.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._historicoTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.historico.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._estoqueTableAdapter.Update(updatedRows));
+                    result = (result + this._historicoTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1143,13 +1290,13 @@ SELECT codigo, nome, unidade, quantidade FROM Estoque WHERE (codigo = @codigo)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(EstoqueDB dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(dbHistorico dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._estoqueTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Estoque.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._historicoTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.historico.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._estoqueTableAdapter.Update(addedRows));
+                    result = (result + this._historicoTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1161,13 +1308,13 @@ SELECT codigo, nome, unidade, quantidade FROM Estoque WHERE (codigo = @codigo)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(EstoqueDB dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(dbHistorico dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._estoqueTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Estoque.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._historicoTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.historico.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._estoqueTableAdapter.Update(deletedRows));
+                    result = (result + this._historicoTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1203,15 +1350,15 @@ SELECT codigo, nome, unidade, quantidade FROM Estoque WHERE (codigo = @codigo)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(EstoqueDB dataSet) {
+        public virtual int UpdateAll(dbHistorico dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._estoqueTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._estoqueTableAdapter.Connection) == false))) {
+            if (((this._historicoTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._historicoTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Todos os TableAdapters gerenciados por um TableAdapterManager devem usar a mesma " +
                         "cadeia de conexão.");
             }
@@ -1247,13 +1394,13 @@ SELECT codigo, nome, unidade, quantidade FROM Estoque WHERE (codigo = @codigo)";
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._estoqueTableAdapter != null)) {
-                    revertConnections.Add(this._estoqueTableAdapter, this._estoqueTableAdapter.Connection);
-                    this._estoqueTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._estoqueTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._estoqueTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._estoqueTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._estoqueTableAdapter.Adapter);
+                if ((this._historicoTableAdapter != null)) {
+                    revertConnections.Add(this._historicoTableAdapter, this._historicoTableAdapter.Connection);
+                    this._historicoTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._historicoTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._historicoTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._historicoTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._historicoTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1314,9 +1461,9 @@ SELECT codigo, nome, unidade, quantidade FROM Estoque WHERE (codigo = @codigo)";
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._estoqueTableAdapter != null)) {
-                    this._estoqueTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._estoqueTableAdapter]));
-                    this._estoqueTableAdapter.Transaction = null;
+                if ((this._historicoTableAdapter != null)) {
+                    this._historicoTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._historicoTableAdapter]));
+                    this._historicoTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

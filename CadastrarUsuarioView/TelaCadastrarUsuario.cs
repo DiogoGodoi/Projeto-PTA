@@ -41,12 +41,7 @@ namespace CadastrarUsuarioView
                         nivel = "2";
                         mdlUsuarios.setNivel(nivel);
                     }
-                    else if (radEpi.Checked == true)
-                    {
-                        nivel = "3";
-                        mdlUsuarios.setNivel(nivel);
-                    }
-
+                    
                     mdlUsuarios.setNome(nome.ToUpper());
                     mdlUsuarios.setSenha(senha.ToUpper());
 

@@ -274,7 +274,7 @@ namespace RelatoriosControle
 
             return true;
         }
-        public bool gerarRelatorioSaida(string caminho, string requisitante, string pSetor, List<ctrlMovimentacao> list)
+        public bool gerarRelatorioSaida(string titulo, string caminho, string requisitante, string pSetor, List<ctrlMovimentacao> list)
         {
 
             Document document = new Document(PageSize.A4);
@@ -302,7 +302,7 @@ namespace RelatoriosControle
             nav1.Add(new Paragraph(" "));
             document.Add(nav1);
 
-            Paragraph header = new Paragraph("Saída de materiais", fonte);
+            Paragraph header = new Paragraph(titulo+" de materiais", fonte);
             header.Alignment = Element.ALIGN_CENTER;
             document.Add(header);
 

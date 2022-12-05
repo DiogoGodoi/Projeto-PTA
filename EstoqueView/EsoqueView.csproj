@@ -90,6 +90,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbGaleria.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DevolucaoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevolucaoView.Designer.cs">
+      <DependentUpon>DevolucaoView.cs</DependentUpon>
+    </Compile>
     <Compile Include="EstoqueView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     <Compile Include="SaidaView.Designer.cs">
       <DependentUpon>SaidaView.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DevolucaoView.resx">
+      <DependentUpon>DevolucaoView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EstoqueView.resx">
       <DependentUpon>EstoqueView.cs</DependentUpon>
     </EmbeddedResource>

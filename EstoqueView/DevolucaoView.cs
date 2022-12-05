@@ -1,4 +1,10 @@
-﻿using System;
+﻿using ColaboradoresControle;
+using EstoqueControle;
+using HistoricoControle;
+using HistoricoModel;
+using RelatoriosControle;
+using SaidaControle;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,18 +13,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ColaboradoresControle;
-using EstoqueControle;
-using HistoricoControle;
-using HistoricoModel;
-using SaidaControle;
 using UsuariosModel;
-using RelatoriosControle;
 
 namespace EstoqueView
 {
-    public partial class SaidaView : Form
+    public partial class DevolucaoView : Form
     {
+
         ctrlEstoque _ctrlEstoque = new ctrlEstoque();
         mdlHistorico _mdlHistorico = new mdlHistorico();
         ctrlHistorico _ctrlHistorico = new ctrlHistorico();
@@ -27,16 +28,19 @@ namespace EstoqueView
         List<ctrlMovimentacao> list = new List<ctrlMovimentacao>();
         ListViewItem items;
         int contador;
-        public SaidaView()
+
+        public DevolucaoView()
         {
             InitializeComponent();
         }
+
         private void btnBuscarItem_Click(object sender, EventArgs e)
-        {   
+        {
+
             int codigo = Convert.ToInt32(txtCodigo.Text);
             _ctrlEstoque.PesquisarPorCodigo(codigo);
 
-            if(_ctrlEstoque.PesquisarPorCodigo(codigo) == null)
+            if (_ctrlEstoque.PesquisarPorCodigo(codigo) == null)
             {
                 MessageBox.Show("Item não localizado", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtItem.Text = _ctrlEstoque.getItem();
@@ -47,7 +51,6 @@ namespace EstoqueView
                 txtItem.Text = _ctrlEstoque.getItem();
                 txtItem.Enabled = false;
             }
-
         }
         private void btnBuscarRequisitante_Click(object sender, EventArgs e)
         {
@@ -85,7 +88,7 @@ namespace EstoqueView
             }
             else
             {
-            txtQuantidade.Text = contador.ToString();
+                txtQuantidade.Text = contador.ToString();
             }
         }
         private void btnAdcionar_Click(object sender, EventArgs e)
@@ -93,14 +96,14 @@ namespace EstoqueView
             try
             {
 
-            ctrlMovimentacao _ctrlMovimentacao = new ctrlMovimentacao();
+                ctrlMovimentacao _ctrlMovimentacao = new ctrlMovimentacao();
 
-            int codigo = Convert.ToInt32(txtCodigo.Text);
-            string item = txtItem.Text;
-            string quantidade = txtQuantidade.Text;
-            string operador = mdlUsuarios.getNome();
+                int codigo = Convert.ToInt32(txtCodigo.Text);
+                string item = txtItem.Text;
+                string quantidade = txtQuantidade.Text;
+                string operador = mdlUsuarios.getNome();
 
-                if (txtCodigo.Text == String.Empty || txtItem.Text == String.Empty || txtQuantidade.Text == String.Empty || txtCracha.Text == String.Empty )
+                if (txtCodigo.Text == String.Empty || txtItem.Text == String.Empty || txtQuantidade.Text == String.Empty || txtCracha.Text == String.Empty)
                 {
                     MessageBox.Show("Dados incompletos");
                 }
@@ -131,7 +134,7 @@ namespace EstoqueView
         {
                 var indice = listSaida.SelectedItems[0].Index;
                 list.RemoveAt(indice);
-                listSaida.SelectedItems[0].Remove();   
+                listSaida.SelectedItems[0].Remove();  
         }
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
@@ -141,67 +144,54 @@ namespace EstoqueView
 
             foreach (var item in list)
             {
-                    _ctrlEstoque.Pesquisar(item.nome);
-                    if (Convert.ToInt32(item.quantidade) > _ctrlEstoque.getQtd())
-                    {
-                        MessageBox.Show("O item: " + item.nome + " não pode ser baixado, quantidade insufuciente no estoque");
-                    }
-                    else
-                    {
-                        _ctrlEstoque.Saida(item.nome, item.quantidade);
-
-                        _mdlHistorico.natureza = "SAÍDA";
-                        _mdlHistorico.operador = mdlUsuarios.getNome();
-                        _mdlHistorico.quantidade = Convert.ToInt32(item.quantidade);
-                        _mdlHistorico.item = item.nome;
-                        _mdlHistorico.requisitante = nomeRequisitante.ToUpper();
-
-                        _ctrlHistorico.CadastrarHistorico(_mdlHistorico);
-
-                        txtCodigo.Text = String.Empty;
-                        txtCracha.Text = String.Empty;
-                        txtItem.Text = String.Empty;
-                        txtNomeRequisitante.Text = String.Empty;
-                        txtQuantidade.Text = String.Empty;
-
-                    }        
-            }
-                        
-                        var resposta = MessageBox.Show("Deseja imprimir comprovante ", "Comprovante", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        
-                        if(resposta == DialogResult.Yes)
-            {
-                        SaveFileDialog arquivo = new SaveFileDialog();
-                        arquivo.FileName = "Arquivo";
-                        arquivo.Filter = "PDF (.pdf) | *.pdf";
-
-                        if(arquivo.ShowDialog() == DialogResult.OK)
+                _ctrlEstoque.Pesquisar(item.nome);
+                if (Convert.ToInt32(item.quantidade) > _ctrlEstoque.getQtd())
                 {
-                        _ctrlRelatorios.gerarRelatorioSaida("Saída", arquivo.FileName, requisitante, nomeSetor, list);
-                        MessageBox.Show("Arquivo salvo");
-                }else
-                {
-                        MessageBox.Show("Sem dados");
+                    MessageBox.Show("O item: " + item.nome + " não pode ser baixado, quantidade insufuciente no estoque");
                 }
-                        
+                else
+                {
+                    _ctrlEstoque.Entrada(item.nome, item.quantidade);
+                    _mdlHistorico.natureza = "DEVOLUÇÃO";
+                    _mdlHistorico.operador = mdlUsuarios.getNome();
+                    _mdlHistorico.quantidade = Convert.ToInt32(item.quantidade);
+                    _mdlHistorico.item = item.nome;
+                    _mdlHistorico.requisitante = nomeRequisitante.ToUpper();
+
+                    _ctrlHistorico.CadastrarHistorico(_mdlHistorico);
+
+                    txtCodigo.Text = String.Empty;
+                    txtCracha.Text = String.Empty;
+                    txtItem.Text = String.Empty;
+                    txtNomeRequisitante.Text = String.Empty;
+                    txtQuantidade.Text = String.Empty;
+
+                }
             }
-                        
+
+            var resposta = MessageBox.Show("Deseja imprimir comprovante ", "Comprovante", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (resposta == DialogResult.Yes)
+            {
+                SaveFileDialog arquivo = new SaveFileDialog();
+                arquivo.FileName = "Arquivo";
+                arquivo.Filter = "PDF (.pdf) | *.pdf";
+
+                if (arquivo.ShowDialog() == DialogResult.OK)
+                {
+                    _ctrlRelatorios.gerarRelatorioSaida("Devolução", arquivo.FileName, requisitante, nomeSetor, list);
+                    MessageBox.Show("Arquivo salvo");
+                }
+                else
+                {
+                    MessageBox.Show("Sem dados");
+                }
+
+            }
         }
-        private void SaidaView_Load(object sender, EventArgs e)
+        private void DevolucaoView_Load(object sender, EventArgs e)
         {
             txtQuantidade.Text = "";
         }
-        private void grdTitulo_Enter(object sender, EventArgs e)
-        {
-
-        }
-        private void listSaida_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
     }
-}
+ }

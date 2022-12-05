@@ -1,6 +1,6 @@
 ﻿namespace EstoqueView
 {
-    partial class SaidaView
+    partial class DevolucaoView
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.grdTitulo = new System.Windows.Forms.GroupBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnConfirmar = new System.Windows.Forms.Button();
+            this.btnRemover = new System.Windows.Forms.Button();
+            this.listSaida = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.codFuncionario = new System.Windows.Forms.Label();
             this.btnBuscarRequisitante = new System.Windows.Forms.Button();
@@ -44,17 +52,96 @@
             this.txtQuantidade = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnSubtrair = new System.Windows.Forms.Button();
-            this.btnRemover = new System.Windows.Forms.Button();
-            this.btnConfirmar = new System.Windows.Forms.Button();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listSaida = new System.Windows.Forms.ListView();
-            this.grdTitulo = new System.Windows.Forms.GroupBox();
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.groupBox2.SuspendLayout();
             this.grdTitulo.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // grdTitulo
+            // 
+            this.grdTitulo.Controls.Add(this.lblTitulo);
+            this.grdTitulo.Location = new System.Drawing.Point(11, 11);
+            this.grdTitulo.Margin = new System.Windows.Forms.Padding(2);
+            this.grdTitulo.Name = "grdTitulo";
+            this.grdTitulo.Padding = new System.Windows.Forms.Padding(2);
+            this.grdTitulo.Size = new System.Drawing.Size(560, 81);
+            this.grdTitulo.TabIndex = 32;
+            this.grdTitulo.TabStop = false;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Bernard MT Condensed", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.lblTitulo.Location = new System.Drawing.Point(242, 25);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(133, 36);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "Devolução";
+            // 
+            // btnConfirmar
+            // 
+            this.btnConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnConfirmar.Font = new System.Drawing.Font("Bernard MT Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmar.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmar.Location = new System.Drawing.Point(155, 489);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(121, 23);
+            this.btnConfirmar.TabIndex = 31;
+            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
+            // 
+            // btnRemover
+            // 
+            this.btnRemover.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnRemover.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRemover.Font = new System.Drawing.Font("Bernard MT Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemover.ForeColor = System.Drawing.Color.White;
+            this.btnRemover.Location = new System.Drawing.Point(332, 489);
+            this.btnRemover.Name = "btnRemover";
+            this.btnRemover.Size = new System.Drawing.Size(121, 23);
+            this.btnRemover.TabIndex = 30;
+            this.btnRemover.Text = "Remover";
+            this.btnRemover.UseVisualStyleBackColor = false;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
+            // 
+            // listSaida
+            // 
+            this.listSaida.Alignment = System.Windows.Forms.ListViewAlignment.Default;
+            this.listSaida.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.listSaida.FullRowSelect = true;
+            this.listSaida.GridLines = true;
+            this.listSaida.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listSaida.HideSelection = false;
+            this.listSaida.Location = new System.Drawing.Point(11, 305);
+            this.listSaida.Margin = new System.Windows.Forms.Padding(2);
+            this.listSaida.MultiSelect = false;
+            this.listSaida.Name = "listSaida";
+            this.listSaida.Size = new System.Drawing.Size(560, 171);
+            this.listSaida.TabIndex = 29;
+            this.listSaida.UseCompatibleStateImageBehavior = false;
+            this.listSaida.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Codigo";
+            this.columnHeader1.Width = 100;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Item";
+            this.columnHeader2.Width = 300;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Quantidade";
+            this.columnHeader3.Width = 100;
             // 
             // groupBox2
             // 
@@ -76,13 +163,12 @@
             this.groupBox2.Controls.Add(this.btnSubtrair);
             this.groupBox2.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Navy;
-            this.groupBox2.Location = new System.Drawing.Point(20, 108);
+            this.groupBox2.Location = new System.Drawing.Point(11, 119);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(560, 155);
-            this.groupBox2.TabIndex = 14;
+            this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Movimentar Estoque";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // codFuncionario
             // 
@@ -241,121 +327,45 @@
             this.btnSubtrair.UseVisualStyleBackColor = false;
             this.btnSubtrair.Click += new System.EventHandler(this.btnSubtrair_Click);
             // 
-            // btnRemover
-            // 
-            this.btnRemover.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnRemover.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRemover.Font = new System.Drawing.Font("Bernard MT Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemover.ForeColor = System.Drawing.Color.White;
-            this.btnRemover.Location = new System.Drawing.Point(341, 488);
-            this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(121, 23);
-            this.btnRemover.TabIndex = 25;
-            this.btnRemover.Text = "Remover";
-            this.btnRemover.UseVisualStyleBackColor = false;
-            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
-            // 
-            // btnConfirmar
-            // 
-            this.btnConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnConfirmar.Font = new System.Drawing.Font("Bernard MT Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirmar.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmar.Location = new System.Drawing.Point(164, 488);
-            this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(121, 23);
-            this.btnConfirmar.TabIndex = 26;
-            this.btnConfirmar.Text = "Confirmar";
-            this.btnConfirmar.UseVisualStyleBackColor = false;
-            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Codigo";
-            this.columnHeader1.Width = 100;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Item";
-            this.columnHeader2.Width = 300;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Quantidade";
-            this.columnHeader3.Width = 100;
-            // 
-            // listSaida
-            // 
-            this.listSaida.Alignment = System.Windows.Forms.ListViewAlignment.Default;
-            this.listSaida.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
-            this.listSaida.FullRowSelect = true;
-            this.listSaida.GridLines = true;
-            this.listSaida.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listSaida.HideSelection = false;
-            this.listSaida.Location = new System.Drawing.Point(20, 290);
-            this.listSaida.Margin = new System.Windows.Forms.Padding(2);
-            this.listSaida.MultiSelect = false;
-            this.listSaida.Name = "listSaida";
-            this.listSaida.Size = new System.Drawing.Size(560, 171);
-            this.listSaida.TabIndex = 15;
-            this.listSaida.UseCompatibleStateImageBehavior = false;
-            this.listSaida.View = System.Windows.Forms.View.Details;
-            this.listSaida.SelectedIndexChanged += new System.EventHandler(this.listSaida_SelectedIndexChanged);
-            // 
-            // grdTitulo
-            // 
-            this.grdTitulo.Controls.Add(this.lblTitulo);
-            this.grdTitulo.Location = new System.Drawing.Point(20, 10);
-            this.grdTitulo.Margin = new System.Windows.Forms.Padding(2);
-            this.grdTitulo.Name = "grdTitulo";
-            this.grdTitulo.Padding = new System.Windows.Forms.Padding(2);
-            this.grdTitulo.Size = new System.Drawing.Size(560, 81);
-            this.grdTitulo.TabIndex = 27;
-            this.grdTitulo.TabStop = false;
-            this.grdTitulo.Enter += new System.EventHandler(this.grdTitulo_Enter);
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Bernard MT Condensed", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lblTitulo.Location = new System.Drawing.Point(242, 25);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(79, 36);
-            this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "SAÍDA";
-            // 
-            // SaidaView
+            // DevolucaoView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 536);
+            this.ClientSize = new System.Drawing.Size(587, 523);
             this.Controls.Add(this.grdTitulo);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.btnRemover);
             this.Controls.Add(this.listSaida);
             this.Controls.Add(this.groupBox2);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "SaidaView";
-            this.Text = "Saida";
-            this.Load += new System.EventHandler(this.SaidaView_Load);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.Name = "DevolucaoView";
+            this.Text = "DevolucaoView";
+            this.Load += new System.EventHandler(this.DevolucaoView_Load);
             this.grdTitulo.ResumeLayout(false);
             this.grdTitulo.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.GroupBox grdTitulo;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Button btnConfirmar;
+        private System.Windows.Forms.Button btnRemover;
+        private System.Windows.Forms.ListView listSaida;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label codFuncionario;
+        private System.Windows.Forms.Button btnBuscarRequisitante;
+        private System.Windows.Forms.TextBox txtNomeRequisitante;
+        private System.Windows.Forms.TextBox txtCracha;
+        private System.Windows.Forms.Label lblNomeRequisitante;
         private System.Windows.Forms.Label lblCracha;
+        private System.Windows.Forms.Button btnAcrescentar;
         private System.Windows.Forms.Button btnBuscarItem;
         private System.Windows.Forms.TextBox txtItem;
         private System.Windows.Forms.TextBox txtCodigo;
@@ -364,19 +374,5 @@
         private System.Windows.Forms.TextBox txtQuantidade;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSubtrair;
-        private System.Windows.Forms.Button btnAcrescentar;
-        private System.Windows.Forms.Button btnRemover;
-        private System.Windows.Forms.Button btnConfirmar;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ListView listSaida;
-        private System.Windows.Forms.Label codFuncionario;
-        private System.Windows.Forms.Button btnBuscarRequisitante;
-        private System.Windows.Forms.TextBox txtNomeRequisitante;
-        private System.Windows.Forms.TextBox txtCracha;
-        private System.Windows.Forms.Label lblNomeRequisitante;
-        private System.Windows.Forms.GroupBox grdTitulo;
-        private System.Windows.Forms.Label lblTitulo;
     }
 }

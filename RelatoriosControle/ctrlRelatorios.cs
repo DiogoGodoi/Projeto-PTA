@@ -75,17 +75,17 @@ namespace RelatoriosControle
             hColl.Colspan = 6;
             hColl.BackgroundColor = BaseColor.BLUE;
             PdfPCell coll1 = new PdfPCell();
-            coll1.BackgroundColor = BaseColor.GREEN;
+            coll1.BackgroundColor = BaseColor.GRAY;
             PdfPCell coll2 = new PdfPCell();
-            coll2.BackgroundColor = BaseColor.GREEN;
+            coll2.BackgroundColor = BaseColor.GRAY;
             PdfPCell coll3 = new PdfPCell();
-            coll3.BackgroundColor = BaseColor.GREEN;
+            coll3.BackgroundColor = BaseColor.GRAY;
             PdfPCell coll4 = new PdfPCell();
-            coll4.BackgroundColor = BaseColor.GREEN;
+            coll4.BackgroundColor = BaseColor.GRAY;
             PdfPCell coll5 = new PdfPCell();
-            coll5.BackgroundColor = BaseColor.GREEN;
+            coll5.BackgroundColor = BaseColor.GRAY;
             PdfPCell coll6 = new PdfPCell();
-            coll6.BackgroundColor = BaseColor.GREEN;
+            coll6.BackgroundColor = BaseColor.GRAY;
 
             hColl.AddElement(hCell);
             coll1.AddElement(coluna1);

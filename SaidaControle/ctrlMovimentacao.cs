@@ -11,17 +11,18 @@ namespace SaidaControle
         public string nome;
         public string quantidade;
         public string codigo;
-        public static List<ctrlMovimentacao> listaAdcionada = new List<ctrlMovimentacao>();
+        public string operador;
 
         public ctrlMovimentacao()
         {
 
         }
-        public ctrlMovimentacao(string pNome, string pQuantidade, string pCodigo)
+        public ctrlMovimentacao(string pNome, string pQuantidade, string pCodigo, string pOperador)
         {
             nome = pNome;
             quantidade = pQuantidade;
             codigo = pCodigo;
+            operador = pOperador;
         }
     }
 }

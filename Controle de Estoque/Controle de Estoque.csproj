@@ -53,10 +53,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>CFEA02687C37EBFE7481AE18D4229BC34B210375</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>1C72CD48FEBD04292C28387819191D79F6C53FAA</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>Controle de Estoque_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>Controle de Estoque_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -113,6 +113,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Controle de Estoque_1_TemporaryKey.pfx" />
     <None Include="Controle de Estoque_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">

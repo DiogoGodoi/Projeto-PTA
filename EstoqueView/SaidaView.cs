@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ColaboradoresControle;
 using EstoqueControle;
-using EstoqueModel;
 using HistoricoControle;
 using HistoricoModel;
 using SaidaControle;
@@ -32,12 +31,23 @@ namespace EstoqueView
         {
             InitializeComponent();
         }
-        private void btnBuscarColaborador_Click(object sender, EventArgs e)
+        private void btnBuscarItem_Click(object sender, EventArgs e)
         {   
             int codigo = Convert.ToInt32(txtCodigo.Text);
             _ctrlEstoque.PesquisarPorCodigo(codigo);
-            txtItem.Text = _ctrlEstoque.getItem();
-            txtItem.Enabled = false;
+
+            if(_ctrlEstoque.PesquisarPorCodigo(codigo) == null)
+            {
+                MessageBox.Show("Item não localizado", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtItem.Text = _ctrlEstoque.getItem();
+                txtItem.Enabled = false;
+            }
+            else
+            {
+                txtItem.Text = _ctrlEstoque.getItem();
+                txtItem.Enabled = false;
+            }
+
         }
         private void btnBuscarRequisitante_Click(object sender, EventArgs e)
         {
@@ -88,6 +98,7 @@ namespace EstoqueView
             int codigo = Convert.ToInt32(txtCodigo.Text);
             string item = txtItem.Text;
             string quantidade = txtQuantidade.Text;
+            string operador = mdlUsuarios.getNome();
 
                 if (txtCodigo.Text == String.Empty || txtItem.Text == String.Empty || txtQuantidade.Text == String.Empty || txtCracha.Text == String.Empty )
                 {
@@ -95,7 +106,7 @@ namespace EstoqueView
                 }
                 else
                 {
-                    list.Add(new ctrlMovimentacao(item, quantidade, codigo.ToString()));
+                    list.Add(new ctrlMovimentacao(item, quantidade, codigo.ToString(), operador));
 
                     foreach (var i in list)
                     {
@@ -109,12 +120,11 @@ namespace EstoqueView
                     txtCodigo.Text = String.Empty;
                     txtItem.Text = String.Empty;
                     contador = 0;
-                    ctrlMovimentacao.listaAdcionada = list;
                 }
             }
             catch (Exception)
             {
-                MessageBox.Show("Erro");
+                MessageBox.Show("Dados incompletos");
             }
         }
         private void btnRemover_Click(object sender, EventArgs e)
@@ -126,6 +136,8 @@ namespace EstoqueView
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             string nomeRequisitante = txtNomeRequisitante.Text;
+            string requisitante = _ctrlColaboradores.getNome();
+            string nomeSetor = _ctrlColaboradores.getSetor();
 
             foreach (var item in list)
             {
@@ -162,14 +174,22 @@ namespace EstoqueView
                         SaveFileDialog arquivo = new SaveFileDialog();
                         arquivo.FileName = "Arquivo";
                         arquivo.Filter = "PDF (.pdf) | *.pdf";
-                        _ctrlRelatorios.gerarRelatorioSaida(arquivo.FileName, txtNomeRequisitante.Text, list);
+
+                        if(arquivo.ShowDialog() == DialogResult.OK)
+                {
+                        _ctrlRelatorios.gerarRelatorioSaida(arquivo.FileName, requisitante, nomeSetor, list);
+                        MessageBox.Show("Arquivo salvo");
+                }else
+                {
+                        MessageBox.Show("Sem dados");
+                }
                         
             }
                         
         }
         private void SaidaView_Load(object sender, EventArgs e)
         {
-            txtQuantidade.Text = contador.ToString();
+            txtQuantidade.Text = "";
         }
     }
 }

@@ -13,10 +13,15 @@ namespace ColaboradoresControle
     public class ctrlColaboradores
     {
         private string nome;
-
+        private string setor;
         public string getNome()
         {
             return nome;
+        }
+
+        public string getSetor()
+        {
+            return setor;
         }
 
         public bool CadastrarColaborador(mdlColaboradores _mdlColaboradores)
@@ -91,6 +96,7 @@ namespace ColaboradoresControle
                 if(leitura.Read())
                 {
                     nome = leitura["nome"].ToString();
+                    setor = leitura["setor"].ToString();
                     return true;
                 }
                 else

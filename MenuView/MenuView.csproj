@@ -57,10 +57,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>69BBD86DFB45BFC578DCDC9E23657527F38C1772</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>7BD4C4EDAB24A9ADB6FE9410F564F75C9A0699C3</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>MenuView_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>MenuView_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -106,6 +106,7 @@
     <EmbeddedResource Include="selecionarAdministracao.resx">
       <DependentUpon>selecionarAdministracao.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="MenuView_1_TemporaryKey.pfx" />
     <None Include="MenuView_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -36,9 +36,17 @@ namespace RelatoriosControle
 
             DataTable dados = query;
 
+            Paragraph nav = new Paragraph();
+            nav.Add(new Paragraph(" "));
+            document.Add(nav);
+
             Image imgPdf = Image.GetInstance(@"C:\logoGaleria\índice.png");
             imgPdf.Alignment = Element.ALIGN_CENTER;
             document.Add(imgPdf);
+
+            Paragraph nav1 = new Paragraph();
+            nav1.Add(new Paragraph(" "));
+            document.Add(nav1);
 
             Paragraph header = new Paragraph("Historico de Movimentação", fonte);
             header.Alignment = Element.ALIGN_CENTER;
@@ -181,9 +189,17 @@ namespace RelatoriosControle
 
             DataTable dados = query;
 
+            Paragraph nav = new Paragraph();
+            nav.Add(new Paragraph(" "));
+            document.Add(nav);
+
             Image imgPdf = Image.GetInstance(@"C:\logoGaleria\índice.png");
             imgPdf.Alignment = Element.ALIGN_CENTER;
             document.Add(imgPdf);
+
+            Paragraph nav1 = new Paragraph();
+            nav1.Add(new Paragraph(" "));
+            document.Add(nav1);
 
             Paragraph header = new Paragraph("Itens com estoque minimo atingido", fonte);
             header.Alignment = Element.ALIGN_CENTER;
@@ -273,11 +289,19 @@ namespace RelatoriosControle
             fonteBranca.Color = BaseColor.WHITE;
 
             document.Open();
-            
+
+            Paragraph nav = new Paragraph();
+            nav.Add(new Paragraph(" "));
+            document.Add(nav);
+
             Image imgPdf = Image.GetInstance(@"C:\logoGaleria\índice.png");
             imgPdf.Alignment = Element.ALIGN_CENTER;
             document.Add(imgPdf);
-            
+
+            Paragraph nav1 = new Paragraph();
+            nav1.Add(new Paragraph(" "));
+            document.Add(nav1);
+
             Paragraph header = new Paragraph("Saída de materiais", fonte);
             header.Alignment = Element.ALIGN_CENTER;
             document.Add(header);
@@ -358,6 +382,10 @@ namespace RelatoriosControle
                 tabela.AddCell(celula3);
 
             }
+
+            Paragraph section3 = new Paragraph();
+            section3.Add(new Paragraph(" "));
+            document.Add(section3);
 
             document.Add(tabela);
             Paragraph assinarutaData = new Paragraph("Assinatura: ________________________________________________________________ Data __/__/____");

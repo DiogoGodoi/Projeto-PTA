@@ -140,7 +140,7 @@ namespace Almoxarifado
             this.grdEstoque.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
             this.grdEstoque.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.grdEstoque.RowTemplate.Height = 15;
-            this.grdEstoque.Size = new System.Drawing.Size(592, 333);
+            this.grdEstoque.Size = new System.Drawing.Size(592, 347);
             this.grdEstoque.TabIndex = 0;
             this.grdEstoque.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdEstoque_CellContentClick);
             // 
@@ -441,9 +441,9 @@ namespace Almoxarifado
             this.grpPaginação.Controls.Add(this.tableLayoutPanel1);
             this.grpPaginação.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpPaginação.ForeColor = System.Drawing.Color.Navy;
-            this.grpPaginação.Location = new System.Drawing.Point(27, 381);
+            this.grpPaginação.Location = new System.Drawing.Point(27, 384);
             this.grpPaginação.Name = "grpPaginação";
-            this.grpPaginação.Size = new System.Drawing.Size(382, 60);
+            this.grpPaginação.Size = new System.Drawing.Size(382, 71);
             this.grpPaginação.TabIndex = 18;
             this.grpPaginação.TabStop = false;
             this.grpPaginação.Text = "Paginação";
@@ -460,7 +460,7 @@ namespace Almoxarifado
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(353, 27);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(353, 35);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // btnAnterior
@@ -470,7 +470,7 @@ namespace Almoxarifado
             this.btnAnterior.ForeColor = System.Drawing.Color.White;
             this.btnAnterior.Location = new System.Drawing.Point(179, 3);
             this.btnAnterior.Name = "btnAnterior";
-            this.btnAnterior.Size = new System.Drawing.Size(171, 20);
+            this.btnAnterior.Size = new System.Drawing.Size(171, 29);
             this.btnAnterior.TabIndex = 1;
             this.btnAnterior.Text = "Anterior";
             this.btnAnterior.UseVisualStyleBackColor = false;
@@ -482,7 +482,7 @@ namespace Almoxarifado
             this.btnProximo.ForeColor = System.Drawing.Color.White;
             this.btnProximo.Location = new System.Drawing.Point(3, 3);
             this.btnProximo.Name = "btnProximo";
-            this.btnProximo.Size = new System.Drawing.Size(170, 20);
+            this.btnProximo.Size = new System.Drawing.Size(170, 29);
             this.btnProximo.TabIndex = 0;
             this.btnProximo.Text = "Proximo";
             this.btnProximo.UseVisualStyleBackColor = false;

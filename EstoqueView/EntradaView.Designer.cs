@@ -37,12 +37,12 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNF = new System.Windows.Forms.TextBox();
             this.lblNf = new System.Windows.Forms.Label();
             this.lblCnpj = new System.Windows.Forms.Label();
-            this.btnBuscarRequisitante = new System.Windows.Forms.Button();
-            this.txtNomeRequisitante = new System.Windows.Forms.TextBox();
-            this.txtCracha = new System.Windows.Forms.TextBox();
+            this.btnBuscaEmpresa = new System.Windows.Forms.Button();
+            this.txtNomeEmpresa = new System.Windows.Forms.TextBox();
+            this.txtCnpj = new System.Windows.Forms.TextBox();
             this.lblNomeEmpresa = new System.Windows.Forms.Label();
             this.lblCracha = new System.Windows.Forms.Label();
             this.btnAcrescentar = new System.Windows.Forms.Button();
@@ -94,6 +94,7 @@
             this.btnConfirmar.TabIndex = 31;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // btnRemover
             // 
@@ -107,6 +108,7 @@
             this.btnRemover.TabIndex = 30;
             this.btnRemover.Text = "Remover";
             this.btnRemover.UseVisualStyleBackColor = false;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
             // listSaida
             // 
@@ -136,7 +138,7 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Item";
-            this.columnHeader2.Width = 300;
+            this.columnHeader2.Width = 500;
             // 
             // columnHeader3
             // 
@@ -146,12 +148,12 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txtNF);
             this.groupBox2.Controls.Add(this.lblNf);
             this.groupBox2.Controls.Add(this.lblCnpj);
-            this.groupBox2.Controls.Add(this.btnBuscarRequisitante);
-            this.groupBox2.Controls.Add(this.txtNomeRequisitante);
-            this.groupBox2.Controls.Add(this.txtCracha);
+            this.groupBox2.Controls.Add(this.btnBuscaEmpresa);
+            this.groupBox2.Controls.Add(this.txtNomeEmpresa);
+            this.groupBox2.Controls.Add(this.txtCnpj);
             this.groupBox2.Controls.Add(this.lblNomeEmpresa);
             this.groupBox2.Controls.Add(this.lblCracha);
             this.groupBox2.Controls.Add(this.btnAcrescentar);
@@ -172,13 +174,13 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Movimentar Estoque";
             // 
-            // textBox1
+            // txtNF
             // 
-            this.textBox1.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(636, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(40, 21);
-            this.textBox1.TabIndex = 31;
+            this.txtNF.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNF.Location = new System.Drawing.Point(636, 33);
+            this.txtNF.Name = "txtNF";
+            this.txtNF.Size = new System.Drawing.Size(40, 21);
+            this.txtNF.TabIndex = 31;
             // 
             // lblNf
             // 
@@ -200,34 +202,35 @@
             this.lblCnpj.TabIndex = 29;
             this.lblCnpj.Text = "Cnpj";
             // 
-            // btnBuscarRequisitante
+            // btnBuscaEmpresa
             // 
-            this.btnBuscarRequisitante.BackColor = System.Drawing.Color.DarkGreen;
-            this.btnBuscarRequisitante.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnBuscarRequisitante.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBuscarRequisitante.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarRequisitante.Location = new System.Drawing.Point(206, 31);
-            this.btnBuscarRequisitante.Name = "btnBuscarRequisitante";
-            this.btnBuscarRequisitante.Size = new System.Drawing.Size(47, 23);
-            this.btnBuscarRequisitante.TabIndex = 28;
-            this.btnBuscarRequisitante.Text = "Buscar";
-            this.btnBuscarRequisitante.UseVisualStyleBackColor = false;
+            this.btnBuscaEmpresa.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnBuscaEmpresa.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnBuscaEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBuscaEmpresa.ForeColor = System.Drawing.Color.White;
+            this.btnBuscaEmpresa.Location = new System.Drawing.Point(206, 31);
+            this.btnBuscaEmpresa.Name = "btnBuscaEmpresa";
+            this.btnBuscaEmpresa.Size = new System.Drawing.Size(47, 23);
+            this.btnBuscaEmpresa.TabIndex = 28;
+            this.btnBuscaEmpresa.Text = "Buscar";
+            this.btnBuscaEmpresa.UseVisualStyleBackColor = false;
+            this.btnBuscaEmpresa.Click += new System.EventHandler(this.btnBuscaEmpresa_Click);
             // 
-            // txtNomeRequisitante
+            // txtNomeEmpresa
             // 
-            this.txtNomeRequisitante.Enabled = false;
-            this.txtNomeRequisitante.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeRequisitante.Location = new System.Drawing.Point(320, 34);
-            this.txtNomeRequisitante.Name = "txtNomeRequisitante";
-            this.txtNomeRequisitante.Size = new System.Drawing.Size(286, 21);
-            this.txtNomeRequisitante.TabIndex = 27;
+            this.txtNomeEmpresa.Enabled = false;
+            this.txtNomeEmpresa.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeEmpresa.Location = new System.Drawing.Point(320, 34);
+            this.txtNomeEmpresa.Name = "txtNomeEmpresa";
+            this.txtNomeEmpresa.Size = new System.Drawing.Size(286, 21);
+            this.txtNomeEmpresa.TabIndex = 27;
             // 
-            // txtCracha
+            // txtCnpj
             // 
-            this.txtCracha.Location = new System.Drawing.Point(60, 32);
-            this.txtCracha.Name = "txtCracha";
-            this.txtCracha.Size = new System.Drawing.Size(140, 23);
-            this.txtCracha.TabIndex = 26;
+            this.txtCnpj.Location = new System.Drawing.Point(60, 32);
+            this.txtCnpj.Name = "txtCnpj";
+            this.txtCnpj.Size = new System.Drawing.Size(140, 23);
+            this.txtCnpj.TabIndex = 26;
             // 
             // lblNomeEmpresa
             // 
@@ -261,6 +264,7 @@
             this.btnAcrescentar.TabIndex = 16;
             this.btnAcrescentar.Text = "+";
             this.btnAcrescentar.UseVisualStyleBackColor = false;
+            this.btnAcrescentar.Click += new System.EventHandler(this.btnAcrescentar_Click);
             // 
             // btnBuscarItem
             // 
@@ -274,6 +278,7 @@
             this.btnBuscarItem.TabIndex = 23;
             this.btnBuscarItem.Text = "Buscar";
             this.btnBuscarItem.UseVisualStyleBackColor = false;
+            this.btnBuscarItem.Click += new System.EventHandler(this.btnBuscarItem_Click);
             // 
             // txtItem
             // 
@@ -312,6 +317,7 @@
             this.btnAdcionar.TabIndex = 19;
             this.btnAdcionar.Text = "Adcionar";
             this.btnAdcionar.UseVisualStyleBackColor = false;
+            this.btnAdcionar.Click += new System.EventHandler(this.btnAdcionar_Click);
             // 
             // txtQuantidade
             // 
@@ -341,6 +347,7 @@
             this.btnSubtrair.TabIndex = 17;
             this.btnSubtrair.Text = "-";
             this.btnSubtrair.UseVisualStyleBackColor = false;
+            this.btnSubtrair.Click += new System.EventHandler(this.btnSubtrair_Click);
             // 
             // EntradaView
             // 
@@ -374,9 +381,9 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblCnpj;
-        private System.Windows.Forms.Button btnBuscarRequisitante;
-        private System.Windows.Forms.TextBox txtNomeRequisitante;
-        private System.Windows.Forms.TextBox txtCracha;
+        private System.Windows.Forms.Button btnBuscaEmpresa;
+        private System.Windows.Forms.TextBox txtNomeEmpresa;
+        private System.Windows.Forms.TextBox txtCnpj;
         private System.Windows.Forms.Label lblNomeEmpresa;
         private System.Windows.Forms.Label lblCracha;
         private System.Windows.Forms.Button btnAcrescentar;
@@ -388,7 +395,7 @@
         private System.Windows.Forms.TextBox txtQuantidade;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSubtrair;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNF;
         private System.Windows.Forms.Label lblNf;
     }
 }

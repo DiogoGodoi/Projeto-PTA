@@ -177,6 +177,18 @@
       <Project>{6cddefb9-f4ff-4169-b4bc-fd958f3178f9}</Project>
       <Name>ConexaoControle</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ctrlFornecedor\FornecedorControle.csproj">
+      <Project>{52cb3059-3a2c-4090-8b4f-e9cd6850489b}</Project>
+      <Name>FornecedorControle</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntradaControle\EntradaControle.csproj">
+      <Project>{a29b81b9-5e13-4896-b4b2-c15a7c6999ee}</Project>
+      <Name>EntradaControle</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntradaModel\EntradaModel.csproj">
+      <Project>{0ee03f19-f068-4ae8-939a-b209dc0ece76}</Project>
+      <Name>EntradaModel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EstoqueModel\EstoqueModel.csproj">
       <Project>{fee7bd5d-af88-4170-9a29-7f3d3a9eb8bc}</Project>
       <Name>EstoqueModel</Name>
@@ -192,6 +204,10 @@
     <ProjectReference Include="..\HistoricoView\HistoricoView.csproj">
       <Project>{6bec3381-eaa7-45d8-8c91-49af9b6721b5}</Project>
       <Name>HistoricoView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mdlFornecedor\FornecedorModel.csproj">
+      <Project>{19091172-2eae-45d3-9729-4118a4a9486d}</Project>
+      <Name>FornecedorModel</Name>
     </ProjectReference>
     <ProjectReference Include="..\RelatoriosControle\RelatoriosControle.csproj">
       <Project>{61411014-d4fa-4e7c-bdc7-2e333943aeb2}</Project>

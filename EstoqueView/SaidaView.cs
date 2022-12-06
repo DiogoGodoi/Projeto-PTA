@@ -32,7 +32,9 @@ namespace EstoqueView
             InitializeComponent();
         }
         private void btnBuscarItem_Click(object sender, EventArgs e)
-        {   
+        {
+            try
+            {
             int codigo = Convert.ToInt32(txtCodigo.Text);
             _ctrlEstoque.PesquisarPorCodigo(codigo);
 
@@ -47,7 +49,11 @@ namespace EstoqueView
                 txtItem.Text = _ctrlEstoque.getItem();
                 txtItem.Enabled = false;
             }
-
+            }
+            catch
+            {
+                MessageBox.Show("Erro", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void btnBuscarRequisitante_Click(object sender, EventArgs e)
         {

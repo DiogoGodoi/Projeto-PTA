@@ -106,7 +106,7 @@ namespace FornecedorControle
 
                 var leitura = comando.ExecuteReader();
 
-                if (leitura.Read() == false)
+                if (leitura.Read())
                 {
                     nomeEmpresa = leitura["nomeEmpresa"].ToString();
                     abrirCONN.Close();

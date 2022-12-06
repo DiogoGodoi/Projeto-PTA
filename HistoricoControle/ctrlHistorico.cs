@@ -13,12 +13,10 @@ namespace HistoricoControle
     public class ctrlHistorico
     {
         private string item;
-
         public string getItem()
         {
             return item;
         }
-
         public bool CadastrarHistorico(mdlHistorico _mdlHistorico)
         {
             Conexao.ConexaoDB.conectar();
@@ -605,7 +603,6 @@ namespace HistoricoControle
             }
 
         }
-
 
     }
 }

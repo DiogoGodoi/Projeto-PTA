@@ -96,6 +96,12 @@
     <Compile Include="DevolucaoView.Designer.cs">
       <DependentUpon>DevolucaoView.cs</DependentUpon>
     </Compile>
+    <Compile Include="EntradaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntradaView.Designer.cs">
+      <DependentUpon>EntradaView.cs</DependentUpon>
+    </Compile>
     <Compile Include="EstoqueView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     </Compile>
     <EmbeddedResource Include="DevolucaoView.resx">
       <DependentUpon>DevolucaoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntradaView.resx">
+      <DependentUpon>EntradaView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EstoqueView.resx">
       <DependentUpon>EstoqueView.cs</DependentUpon>

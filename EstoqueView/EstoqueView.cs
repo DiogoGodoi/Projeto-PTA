@@ -63,6 +63,7 @@ namespace Almoxarifado
         private void btnEntrada_Click(object sender, EventArgs e)
         {
 
+            /*
             string nome = txtProcurar.Text;
             string nomeRequisitante = txtNomeRequisitante.Text;
             string quantidade = txtQuantidade.Text;
@@ -95,6 +96,10 @@ namespace Almoxarifado
             {
                 MessageBox.Show("Erro na entrada: "+ erro, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            */
+            _thread = new Thread(TelaEntrada);
+            _thread.SetApartmentState(ApartmentState.STA);
+            _thread.Start();
         }
         private void btnSaida_Click(object sender, EventArgs e)
         {
@@ -247,6 +252,11 @@ namespace Almoxarifado
         public void TelaDevolucao()
         {
             Application.Run(new DevolucaoView());
+        }
+
+        public void TelaEntrada()
+        {
+            Application.Run(new EntradaView());
         }
     }
 }

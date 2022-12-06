@@ -126,6 +126,10 @@
       <Project>{1fa5ddb7-e2d7-40d7-aae0-e162de13cb87}</Project>
       <Name>CadastrarColaboradorView</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CadastrarFornecedorView\CadastrarFornecedorView.csproj">
+      <Project>{8e775ff6-7144-4051-a944-3f1cc0fe562f}</Project>
+      <Name>CadastrarFornecedorView</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CadastrarInsumoView\CadastrarInsumoView.csproj">
       <Project>{19dfd216-1b50-49da-ac42-a95f9463c1e3}</Project>
       <Name>CadastrarInsumoView</Name>

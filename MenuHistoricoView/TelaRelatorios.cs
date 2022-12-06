@@ -150,7 +150,6 @@ namespace MenuHistoricoView
                 MessageBox.Show("Erro interno");
             }
         }
-
         private void btnGerarTudoData_Click(object sender, EventArgs e)
         {
             try
@@ -235,7 +234,6 @@ namespace MenuHistoricoView
         }
         private void btnGerarDevolucaoData_Click(object sender, EventArgs e)
         {
-
             try
             {
 
@@ -259,7 +257,6 @@ namespace MenuHistoricoView
                 MessageBox.Show("Por favor insira uma data");
             }
         }
-
         private void btnGerarTudoCraha_Click(object sender, EventArgs e)
         {
             try
@@ -379,7 +376,65 @@ namespace MenuHistoricoView
         {
             txtNomeRequisitante.Enabled = false;
         }
+        private void btnBuscarPorItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int codigo = Convert.ToInt32(txtCodigo.Text);
+                bool retorno = _ctrlHistorico.PesquisarPorCodigo(codigo);
 
+                if (retorno == false)
+                {
+                    MessageBox.Show("Item não localizado", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    txtItem.Text = _ctrlHistorico.getItem();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Por favor digite o código do item", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void btnGerarSaidaPorItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtItem.Text == String.Empty)
+                {
+                    MessageBox.Show("Por favor digite o codigo do item");
+                }
+                else
+                {
+                    SaveFileDialog arquivo = new SaveFileDialog();
+                    arquivo.FileName = "Arquivo";
+                    arquivo.Filter = "PDF (.pdf) | *.pdf";
+
+                    if (arquivo.ShowDialog() == DialogResult.OK)
+                    {
+                        _ctrlRelatorios.gerarRelatorioMovimentacao(arquivo.FileName, _ctrlHistorico.PesquisarPorItem(txtItem.Text));
+                        MessageBox.Show("Arquivo salvo");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Operação cancelada");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro interno"+ ex);
+            }
+        }
+        private void btnGerarDevolucaoPorItem_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void btnGerarTudoPorItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

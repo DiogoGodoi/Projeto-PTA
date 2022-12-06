@@ -12,6 +12,13 @@ namespace HistoricoControle
 {
     public class ctrlHistorico
     {
+        private string item;
+
+        public string getItem()
+        {
+            return item;
+        }
+
         public bool CadastrarHistorico(mdlHistorico _mdlHistorico)
         {
             Conexao.ConexaoDB.conectar();
@@ -198,8 +205,6 @@ namespace HistoricoControle
             }
 
         }
-
-
         public DataTable ExibirMinimo()
         {
 
@@ -488,5 +493,83 @@ namespace HistoricoControle
             }
 
         }
+        public bool PesquisarPorCodigo(int codigo)
+        {
+            Conexao.ConexaoDB.conectar();
+            var abrirConn = Conexao.ConexaoDB.conectar();
+            try
+            {
+                abrirConn.Open();
+                string query = "SELECT nome, unidade, quantidade, codigo, estoqueMin FROM Estoque WHERE codigo LIKE @codigo";
+                SqlCommand comando = new SqlCommand(query, abrirConn);
+
+                comando.Parameters.AddWithValue("@codigo", codigo + "%");
+
+                comando.CommandType = CommandType.Text;
+                SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+                DataTable tabela = new DataTable();
+                adaptador.Fill(tabela);
+
+                var leitura = comando.ExecuteReader();
+
+                if (leitura.Read() == true)
+                {
+                    item = leitura["nome"].ToString();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                abrirConn.Close();
+                return false;
+                throw new Exception("Erro ao acesso a base " + ex.Message);
+            }
+            finally
+            {
+                abrirConn.Close();
+            }
+        }
+        public DataTable PesquisarPorItem(string item)
+        {
+            Conexao.ConexaoDB.conectar();
+            var abrirConn = Conexao.ConexaoDB.conectar();
+
+            try
+            {
+                abrirConn.Open();
+                string query = "SELECT * FROM historico WHERE item=@item ORDER BY dataModificacao ASC";
+                SqlCommand comando = new SqlCommand(query, abrirConn);
+
+                comando.Parameters.AddWithValue("@item", item);
+
+                comando.CommandType = CommandType.Text;
+                SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+                DataTable tabela = new DataTable();
+                adaptador.Fill(tabela);
+
+                comando.ExecuteReader();
+
+                return tabela;
+
+            }
+            catch (Exception ex)
+            {
+                abrirConn.Close();
+                return null;
+                throw new Exception("Erro ao exibir " + ex.Message);
+            }
+            finally
+            {
+                abrirConn.Close();
+            }
+
+        }
+
+
     }
 }

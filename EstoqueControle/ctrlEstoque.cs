@@ -157,7 +157,6 @@ namespace EstoqueControle
         }
         public DataTable PesquisarPorCodigo(int codigo)
         {
-
             Conexao.ConexaoDB.conectar();
             var abrirConn = Conexao.ConexaoDB.conectar();
             try

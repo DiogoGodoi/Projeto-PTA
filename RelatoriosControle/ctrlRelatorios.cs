@@ -10,13 +10,10 @@ using iTextSharp;
 using System.IO;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
-using HistoricoControle;
-using Org.BouncyCastle.Bcpg.OpenPgp;
 using SaidaControle;
 
 namespace RelatoriosControle
 {
-    
     public class ctrlRelatorios
     {
         public bool gerarRelatorioMovimentacao(string caminho, DataTable query)

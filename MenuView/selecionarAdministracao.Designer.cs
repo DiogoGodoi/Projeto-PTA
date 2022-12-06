@@ -34,6 +34,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.grpTitulo = new System.Windows.Forms.GroupBox();
             this.lblOpcoes = new System.Windows.Forms.Label();
+            this.btnCadastrarFornecedor = new System.Windows.Forms.Button();
             this.grpTitulo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,7 +72,7 @@
             this.btnCadastrarInsumo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrarInsumo.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarInsumo.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrarInsumo.Location = new System.Drawing.Point(61, 238);
+            this.btnCadastrarInsumo.Location = new System.Drawing.Point(61, 303);
             this.btnCadastrarInsumo.Name = "btnCadastrarInsumo";
             this.btnCadastrarInsumo.Size = new System.Drawing.Size(198, 31);
             this.btnCadastrarInsumo.TabIndex = 2;
@@ -85,7 +86,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(61, 295);
+            this.button4.Location = new System.Drawing.Point(61, 360);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(198, 31);
             this.button4.TabIndex = 3;
@@ -112,11 +113,26 @@
             this.lblOpcoes.TabIndex = 0;
             this.lblOpcoes.Text = "Opções";
             // 
+            // btnCadastrarFornecedor
+            // 
+            this.btnCadastrarFornecedor.BackColor = System.Drawing.Color.Navy;
+            this.btnCadastrarFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarFornecedor.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarFornecedor.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrarFornecedor.Location = new System.Drawing.Point(61, 240);
+            this.btnCadastrarFornecedor.Name = "btnCadastrarFornecedor";
+            this.btnCadastrarFornecedor.Size = new System.Drawing.Size(198, 31);
+            this.btnCadastrarFornecedor.TabIndex = 5;
+            this.btnCadastrarFornecedor.Text = "Cadastrar Fornecedor";
+            this.btnCadastrarFornecedor.UseVisualStyleBackColor = false;
+            this.btnCadastrarFornecedor.Click += new System.EventHandler(this.btnCadastrarFornecedor_Click);
+            // 
             // TelaSelecaoAdministracao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(319, 343);
+            this.ClientSize = new System.Drawing.Size(319, 448);
+            this.Controls.Add(this.btnCadastrarFornecedor);
             this.Controls.Add(this.grpTitulo);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btnCadastrarInsumo);
@@ -138,5 +154,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.GroupBox grpTitulo;
         private System.Windows.Forms.Label lblOpcoes;
+        private System.Windows.Forms.Button btnCadastrarFornecedor;
     }
 }

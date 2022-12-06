@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using CadastrarInsumoView;
 using CadastrarUsuarioView;
 using CadastrarColaboradorView;
+using CadastrarFornecedorView;
 
 namespace MenuView
 {
@@ -43,6 +44,15 @@ namespace MenuView
             _thread.SetApartmentState(ApartmentState.STA);
             _thread.Start();
         }
+
+        private void btnCadastrarFornecedor_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            _thread = new Thread(abrirJanelaCadastrarFornecedor);
+            _thread.SetApartmentState(ApartmentState.STA);
+            _thread.Start();
+        }
+
         private void abrirJanelaCadastrarInsumo()
         {
             Application.Run(new TelaCadastroInsumo());
@@ -58,5 +68,9 @@ namespace MenuView
             Application.Run(new frmCadastrarColaborador());
         }
 
+        private void abrirJanelaCadastrarFornecedor()
+        {
+            Application.Run(new cadastrarFornecedorView());
+        }
     }
 }

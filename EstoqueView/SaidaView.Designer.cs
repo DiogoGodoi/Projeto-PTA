@@ -82,7 +82,6 @@
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Movimentar Estoque";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // codFuncionario
             // 
@@ -303,7 +302,6 @@
             this.listSaida.TabIndex = 15;
             this.listSaida.UseCompatibleStateImageBehavior = false;
             this.listSaida.View = System.Windows.Forms.View.Details;
-            this.listSaida.SelectedIndexChanged += new System.EventHandler(this.listSaida_SelectedIndexChanged);
             // 
             // grdTitulo
             // 
@@ -315,7 +313,6 @@
             this.grdTitulo.Size = new System.Drawing.Size(560, 81);
             this.grdTitulo.TabIndex = 27;
             this.grdTitulo.TabStop = false;
-            this.grdTitulo.Enter += new System.EventHandler(this.grdTitulo_Enter);
             // 
             // lblTitulo
             // 

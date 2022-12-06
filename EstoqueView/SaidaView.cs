@@ -184,24 +184,12 @@ namespace EstoqueView
                         MessageBox.Show("Sem dados");
                 }
                         
-            }
-                        
+            }            
         }
         private void SaidaView_Load(object sender, EventArgs e)
         {
             txtQuantidade.Text = "";
         }
-        private void grdTitulo_Enter(object sender, EventArgs e)
-        {
 
-        }
-        private void listSaida_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
     }
 }

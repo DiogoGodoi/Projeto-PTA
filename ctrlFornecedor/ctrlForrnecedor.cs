@@ -12,6 +12,12 @@ namespace FornecedorControle
 {
     public class ctrlForrnecedor
     {
+        private string nomeEmpresa;
+
+        public string getNomeEmpresa()
+        {
+            return nomeEmpresa;
+        }
         public bool Cadastrar (mdlFornecedor _mdlFornecedor)
         {
             Conexao.ConexaoDB.conectar();
@@ -78,6 +84,51 @@ namespace FornecedorControle
                 return false;
                 throw new Exception("Erro: " + ex.Message);
             }
+            finally
+            {
+                abrirCONN.Close();
+            }
         }
+
+        public bool ProcurarPorCnpj(string cnpj)
+        {
+            Conexao.ConexaoDB.conectar();
+            var abrirCONN = ConexaoDB.conectar();
+
+            try
+            {
+                abrirCONN.Open();
+
+                string query = "SELECT * FROM Fornecedor WHERE cnpj=@cnpj";
+                SqlCommand comando = new SqlCommand(query, abrirCONN);
+
+                comando.Parameters.AddWithValue("@cnpj", cnpj);
+
+                var leitura = comando.ExecuteReader();
+
+                if (leitura.Read() == false)
+                {
+                    nomeEmpresa = leitura["nomeEmpresa"].ToString();
+                    abrirCONN.Close();
+                    return true;
+                }
+                else
+                {
+                    abrirCONN.Close();
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return false;
+                throw new Exception("Erro: " + ex.Message);
+            }
+            finally
+            {
+                abrirCONN.Close();
+            }
+        }
+
     }
 }

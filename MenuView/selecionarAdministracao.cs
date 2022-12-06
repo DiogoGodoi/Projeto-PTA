@@ -70,7 +70,7 @@ namespace MenuView
 
         private void abrirJanelaCadastrarFornecedor()
         {
-            Application.Run(new cadastrarFornecedorView());
+            Application.Run(new TelaCadastroFornecedorView());
         }
     }
 }

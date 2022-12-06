@@ -16,7 +16,7 @@ namespace CadastrarFornecedorView
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new cadastrarFornecedorView());
+            Application.Run(new TelaCadastroFornecedorView());
         }
     }
 }

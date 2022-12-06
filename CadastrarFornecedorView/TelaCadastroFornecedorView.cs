@@ -12,11 +12,11 @@ using FornecedorModel;
 
 namespace CadastrarFornecedorView
 {
-    public partial class cadastrarFornecedorView : Form
+    public partial class TelaCadastroFornecedorView : Form
     {
         ctrlForrnecedor _ctrlFornecedor = new ctrlForrnecedor();
         mdlFornecedor _mdlFornecedor;
-        public cadastrarFornecedorView()
+        public TelaCadastroFornecedorView()
         {
             InitializeComponent();
         }

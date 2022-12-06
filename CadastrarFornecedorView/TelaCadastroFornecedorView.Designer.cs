@@ -1,6 +1,6 @@
 ﻿namespace CadastrarFornecedorView
 {
-    partial class cadastrarFornecedorView
+    partial class TelaCadastroFornecedorView
     {
         /// <summary>
         /// Variável de designer necessária.

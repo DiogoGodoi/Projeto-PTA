@@ -169,6 +169,159 @@ namespace RelatoriosControle
 
             return true;
         }
+
+        public bool gerarRelatorioMovimentacaoEntrada(string caminho, DataTable query)
+        {
+            Document document = new Document(PageSize.A4);
+            document.SetMargins(3, 2, 3, 2);
+            document.AddCreationDate();
+            PdfWriter.GetInstance(document, new
+            FileStream(caminho, FileMode.Create));
+
+            PdfPTable tabela = new PdfPTable(6);
+            Font fonte = FontFactory.GetFont(BaseFont.HELVETICA_BOLD, 12);
+            Font fonteBranca = FontFactory.GetFont(BaseFont.HELVETICA_BOLD, 12);
+            fonteBranca.Color = BaseColor.WHITE;
+
+            document.Open();
+
+            DataTable dados = query;
+
+            Paragraph nav = new Paragraph();
+            nav.Add(new Paragraph(" "));
+            document.Add(nav);
+
+            Image imgPdf = Image.GetInstance(@"C:\logoGaleria\índice.png");
+            imgPdf.Alignment = Element.ALIGN_CENTER;
+            document.Add(imgPdf);
+
+            Paragraph nav1 = new Paragraph();
+            nav1.Add(new Paragraph(" "));
+            document.Add(nav1);
+
+            Paragraph header = new Paragraph("Historico de Entradas", fonte);
+            header.Alignment = Element.ALIGN_CENTER;
+            document.Add(header);
+
+            Paragraph section = new Paragraph();
+            section.Add(new Paragraph(" "));
+            document.Add(section);
+
+            Paragraph hCell = new Paragraph("Materiais", fonteBranca);
+            hCell.Alignment = Element.ALIGN_CENTER;
+            Paragraph coluna1 = new Paragraph("Data", fonte);
+            coluna1.Alignment = Element.ALIGN_CENTER;
+            Paragraph coluna2 = new Paragraph("NF", fonte);
+            coluna2.Alignment = Element.ALIGN_CENTER;
+            Paragraph coluna3 = new Paragraph("Item", fonte);
+            coluna3.Alignment = Element.ALIGN_CENTER;
+            Paragraph coluna4 = new Paragraph("Quantidade", fonte);
+            coluna4.Alignment = Element.ALIGN_CENTER;
+            Paragraph coluna5 = new Paragraph("Empresa", fonte);
+            coluna5.Alignment = Element.ALIGN_CENTER;
+            Paragraph coluna6 = new Paragraph("Recebedor", fonte);
+            coluna6.Alignment = Element.ALIGN_CENTER;
+
+            PdfPCell hColl = new PdfPCell();
+            hColl.Colspan = 6;
+            hColl.BackgroundColor = BaseColor.BLUE;
+            PdfPCell coll1 = new PdfPCell();
+            coll1.BackgroundColor = BaseColor.GRAY;
+            PdfPCell coll2 = new PdfPCell();
+            coll2.BackgroundColor = BaseColor.GRAY;
+            PdfPCell coll3 = new PdfPCell();
+            coll3.BackgroundColor = BaseColor.GRAY;
+
+            PdfPCell collres = new PdfPCell();
+            collres.BackgroundColor = BaseColor.GRAY;
+
+            PdfPCell coll4 = new PdfPCell();
+            coll4.BackgroundColor = BaseColor.GRAY;
+            PdfPCell coll5 = new PdfPCell();
+            coll5.BackgroundColor = BaseColor.GRAY;
+            PdfPCell coll6 = new PdfPCell();
+            coll6.BackgroundColor = BaseColor.GRAY;
+
+            hColl.AddElement(hCell);
+            coll1.AddElement(coluna1);
+            coll2.AddElement(coluna2);
+            coll3.AddElement(coluna3);
+            coll4.AddElement(coluna4);
+            coll5.AddElement(coluna5);
+            coll6.AddElement(coluna6);
+
+            tabela.AddCell(hColl);
+            tabela.AddCell(coll1);
+            tabela.AddCell(coll2);
+            tabela.AddCell(coll3);
+            tabela.AddCell(coll4);
+            tabela.AddCell(coll5);
+            tabela.AddCell(coll6);
+
+            for (int i = 0; i < dados.Rows.Count; i++)
+            {
+
+                string dataModificacao = dados.Rows[i]["dataEntrada"].ToString();
+                var dt = Convert.ToDateTime(dataModificacao);
+                var dia = dt.ToString("dd/MM/yyyy");
+
+                string nf = dados.Rows[i]["numeroDaNf"].ToString();
+                string item = dados.Rows[i]["item"].ToString();
+                string quantidade = dados.Rows[i]["quantidade"].ToString();
+                string empresa = dados.Rows[i]["empresa"].ToString();
+                string recebedor = dados.Rows[i]["recebedor"].ToString();
+
+                Font font = FontFactory.GetFont(BaseFont.HELVETICA_BOLD, 8);
+
+                Paragraph paragrafo1 = new Paragraph(dia, font);
+                Phrase data = new Phrase(paragrafo1);
+                PdfPCell celula1 = new PdfPCell(data);
+                celula1.HorizontalAlignment = Element.ALIGN_CENTER;
+                celula1.VerticalAlignment = Element.ALIGN_CENTER;
+                tabela.AddCell(celula1);
+
+                Paragraph paragrafo2 = new Paragraph(nf, font);
+                Phrase numeroNota = new Phrase(paragrafo2);
+                PdfPCell celula2 = new PdfPCell(numeroNota);
+                celula2.HorizontalAlignment = Element.ALIGN_CENTER;
+                celula2.VerticalAlignment = Element.ALIGN_CENTER;
+                tabela.AddCell(celula2);
+
+                Paragraph paragrafo3 = new Paragraph(item, font);
+                Phrase material = new Phrase(paragrafo3);
+                PdfPCell celula3 = new PdfPCell(material);
+                celula3.HorizontalAlignment = Element.ALIGN_CENTER;
+                celula3.VerticalAlignment = Element.ALIGN_CENTER;
+                tabela.AddCell(celula3);
+
+                Paragraph paragrafo4 = new Paragraph(quantidade, font);
+                Phrase qtd = new Phrase(paragrafo4);
+                PdfPCell celula4 = new PdfPCell(qtd);
+                celula4.HorizontalAlignment = Element.ALIGN_CENTER;
+                celula4.VerticalAlignment = Element.ALIGN_CENTER;
+                tabela.AddCell(celula4);
+
+                Paragraph paragrafo5 = new Paragraph(empresa, font);
+                Phrase empres = new Phrase(paragrafo5);
+                PdfPCell celula5 = new PdfPCell(empres);
+                celula5.HorizontalAlignment = Element.ALIGN_CENTER;
+                celula5.VerticalAlignment = Element.ALIGN_CENTER;
+                tabela.AddCell(celula5);
+
+                Paragraph paragrafo6 = new Paragraph(recebedor, font);
+                Phrase receb = new Phrase(paragrafo6);
+                PdfPCell celula6 = new PdfPCell(receb);
+                celula6.HorizontalAlignment = Element.ALIGN_CENTER;
+                celula6.VerticalAlignment = Element.ALIGN_CENTER;
+                tabela.AddCell(celula6);
+
+            }
+            document.Add(tabela);
+            document.Close();
+
+            return true;
+        }
+
         public bool relatorioEstoqueMin(string caminho, DataTable query)
         {
             Document document = new Document(PageSize.A4);

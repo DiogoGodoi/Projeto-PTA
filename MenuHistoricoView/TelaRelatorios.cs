@@ -69,7 +69,7 @@ namespace MenuHistoricoView
 
                 if (arquivo.ShowDialog() == DialogResult.OK)
                 {
-                    _ctrlRelatorios.gerarRelatorioMovimentacao(arquivo.FileName, _ctrlHistorico.ExibirEntrada());
+                    _ctrlRelatorios.gerarRelatorioMovimentacaoEntrada(arquivo.FileName, _ctrlEntrada.ExibirEntrada());
                     MessageBox.Show("Arquivo salvo");
                 }
                 else

@@ -85,7 +85,7 @@ namespace EntradaControle
             try
             {
                 abrirConn.Open();
-                string query = "SELECT dataEntrada, numeroDaNf, item, quantidade, recebedor FROM Entrada ORDER BY dataEntrada, empresa ASC";
+                string query = "SELECT dataEntrada, numeroDaNf, item, quantidade, empresa, recebedor FROM Entrada ORDER BY dataEntrada, empresa ASC";
                 SqlCommand comando = new SqlCommand(query, abrirConn);
 
                 comando.CommandType = CommandType.Text;

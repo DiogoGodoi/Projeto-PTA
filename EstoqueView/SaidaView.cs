@@ -80,12 +80,16 @@ namespace EstoqueView
             string item = txtItem.Text;
             string quantidade = txtQuantidade.Text;
             string operador = mdlUsuarios.getNome();
+            _ctrlEstoque.Pesquisar(item);
 
-                if (txtItem.Text == String.Empty || txtQuantidade.Text == String.Empty || txtCracha.Text == String.Empty )
+                if (txtItem.Text == String.Empty || txtQuantidade.Text == String.Empty || txtCracha.Text == String.Empty)
                 {
                     MessageBox.Show("Dados incompletos");
                 }
-                else
+                else if(Convert.ToInt32(quantidade) > _ctrlEstoque.getQtd())
+                {
+                    MessageBox.Show("A quantidade solicitada para baixa é superior ao que existe em estoque");
+                }else
                 {
                     list.Add(new ctrlMovimentacao(item, quantidade, operador));
 
@@ -115,19 +119,16 @@ namespace EstoqueView
         }
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
+            try
+            {
+
             string nomeRequisitante = txtNomeRequisitante.Text;
             string requisitante = _ctrlColaboradores.getNome();
             string nomeSetor = _ctrlColaboradores.getSetor();
 
             foreach (var item in list)
             {
-                    _ctrlEstoque.Pesquisar(item.nome);
-                    if (Convert.ToInt32(item.quantidade) > _ctrlEstoque.getQtd())
-                    {
-                        MessageBox.Show("O item: " + item.nome + " não pode ser baixado, quantidade insufuciente no estoque");
-                    }
-                    else
-                    {
+                    
                         _ctrlEstoque.Saida(item.nome, item.quantidade);
 
                         _mdlHistorico.natureza = "SAÍDA";
@@ -143,7 +144,7 @@ namespace EstoqueView
                         txtNomeRequisitante.Text = String.Empty;
                         txtQuantidade.Text = String.Empty;
 
-                    }        
+                            
             }
                         
                         var resposta = MessageBox.Show("Deseja imprimir comprovante ", "Comprovante", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -159,11 +160,17 @@ namespace EstoqueView
                         _ctrlRelatorios.gerarRelatorioSaida("Saída", arquivo.FileName, requisitante, nomeSetor, list);
                         MessageBox.Show("Arquivo salvo");
                 }else
-                {
+              
+                    {
                         MessageBox.Show("Sem dados");
                 }
                         
-            }            
+            }
+                        }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void SaidaView_Load(object sender, EventArgs e)
         {
@@ -183,7 +190,6 @@ namespace EstoqueView
                 grdEstoque.DataSource = tabela;
             }
         }
-
         private void btnProcurar_Click(object sender, EventArgs e)
         {
             try
@@ -213,7 +219,6 @@ namespace EstoqueView
                 MessageBox.Show("Erro na pesquisa", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void grdEstoque_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             txtItem.Text = grdEstoque.SelectedCells[0].Value.ToString();

@@ -59,31 +59,6 @@ namespace EstoqueView
             }
         }
 
-        private void btnBuscarItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int codigo = Convert.ToInt32(txtCodigo.Text);
-                _ctrlEstoque.PesquisarPorCodigo(codigo);
-
-                if (_ctrlEstoque.PesquisarPorCodigo(codigo) == null)
-                {
-                    MessageBox.Show("Item não localizado", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtItem.Text = _ctrlEstoque.getItem();
-                    txtItem.Enabled = false;
-                }
-                else
-                {
-                    txtItem.Text = _ctrlEstoque.getItem();
-                    txtItem.Enabled = false;
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Erro", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
         private void btnAcrescentar_Click(object sender, EventArgs e)
         {
             contador++;
@@ -134,9 +109,9 @@ namespace EstoqueView
                     listSaida.Items.Add(items);
                     txtCnpj.Enabled = false;
                     txtNF.Enabled = false;
-                    txtCodigo.Text = String.Empty;
                     txtItem.Text = String.Empty;
                     txtQuantidade.Text = String.Empty;
+                    _ctrlEstoque.Exibir();
                     contador = 0;
                 }
             }
@@ -191,7 +166,6 @@ namespace EstoqueView
                     txtNomeEmpresa.Text = String.Empty;
                     txtNF.Text = String.Empty;
                     txtNF.Enabled = true;
-                    txtCodigo.Text = String.Empty;
                     txtItem.Text = String.Empty;
                     txtQuantidade.Text = String.Empty;
 
@@ -270,7 +244,6 @@ namespace EstoqueView
         private void grdEstoque_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
            txtItem.Text = grdEstoque.SelectedCells[0].Value.ToString();
-           
         }
     }
 }

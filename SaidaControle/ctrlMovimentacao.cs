@@ -20,11 +20,10 @@ namespace SaidaControle
         {
 
         }
-        public ctrlMovimentacao(string pNome, string pQuantidade, string pCodigo, string pOperador)
+        public ctrlMovimentacao(string pNome, string pQuantidade, string pOperador)
         {
             nome = pNome;
             quantidade = pQuantidade;
-            codigo = pCodigo;
             operador = pOperador;
         }
         public ctrlMovimentacao(string pCnpj, string pNomeEmpresa, int pNf, string pNome, string pQuantidade, string pOperador)

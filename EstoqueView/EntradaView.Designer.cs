@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grdTitulo = new System.Windows.Forms.GroupBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnConfirmar = new System.Windows.Forms.Button();
@@ -48,12 +48,8 @@
             this.txtNomeEmpresa = new System.Windows.Forms.TextBox();
             this.txtCnpj = new System.Windows.Forms.TextBox();
             this.lblNomeEmpresa = new System.Windows.Forms.Label();
-            this.lblCracha = new System.Windows.Forms.Label();
             this.btnAcrescentar = new System.Windows.Forms.Button();
-            this.btnBuscarItem = new System.Windows.Forms.Button();
             this.txtItem = new System.Windows.Forms.TextBox();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.lblRequisitante = new System.Windows.Forms.Label();
             this.btnAdcionar = new System.Windows.Forms.Button();
             this.txtQuantidade = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -68,6 +64,7 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblRequisitante = new System.Windows.Forms.Label();
             this.grdTitulo.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdEstoque)).BeginInit();
@@ -167,11 +164,8 @@
             this.groupBox2.Controls.Add(this.txtNomeEmpresa);
             this.groupBox2.Controls.Add(this.txtCnpj);
             this.groupBox2.Controls.Add(this.lblNomeEmpresa);
-            this.groupBox2.Controls.Add(this.lblCracha);
             this.groupBox2.Controls.Add(this.btnAcrescentar);
-            this.groupBox2.Controls.Add(this.btnBuscarItem);
             this.groupBox2.Controls.Add(this.txtItem);
-            this.groupBox2.Controls.Add(this.txtCodigo);
             this.groupBox2.Controls.Add(this.lblRequisitante);
             this.groupBox2.Controls.Add(this.btnAdcionar);
             this.groupBox2.Controls.Add(this.txtQuantidade);
@@ -254,16 +248,6 @@
             this.lblNomeEmpresa.TabIndex = 25;
             this.lblNomeEmpresa.Text = "Empresa";
             // 
-            // lblCracha
-            // 
-            this.lblCracha.AutoSize = true;
-            this.lblCracha.ForeColor = System.Drawing.Color.Black;
-            this.lblCracha.Location = new System.Drawing.Point(15, 68);
-            this.lblCracha.Name = "lblCracha";
-            this.lblCracha.Size = new System.Drawing.Size(39, 16);
-            this.lblCracha.TabIndex = 24;
-            this.lblCracha.Text = "Codigo";
-            // 
             // btnAcrescentar
             // 
             this.btnAcrescentar.BackColor = System.Drawing.Color.DarkGreen;
@@ -278,45 +262,14 @@
             this.btnAcrescentar.UseVisualStyleBackColor = false;
             this.btnAcrescentar.Click += new System.EventHandler(this.btnAcrescentar_Click);
             // 
-            // btnBuscarItem
-            // 
-            this.btnBuscarItem.BackColor = System.Drawing.Color.DarkGreen;
-            this.btnBuscarItem.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnBuscarItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBuscarItem.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarItem.Location = new System.Drawing.Point(206, 64);
-            this.btnBuscarItem.Name = "btnBuscarItem";
-            this.btnBuscarItem.Size = new System.Drawing.Size(47, 23);
-            this.btnBuscarItem.TabIndex = 23;
-            this.btnBuscarItem.Text = "Buscar";
-            this.btnBuscarItem.UseVisualStyleBackColor = false;
-            this.btnBuscarItem.Click += new System.EventHandler(this.btnBuscarItem_Click);
-            // 
             // txtItem
             // 
             this.txtItem.Enabled = false;
             this.txtItem.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtItem.Location = new System.Drawing.Point(302, 66);
+            this.txtItem.Location = new System.Drawing.Point(60, 66);
             this.txtItem.Name = "txtItem";
-            this.txtItem.Size = new System.Drawing.Size(374, 21);
+            this.txtItem.Size = new System.Drawing.Size(616, 21);
             this.txtItem.TabIndex = 22;
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Location = new System.Drawing.Point(60, 66);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(140, 23);
-            this.txtCodigo.TabIndex = 21;
-            // 
-            // lblRequisitante
-            // 
-            this.lblRequisitante.AutoSize = true;
-            this.lblRequisitante.ForeColor = System.Drawing.Color.Black;
-            this.lblRequisitante.Location = new System.Drawing.Point(266, 68);
-            this.lblRequisitante.Name = "lblRequisitante";
-            this.lblRequisitante.Size = new System.Drawing.Size(30, 16);
-            this.lblRequisitante.TabIndex = 20;
-            this.lblRequisitante.Text = "Item";
             // 
             // btnAdcionar
             // 
@@ -370,47 +323,47 @@
             this.grdEstoque.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grdEstoque.BackgroundColor = System.Drawing.Color.Silver;
             this.grdEstoque.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Format = "N0";
-            dataGridViewCellStyle1.NullValue = null;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdEstoque.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Format = "N0";
+            dataGridViewCellStyle5.NullValue = null;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdEstoque.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.grdEstoque.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdEstoque.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigo,
             this.nomeDataGridViewTextBoxColumn});
             this.grdEstoque.DataSource = this.estoqueBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = null;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdEstoque.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.Format = "N2";
+            dataGridViewCellStyle6.NullValue = null;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdEstoque.DefaultCellStyle = dataGridViewCellStyle6;
             this.grdEstoque.GridColor = System.Drawing.SystemColors.MenuHighlight;
             this.grdEstoque.Location = new System.Drawing.Point(791, 215);
             this.grdEstoque.Name = "grdEstoque";
             this.grdEstoque.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdEstoque.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdEstoque.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.grdEstoque.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdEstoque.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdEstoque.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.grdEstoque.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.grdEstoque.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Navy;
             this.grdEstoque.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
@@ -498,6 +451,16 @@
             this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
             this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // lblRequisitante
+            // 
+            this.lblRequisitante.AutoSize = true;
+            this.lblRequisitante.ForeColor = System.Drawing.Color.Black;
+            this.lblRequisitante.Location = new System.Drawing.Point(15, 71);
+            this.lblRequisitante.Name = "lblRequisitante";
+            this.lblRequisitante.Size = new System.Drawing.Size(30, 16);
+            this.lblRequisitante.TabIndex = 20;
+            this.lblRequisitante.Text = "Item";
+            // 
             // EntradaView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -541,12 +504,8 @@
         private System.Windows.Forms.TextBox txtNomeEmpresa;
         private System.Windows.Forms.TextBox txtCnpj;
         private System.Windows.Forms.Label lblNomeEmpresa;
-        private System.Windows.Forms.Label lblCracha;
         private System.Windows.Forms.Button btnAcrescentar;
-        private System.Windows.Forms.Button btnBuscarItem;
         private System.Windows.Forms.TextBox txtItem;
-        private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.Label lblRequisitante;
         private System.Windows.Forms.Button btnAdcionar;
         private System.Windows.Forms.TextBox txtQuantidade;
         private System.Windows.Forms.Label label2;
@@ -563,5 +522,6 @@
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label lblRequisitante;
     }
 }

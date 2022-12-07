@@ -70,6 +70,11 @@ namespace CadastrarInsumoView
                 {
                     unidade = "MT";
                     _mdlEstoque.unidade = unidade;
+
+                }else if (radPR.Checked == true)
+                {
+                    unidade = "PR";
+                    _mdlEstoque.unidade = unidade;
                 }
 
                 _mdlEstoque.codigo = codigo;

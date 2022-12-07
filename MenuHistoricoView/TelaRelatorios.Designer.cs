@@ -66,6 +66,7 @@
             this.btnGerarTudoData = new System.Windows.Forms.Button();
             this.grpTitulo = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnGerarEntradas = new System.Windows.Forms.Button();
             this.grpMovimentacoes.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -260,13 +261,14 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.btnGerarEntradas);
             this.groupBox4.Controls.Add(this.lblCodigo);
             this.groupBox4.Controls.Add(this.txtCodigo);
             this.groupBox4.Controls.Add(this.btnBuscarPorItem);
+            this.groupBox4.Controls.Add(this.btnGerarSaidaPorItem);
             this.groupBox4.Controls.Add(this.btnGerarTudoPorItem);
             this.groupBox4.Controls.Add(this.txtItem);
             this.groupBox4.Controls.Add(this.btnGerarDevolucaoPorItem);
-            this.groupBox4.Controls.Add(this.btnGerarSaidaPorItem);
             this.groupBox4.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(33, 204);
             this.groupBox4.Name = "groupBox4";
@@ -342,9 +344,9 @@
             this.btnGerarDevolucaoPorItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGerarDevolucaoPorItem.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGerarDevolucaoPorItem.ForeColor = System.Drawing.Color.Black;
-            this.btnGerarDevolucaoPorItem.Location = new System.Drawing.Point(219, 69);
+            this.btnGerarDevolucaoPorItem.Location = new System.Drawing.Point(268, 69);
             this.btnGerarDevolucaoPorItem.Name = "btnGerarDevolucaoPorItem";
-            this.btnGerarDevolucaoPorItem.Size = new System.Drawing.Size(160, 28);
+            this.btnGerarDevolucaoPorItem.Size = new System.Drawing.Size(111, 28);
             this.btnGerarDevolucaoPorItem.TabIndex = 23;
             this.btnGerarDevolucaoPorItem.Text = "Gerar Devoluções";
             this.btnGerarDevolucaoPorItem.UseVisualStyleBackColor = false;
@@ -357,9 +359,9 @@
             this.btnGerarSaidaPorItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGerarSaidaPorItem.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGerarSaidaPorItem.ForeColor = System.Drawing.Color.White;
-            this.btnGerarSaidaPorItem.Location = new System.Drawing.Point(26, 69);
+            this.btnGerarSaidaPorItem.Location = new System.Drawing.Point(150, 69);
             this.btnGerarSaidaPorItem.Name = "btnGerarSaidaPorItem";
-            this.btnGerarSaidaPorItem.Size = new System.Drawing.Size(164, 28);
+            this.btnGerarSaidaPorItem.Size = new System.Drawing.Size(102, 28);
             this.btnGerarSaidaPorItem.TabIndex = 22;
             this.btnGerarSaidaPorItem.Text = "Gerar Saidas";
             this.btnGerarSaidaPorItem.UseVisualStyleBackColor = false;
@@ -589,6 +591,21 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Relatórios";
             // 
+            // btnGerarEntradas
+            // 
+            this.btnGerarEntradas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGerarEntradas.BackColor = System.Drawing.Color.Green;
+            this.btnGerarEntradas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGerarEntradas.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGerarEntradas.ForeColor = System.Drawing.Color.White;
+            this.btnGerarEntradas.Location = new System.Drawing.Point(26, 69);
+            this.btnGerarEntradas.Name = "btnGerarEntradas";
+            this.btnGerarEntradas.Size = new System.Drawing.Size(105, 28);
+            this.btnGerarEntradas.TabIndex = 25;
+            this.btnGerarEntradas.Text = "Gerar Entradas";
+            this.btnGerarEntradas.UseVisualStyleBackColor = false;
+            this.btnGerarEntradas.Click += new System.EventHandler(this.btnGerarEntradas_Click);
+            // 
             // TelaRelatorios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -656,6 +673,7 @@
         private System.Windows.Forms.Button btnBuscarEmpresa;
         private System.Windows.Forms.Button btnGerarEntrada;
         private System.Windows.Forms.TextBox txtNomeEmpresa;
+        private System.Windows.Forms.Button btnGerarEntradas;
     }
 }
 

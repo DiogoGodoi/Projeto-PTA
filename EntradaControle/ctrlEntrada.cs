@@ -137,6 +137,42 @@ namespace EntradaControle
                 abrirConn.Close();
             }
         }
+
+        public DataTable PesquisarPorItemNatureza(string item)
+        {
+            Conexao.ConexaoDB.conectar();
+            var abrirConn = Conexao.ConexaoDB.conectar();
+
+            try
+            {
+                abrirConn.Open();
+                string query = "SELECT dataEntrada, numeroDaNf, item, quantidade, empresa, recebedor FROM Entrada WHERE item=@item ORDER BY dataEntrada, empresa, numeroDaNf ASC";
+                SqlCommand comando = new SqlCommand(query, abrirConn);
+
+                comando.Parameters.AddWithValue("@item", item);
+
+                comando.CommandType = CommandType.Text;
+                SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+                DataTable tabela = new DataTable();
+                adaptador.Fill(tabela);
+
+                comando.ExecuteReader();
+
+                return tabela;
+
+            }
+            catch (Exception ex)
+            {
+                abrirConn.Close();
+                return null;
+                throw new Exception("Erro ao exibir " + ex.Message);
+            }
+            finally
+            {
+                abrirConn.Close();
+            }
+
+        }
     }
 
 }

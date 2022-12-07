@@ -541,6 +541,37 @@ namespace MenuHistoricoView
 
             }
         }
+
+        private void btnGerarEntradas_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtItem.Text == String.Empty)
+                {
+                    MessageBox.Show("Por favor digite o codigo do item");
+                }
+                else
+                {
+                    SaveFileDialog arquivo = new SaveFileDialog();
+                    arquivo.FileName = "Arquivo";
+                    arquivo.Filter = "PDF (.pdf) | *.pdf";
+
+                    if (arquivo.ShowDialog() == DialogResult.OK)
+                    {
+                        _ctrlRelatorios.gerarRelatorioMovimentacaoEntrada(arquivo.FileName, _ctrlEntrada.PesquisarPorItemNatureza(txtItem.Text));
+                        MessageBox.Show("Arquivo salvo");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Operação cancelada");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro interno" + ex);
+            }
+        }
     }
 }
 

@@ -23,6 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.2.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
@@ -58,7 +59,7 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>favicon.ico</ApplicationIcon>
@@ -101,6 +102,11 @@
     </Compile>
     <Compile Include="EntradaView.Designer.cs">
       <DependentUpon>EntradaView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EstoqueTB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EstoqueTB.xsd</DependentUpon>
     </Compile>
     <Compile Include="EstoqueView.cs">
       <SubType>Form</SubType>
@@ -150,6 +156,17 @@
       <DependentUpon>dbGaleria.xsd</DependentUpon>
     </None>
     <None Include="EsoqueView_1_TemporaryKey.pfx" />
+    <None Include="EstoqueTB.xsc">
+      <DependentUpon>EstoqueTB.xsd</DependentUpon>
+    </None>
+    <None Include="EstoqueTB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EstoqueTB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EstoqueTB.xss">
+      <DependentUpon>EstoqueTB.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

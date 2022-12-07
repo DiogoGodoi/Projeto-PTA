@@ -16,6 +16,7 @@ namespace RelatoriosControle
 {
     public class ctrlRelatorios
     {
+        private string img = @"C:\Program Files\Controle de Estoque\Application Files\logo\pacettaLogo.png";
         public bool gerarRelatorioMovimentacao(string caminho, DataTable query)
         {
             Document document = new Document(PageSize.A4);
@@ -37,7 +38,7 @@ namespace RelatoriosControle
             nav.Add(new Paragraph(" "));
             document.Add(nav);
 
-            Image imgPdf = Image.GetInstance(@"C:\logoGaleria\índice.png");
+            Image imgPdf = Image.GetInstance(img);
             imgPdf.Alignment = Element.ALIGN_CENTER;
             document.Add(imgPdf);
 
@@ -169,7 +170,6 @@ namespace RelatoriosControle
 
             return true;
         }
-
         public bool gerarRelatorioMovimentacaoEntrada(string caminho, DataTable query)
         {
             Document document = new Document(PageSize.A4);
@@ -191,7 +191,7 @@ namespace RelatoriosControle
             nav.Add(new Paragraph(" "));
             document.Add(nav);
 
-            Image imgPdf = Image.GetInstance(@"C:\logoGaleria\índice.png");
+            Image imgPdf = Image.GetInstance(img);
             imgPdf.Alignment = Element.ALIGN_CENTER;
             document.Add(imgPdf);
 
@@ -321,7 +321,6 @@ namespace RelatoriosControle
 
             return true;
         }
-
         public bool relatorioEstoqueMin(string caminho, DataTable query)
         {
             Document document = new Document(PageSize.A4);
@@ -343,7 +342,7 @@ namespace RelatoriosControle
             nav.Add(new Paragraph(" "));
             document.Add(nav);
 
-            Image imgPdf = Image.GetInstance(@"C:\logoGaleria\índice.png");
+            Image imgPdf = Image.GetInstance(img);
             imgPdf.Alignment = Element.ALIGN_CENTER;
             document.Add(imgPdf);
 
@@ -444,7 +443,7 @@ namespace RelatoriosControle
             nav.Add(new Paragraph(" "));
             document.Add(nav);
 
-            Image imgPdf = Image.GetInstance(@"C:\logoGaleria\índice.png");
+            Image imgPdf = Image.GetInstance(img);
             imgPdf.Alignment = Element.ALIGN_CENTER;
             document.Add(imgPdf);
 
@@ -548,7 +547,6 @@ namespace RelatoriosControle
         }
         public bool gerarRelatorioEntrada(string titulo, string caminho, string requisitante, string pNf, List<ctrlMovimentacao> list)
         {
-
             Document document = new Document(PageSize.A4);
             document.SetMargins(3, 2, 3, 2);
             document.AddCreationDate();
@@ -566,7 +564,7 @@ namespace RelatoriosControle
             nav.Add(new Paragraph(" "));
             document.Add(nav);
 
-            Image imgPdf = Image.GetInstance(@"C:\logoGaleria\índice.png");
+            Image imgPdf = Image.GetInstance(img);
             imgPdf.Alignment = Element.ALIGN_CENTER;
             document.Add(imgPdf);
 

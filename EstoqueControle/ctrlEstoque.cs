@@ -195,17 +195,17 @@ namespace EstoqueControle
                 abrirConn.Close();
             }
         }
-        public DataTable Entrada(string codigo, string quantidade)
+        public DataTable Entrada(string item, string quantidade)
         {
             Conexao.ConexaoDB.conectar();
             var abrirConn = Conexao.ConexaoDB.conectar();
             try
             {
                 abrirConn.Open();
-                string query =  "UPDATE estoque SET quantidade = quantidade + @quantidade WHERE nome=@codigo";
+                string query =  "UPDATE estoque SET quantidade = quantidade + @quantidade WHERE nome=@item";
                 SqlCommand comando = new SqlCommand(query, abrirConn);
 
-                comando.Parameters.AddWithValue("@codigo", codigo);
+                comando.Parameters.AddWithValue("@item", item);
                 comando.Parameters.AddWithValue("@quantidade", quantidade);
 
                 comando.CommandType = CommandType.Text;

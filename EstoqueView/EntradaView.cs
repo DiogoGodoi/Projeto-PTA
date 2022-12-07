@@ -109,30 +109,25 @@ namespace EstoqueView
             try
             {
 
-                ctrlMovimentacao _ctrlMovimentacao = new ctrlMovimentacao();
-
                 string cnpj = txtCnpj.Text;
                 string nomeEmpresa = txtNomeEmpresa.Text;
                 int nf = Convert.ToInt32(txtNF.Text);
-                int codigo = Convert.ToInt32(txtCodigo.Text);
                 string item = txtItem.Text;
                 string quantidade = txtQuantidade.Text;
                 string operador = mdlUsuarios.getNome();
 
                 if (txtCnpj.Text == String.Empty || txtNomeEmpresa.Text == String.Empty || 
-                    txtNF.Text == String.Empty || txtCodigo.Text == String.Empty || 
-                    txtItem.Text == String.Empty || txtQuantidade.Text == String.Empty)
+                    txtNF.Text == String.Empty || txtItem.Text == String.Empty || txtQuantidade.Text == String.Empty)
                 {
                     MessageBox.Show("Dados incompletos");
                 }
                 else
                 {
-                    list.Add(new ctrlMovimentacao(cnpj, nomeEmpresa, nf, codigo.ToString(), item, quantidade, operador));
+                    list.Add(new ctrlMovimentacao(cnpj, nomeEmpresa, nf, item, quantidade, operador));
 
                     foreach (var i in list)
                     {
-                        items = new ListViewItem(i.codigo);
-                        items.SubItems.Add(i.nome);
+                        items = new ListViewItem(i.nome);
                         items.SubItems.Add(i.quantidade);
                     }
 
@@ -145,9 +140,9 @@ namespace EstoqueView
                     contador = 0;
                 }
             }
-            catch (Exception)
+            catch (Exception erro)
             {
-                MessageBox.Show("Dados incompletos");
+                MessageBox.Show("Dados incompletos x"+ erro);
             }
         }
 
@@ -222,6 +217,60 @@ namespace EstoqueView
                 }
 
             }
+        }
+
+        private void EntradaView_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                this.estoqueTableAdapter.Fill(this.estoqueTB.Estoque);
+            }
+            catch (Exception)
+            {
+
+            }
+            finally
+            {
+                ctrlEstoque _ctrlEstoque = new ctrlEstoque();
+                DataTable tabela = _ctrlEstoque.Exibir();
+                grdEstoque.DataSource = tabela;
+            }
+        }
+
+        private void btnProcurar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ctrlEstoque _ctrlEstoque = new ctrlEstoque();
+                string nome = txtProcurar.Text;
+                DataTable retorno = _ctrlEstoque.Pesquisar(nome);
+
+                if (retorno == null)
+                {
+                    MessageBox.Show("Item não localizado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtProcurar.Text = String.Empty;
+                    grdEstoque.DataSource = _ctrlEstoque.Exibir();
+                }
+                else if (retorno != null && nome != String.Empty)
+                {
+                    grdEstoque.DataSource = _ctrlEstoque.Pesquisar(nome);
+                }
+                else
+                {
+                    MessageBox.Show("Digite o nome do item", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Erro na pesquisa", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+    
+        private void grdEstoque_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+           txtItem.Text = grdEstoque.SelectedCells[0].Value.ToString();
+           
         }
     }
 }

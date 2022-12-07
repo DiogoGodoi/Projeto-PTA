@@ -138,14 +138,7 @@ namespace EstoqueView
 
             foreach (var items in list)
             {
-                _ctrlEstoque.Pesquisar(items.nome);
-
-                if (Convert.ToInt32(items.quantidade) > _ctrlEstoque.getQtd())
-                {
-                    MessageBox.Show("O item: " + items.nome + " não pode ser baixado, quantidade insufuciente no estoque");
-                }
-                else
-                {
+                
                     _mdlEntrada = new mdlEntrada(items.nf, items.nomeEmpresa, items.nome, Convert.ToInt32(items.quantidade), recebedor);
 
                     _ctrlEntrada.Cadastrar(_mdlEntrada);
@@ -169,7 +162,7 @@ namespace EstoqueView
                     txtItem.Text = String.Empty;
                     txtQuantidade.Text = String.Empty;
 
-                }
+                
             }
 
             var resposta = MessageBox.Show("Deseja imprimir comprovante ", "Comprovante", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

@@ -125,6 +125,7 @@ namespace EstoqueView
             string nomeRequisitante = txtNomeRequisitante.Text;
             string requisitante = _ctrlColaboradores.getNome();
             string nomeSetor = _ctrlColaboradores.getSetor();
+            string cracha = txtCracha.Text;
 
             foreach (var item in list)
             {
@@ -157,7 +158,7 @@ namespace EstoqueView
 
                         if(arquivo.ShowDialog() == DialogResult.OK)
                 {
-                        _ctrlRelatorios.gerarRelatorioSaida("Saída", arquivo.FileName, requisitante, nomeSetor, list);
+                        _ctrlRelatorios.gerarRelatorioSaida("Saída", arquivo.FileName, requisitante, nomeSetor, cracha, list);
                         MessageBox.Show("Arquivo salvo");
                 }else
               

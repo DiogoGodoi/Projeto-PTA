@@ -410,7 +410,7 @@ namespace RelatoriosControle
 
             return true;
         }
-        public bool gerarRelatorioSaida(string titulo, string caminho, string requisitante, string pSetor, List<ctrlMovimentacao> list)
+        public bool gerarRelatorioSaida(string titulo, string caminho, string requisitante, string pSetor, string pCracha, List<ctrlMovimentacao> list)
         {
 
             Document document = new Document(PageSize.A4);
@@ -443,13 +443,16 @@ namespace RelatoriosControle
             document.Add(section);
 
             Paragraph solicitante = new Paragraph("Requisitante: "+ requisitante, fonte);
-            solicitante.Alignment = Element.ALIGN_CENTER;
+            solicitante.Alignment = Element.ALIGN_LEFT;
             document.Add(solicitante);
 
             Paragraph setor = new Paragraph("Setor: " + pSetor, fonte);
-            setor.Alignment = Element.ALIGN_CENTER;
+            setor.Alignment = Element.ALIGN_LEFT;
             document.Add(setor);
-            
+
+            Paragraph cracha = new Paragraph("Cracha: " + pCracha, fonte);
+            cracha.Alignment = Element.ALIGN_LEFT;
+            document.Add(cracha);
 
             Paragraph section2 = new Paragraph();
             section2.Add(new Paragraph(" "));

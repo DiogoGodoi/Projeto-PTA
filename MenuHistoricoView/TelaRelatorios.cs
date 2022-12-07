@@ -15,6 +15,8 @@ using RelatoriosControle;
 using HistoricoControle;
 using System.Security.Cryptography;
 using ColaboradoresControle;
+using FornecedorControle;
+using EntradaControle;
 
 namespace MenuHistoricoView
 {
@@ -23,6 +25,8 @@ namespace MenuHistoricoView
        ctrlRelatorios _ctrlRelatorios = new ctrlRelatorios();
        ctrlHistorico _ctrlHistorico = new ctrlHistorico();
        ctrlColaboradores _ctrlColaboradores = new ctrlColaboradores();
+       ctrlForrnecedor _ctrlFornecedor = new ctrlForrnecedor();
+        ctrlEntrada _ctrlEntrada = new ctrlEntrada();
         
         public TelaRelatorios()
         {
@@ -485,6 +489,56 @@ namespace MenuHistoricoView
             catch (Exception ex)
             {
                 MessageBox.Show("Erro interno" + ex);
+            }
+        }
+        private void btnBuscarEmpresa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string cnpj = txtCnpj.Text;
+                bool retorno = _ctrlFornecedor.ProcurarPorCnpj(cnpj);
+
+                if (retorno == false)
+                {
+                    MessageBox.Show("Fornecedor não localizado", "Não localizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    txtNomeEmpresa.Text = _ctrlFornecedor.getNomeEmpresa();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Por favor digite o cnpj da empresa", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void btnGerarEntrada_Click(object sender, EventArgs e)
+        {
+
+            if (txtCnpj.Text == String.Empty)
+            {
+                MessageBox.Show("Por favor digite o cnpj da empresa");
+            }
+            else
+            {
+
+                string nomeEmpresa = txtNomeEmpresa.Text;
+
+                SaveFileDialog arquivo = new SaveFileDialog();
+                arquivo.FileName = "Arquivo";
+                arquivo.Filter = "PDF (.pdf) | *.pdf";
+
+                if (arquivo.ShowDialog() == DialogResult.OK)
+                {
+                    _ctrlRelatorios.gerarRelatorioPorEmpresa(arquivo.FileName, nomeEmpresa, _ctrlEntrada.Pesquisar(nomeEmpresa));
+                    MessageBox.Show("Arquivo salvo");
+                    nomeEmpresa = String.Empty;
+                }
+                else
+                {
+                    MessageBox.Show("Sem dados");
+                }
+
             }
         }
     }

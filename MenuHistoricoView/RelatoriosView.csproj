@@ -119,6 +119,14 @@
       <Project>{49a991b7-a6f0-4e25-bc6c-5c1875fabe3d}</Project>
       <Name>ColaboradoresControle</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ctrlFornecedor\FornecedorControle.csproj">
+      <Project>{52cb3059-3a2c-4090-8b4f-e9cd6850489b}</Project>
+      <Name>FornecedorControle</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntradaControle\EntradaControle.csproj">
+      <Project>{a29b81b9-5e13-4896-b4b2-c15a7c6999ee}</Project>
+      <Name>EntradaControle</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HistoricoControle\HistoricoControle.csproj">
       <Project>{03ea7777-02a3-4b31-848c-a56215ab68dc}</Project>
       <Name>HistoricoControle</Name>

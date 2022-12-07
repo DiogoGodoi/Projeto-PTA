@@ -114,7 +114,6 @@ namespace EstoqueControle
         }
         public DataTable Pesquisar(string nome)
         {
-
             Conexao.ConexaoDB.conectar();
             var abrirConn = Conexao.ConexaoDB.conectar();
             try

@@ -156,25 +156,30 @@ namespace EstoqueView
             var indice = listSaida.SelectedItems[0].Index;
             list.RemoveAt(indice);
             listSaida.SelectedItems[0].Remove();
+            txtCnpj.Enabled = true;
+            txtNF.Enabled = true;
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            int numeroDaNf = Convert.ToInt32(txtNF.Text);
             string nomeDaEmpresa = txtNomeEmpresa.Text;
-            string item = txtItem.Text;
-            string quantidade = txtQuantidade.Text;
+            string nf = txtNF.Text;
             string recebedor = mdlUsuarios.getNome();
 
             foreach (var items in list)
             {
                 _ctrlEstoque.Pesquisar(items.nome);
+
                 if (Convert.ToInt32(items.quantidade) > _ctrlEstoque.getQtd())
                 {
                     MessageBox.Show("O item: " + items.nome + " não pode ser baixado, quantidade insufuciente no estoque");
                 }
                 else
                 {
+                    _mdlEntrada = new mdlEntrada(items.nf, items.nomeEmpresa, items.nome, Convert.ToInt32(items.quantidade), recebedor);
+
+                    _ctrlEntrada.Cadastrar(_mdlEntrada);
+                    
                     _ctrlEstoque.Entrada(items.nome, items.quantidade);
 
                     _mdlHistorico.natureza = "ENTRADA";
@@ -185,9 +190,6 @@ namespace EstoqueView
 
                     _ctrlHistorico.CadastrarHistorico(_mdlHistorico);
 
-                    _mdlEntrada = new mdlEntrada(numeroDaNf, nomeDaEmpresa, item, Convert.ToInt32(quantidade), recebedor);
-
-                    _ctrlEntrada.Cadastrar(_mdlEntrada);
 
                     txtCnpj.Text = String.Empty;
                     txtCnpj.Enabled = true;
@@ -211,7 +213,7 @@ namespace EstoqueView
 
                 if (arquivo.ShowDialog() == DialogResult.OK)
                 {
-                    _ctrlRelatorios.gerarRelatorioSaida("Saída", arquivo.FileName, nomeDaEmpresa, "", list);
+                    _ctrlRelatorios.gerarRelatorioEntrada("Entrada", arquivo.FileName, nomeDaEmpresa, nf, list);
                     MessageBox.Show("Arquivo salvo");
                 }
                 else

@@ -31,10 +31,10 @@ namespace Almoxarifado
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grdEstoque = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,14 +51,7 @@ namespace Almoxarifado
             this.btnProcurar = new System.Windows.Forms.Button();
             this.lblNome = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblCracha = new System.Windows.Forms.Label();
-            this.btnBuscarColaborador = new System.Windows.Forms.Button();
-            this.txtNomeRequisitante = new System.Windows.Forms.TextBox();
-            this.txtCracha = new System.Windows.Forms.TextBox();
-            this.lblRequisitante = new System.Windows.Forms.Label();
             this.btnDevolucao = new System.Windows.Forms.Button();
-            this.txtQuantidade = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnSaida = new System.Windows.Forms.Button();
             this.btnEntrada = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -88,16 +81,16 @@ namespace Almoxarifado
             this.grdEstoque.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grdEstoque.BackgroundColor = System.Drawing.Color.Silver;
             this.grdEstoque.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Format = "N0";
-            dataGridViewCellStyle1.NullValue = null;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdEstoque.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Format = "N0";
+            dataGridViewCellStyle9.NullValue = null;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdEstoque.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.grdEstoque.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdEstoque.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn9,
@@ -106,32 +99,32 @@ namespace Almoxarifado
             this.dataGridViewTextBoxColumn12,
             this.estoqueMinDataGridViewTextBoxColumn});
             this.grdEstoque.DataSource = this.estoqueBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = null;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdEstoque.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.Format = "N2";
+            dataGridViewCellStyle10.NullValue = null;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdEstoque.DefaultCellStyle = dataGridViewCellStyle10;
             this.grdEstoque.GridColor = System.Drawing.SystemColors.MenuHighlight;
             this.grdEstoque.Location = new System.Drawing.Point(424, 108);
             this.grdEstoque.Name = "grdEstoque";
             this.grdEstoque.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdEstoque.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdEstoque.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.grdEstoque.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdEstoque.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdEstoque.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.grdEstoque.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.grdEstoque.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Navy;
             this.grdEstoque.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
@@ -206,7 +199,7 @@ namespace Almoxarifado
             this.grpExibirEstoque.Controls.Add(this.btnEstoqueZerado);
             this.grpExibirEstoque.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpExibirEstoque.ForeColor = System.Drawing.Color.Navy;
-            this.grpExibirEstoque.Location = new System.Drawing.Point(27, 289);
+            this.grpExibirEstoque.Location = new System.Drawing.Point(27, 283);
             this.grpExibirEstoque.Name = "grpExibirEstoque";
             this.grpExibirEstoque.Size = new System.Drawing.Size(382, 74);
             this.grpExibirEstoque.TabIndex = 15;
@@ -287,112 +280,39 @@ namespace Almoxarifado
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.groupBox2.Controls.Add(this.lblCracha);
-            this.groupBox2.Controls.Add(this.btnBuscarColaborador);
-            this.groupBox2.Controls.Add(this.txtNomeRequisitante);
-            this.groupBox2.Controls.Add(this.txtCracha);
-            this.groupBox2.Controls.Add(this.lblRequisitante);
             this.groupBox2.Controls.Add(this.btnDevolucao);
-            this.groupBox2.Controls.Add(this.txtQuantidade);
-            this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.btnSaida);
             this.groupBox2.Controls.Add(this.btnEntrada);
             this.groupBox2.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Navy;
-            this.groupBox2.Location = new System.Drawing.Point(27, 153);
+            this.groupBox2.Location = new System.Drawing.Point(27, 144);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(382, 101);
+            this.groupBox2.Size = new System.Drawing.Size(382, 118);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Movimentar Estoque";
-            // 
-            // lblCracha
-            // 
-            this.lblCracha.AutoSize = true;
-            this.lblCracha.ForeColor = System.Drawing.Color.Black;
-            this.lblCracha.Location = new System.Drawing.Point(13, 29);
-            this.lblCracha.Name = "lblCracha";
-            this.lblCracha.Size = new System.Drawing.Size(40, 16);
-            this.lblCracha.TabIndex = 24;
-            this.lblCracha.Text = "Cracha";
-            // 
-            // btnBuscarColaborador
-            // 
-            this.btnBuscarColaborador.BackColor = System.Drawing.Color.DarkGreen;
-            this.btnBuscarColaborador.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnBuscarColaborador.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBuscarColaborador.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarColaborador.Location = new System.Drawing.Point(97, 26);
-            this.btnBuscarColaborador.Name = "btnBuscarColaborador";
-            this.btnBuscarColaborador.Size = new System.Drawing.Size(47, 23);
-            this.btnBuscarColaborador.TabIndex = 23;
-            this.btnBuscarColaborador.Text = "Buscar";
-            this.btnBuscarColaborador.UseVisualStyleBackColor = false;
-            this.btnBuscarColaborador.Click += new System.EventHandler(this.btnBuscarColaborador_Click);
-            // 
-            // txtNomeRequisitante
-            // 
-            this.txtNomeRequisitante.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeRequisitante.Location = new System.Drawing.Point(222, 26);
-            this.txtNomeRequisitante.Name = "txtNomeRequisitante";
-            this.txtNomeRequisitante.Size = new System.Drawing.Size(140, 21);
-            this.txtNomeRequisitante.TabIndex = 22;
-            // 
-            // txtCracha
-            // 
-            this.txtCracha.Location = new System.Drawing.Point(59, 26);
-            this.txtCracha.Name = "txtCracha";
-            this.txtCracha.Size = new System.Drawing.Size(32, 23);
-            this.txtCracha.TabIndex = 21;
-            // 
-            // lblRequisitante
-            // 
-            this.lblRequisitante.AutoSize = true;
-            this.lblRequisitante.ForeColor = System.Drawing.Color.Black;
-            this.lblRequisitante.Location = new System.Drawing.Point(149, 29);
-            this.lblRequisitante.Name = "lblRequisitante";
-            this.lblRequisitante.Size = new System.Drawing.Size(68, 16);
-            this.lblRequisitante.TabIndex = 20;
-            this.lblRequisitante.Text = "Requisitante";
             // 
             // btnDevolucao
             // 
             this.btnDevolucao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnDevolucao.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDevolucao.ForeColor = System.Drawing.Color.White;
-            this.btnDevolucao.Location = new System.Drawing.Point(291, 62);
+            this.btnDevolucao.Location = new System.Drawing.Point(16, 80);
             this.btnDevolucao.Name = "btnDevolucao";
-            this.btnDevolucao.Size = new System.Drawing.Size(68, 23);
+            this.btnDevolucao.Size = new System.Drawing.Size(344, 23);
             this.btnDevolucao.TabIndex = 19;
             this.btnDevolucao.Text = "Devolução";
             this.btnDevolucao.UseVisualStyleBackColor = false;
             this.btnDevolucao.Click += new System.EventHandler(this.btnDevolucao_Click);
-            // 
-            // txtQuantidade
-            // 
-            this.txtQuantidade.Location = new System.Drawing.Point(82, 62);
-            this.txtQuantidade.Name = "txtQuantidade";
-            this.txtQuantidade.Size = new System.Drawing.Size(62, 23);
-            this.txtQuantidade.TabIndex = 18;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(13, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 16);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Quantidade";
             // 
             // btnSaida
             // 
             this.btnSaida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnSaida.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSaida.ForeColor = System.Drawing.Color.White;
-            this.btnSaida.Location = new System.Drawing.Point(222, 62);
+            this.btnSaida.Location = new System.Drawing.Point(16, 51);
             this.btnSaida.Name = "btnSaida";
-            this.btnSaida.Size = new System.Drawing.Size(63, 23);
+            this.btnSaida.Size = new System.Drawing.Size(344, 23);
             this.btnSaida.TabIndex = 17;
             this.btnSaida.Text = "Saida";
             this.btnSaida.UseVisualStyleBackColor = false;
@@ -404,9 +324,9 @@ namespace Almoxarifado
             this.btnEntrada.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEntrada.ForeColor = System.Drawing.Color.White;
-            this.btnEntrada.Location = new System.Drawing.Point(152, 62);
+            this.btnEntrada.Location = new System.Drawing.Point(16, 22);
             this.btnEntrada.Name = "btnEntrada";
-            this.btnEntrada.Size = new System.Drawing.Size(62, 23);
+            this.btnEntrada.Size = new System.Drawing.Size(343, 23);
             this.btnEntrada.TabIndex = 16;
             this.btnEntrada.Text = "Entrada";
             this.btnEntrada.UseVisualStyleBackColor = false;
@@ -514,7 +434,6 @@ namespace Almoxarifado
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.grpTitulo.ResumeLayout(false);
             this.grpTitulo.PerformLayout();
             this.grpPaginação.ResumeLayout(false);
@@ -534,7 +453,6 @@ namespace Almoxarifado
         private System.Windows.Forms.Button btnProcurar;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSaida;
         private System.Windows.Forms.Button btnEntrada;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
@@ -542,7 +460,6 @@ namespace Almoxarifado
         private System.Windows.Forms.DataGridViewTextBoxColumn unidadeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeDataGridViewTextBoxColumn;
         private System.Windows.Forms.TextBox txtProcurar;
-        private System.Windows.Forms.TextBox txtQuantidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -558,11 +475,6 @@ namespace Almoxarifado
         private System.Windows.Forms.Button btnAnterior;
         private System.Windows.Forms.Button btnProximo;
         private System.Windows.Forms.Button btnDevolucao;
-        private System.Windows.Forms.TextBox txtCracha;
-        private System.Windows.Forms.Label lblRequisitante;
-        private System.Windows.Forms.Button btnBuscarColaborador;
-        private System.Windows.Forms.TextBox txtNomeRequisitante;
-        private System.Windows.Forms.Label lblCracha;
         private EstoqueView.dbGaleria dbGaleria;
         private System.Windows.Forms.BindingSource estoqueBindingSource;
         private EstoqueView.dbGaleriaTableAdapters.EstoqueTableAdapter estoqueTableAdapter;

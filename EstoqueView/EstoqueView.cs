@@ -63,82 +63,13 @@ namespace Almoxarifado
         private void btnEntrada_Click(object sender, EventArgs e)
         {
 
-            /*
-            string nome = txtProcurar.Text;
-            string nomeRequisitante = txtNomeRequisitante.Text;
-            string quantidade = txtQuantidade.Text;
-            DataTable tabelaEstoque = _ctrlEstoque.Entrada(nome, quantidade);
-            string linhaSelecionada = grdEstoque.SelectedCells[0].Value.ToString();
-
-            try
-            {
-                if (tabelaEstoque != null && nome != String.Empty && quantidade != String.Empty && nome == linhaSelecionada && nomeRequisitante != String.Empty)
-                {
-                    grdEstoque.DataSource = _ctrlEstoque.Pesquisar(nome);
-                    MessageBox.Show("Entrada efetuada com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-                    _mdlHistorico.natureza = "ENTRADA";
-                    _mdlHistorico.operador =  mdlUsuarios.getNome();
-                    _mdlHistorico.quantidade = Convert.ToInt32(quantidade);
-                    _mdlHistorico.item = nome.ToUpper();
-                    _mdlHistorico.requisitante = nomeRequisitante.ToUpper();
-                    
-                    _ctrlHistorico.CadastrarHistorico(_mdlHistorico);
-
-                    txtProcurar.Text = String.Empty;
-                    txtQuantidade.Text = String.Empty;
-                }else
-                {
-                    MessageBox.Show("Verifique se: \n 1) Os campos nome, quantidade e colaborador estão corretamente preenchidos \n 2) Se o nome do item foi selecionado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-            }catch (Exception erro)
-            {
-                MessageBox.Show("Erro na entrada: "+ erro, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            */
             _thread = new Thread(TelaEntrada);
             _thread.SetApartmentState(ApartmentState.STA);
             _thread.Start();
         }
         private void btnSaida_Click(object sender, EventArgs e)
         {
-            /*
-            string nome = txtProcurar.Text;
-            string nomeRequisitante = txtNomeRequisitante.Text;
-            string quantidade = txtQuantidade.Text;
-            var tabelaEstoque = _ctrlEstoque.Saida(nome, quantidade);
-            string linhaSelecionada = grdEstoque.SelectedCells[0].Value.ToString();
-
-            try
-            {
-                if (tabelaEstoque != null && nome != String.Empty && quantidade != String.Empty && nome == linhaSelecionada && nomeRequisitante != String.Empty)
-                {
-                    grdEstoque.DataSource = _ctrlEstoque.Pesquisar(nome);
-                    MessageBox.Show("Saída efetuada com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-                    _mdlHistorico.natureza = "SAÍDA";
-                    _mdlHistorico.operador = mdlUsuarios.getNome();
-                    _mdlHistorico.quantidade = Convert.ToInt32(quantidade);
-                    _mdlHistorico.item = nome.ToUpper();
-                    _mdlHistorico.requisitante = nomeRequisitante.ToUpper();
-
-                    _ctrlHistorico.CadastrarHistorico(_mdlHistorico);
-
-                    txtProcurar.Text = String.Empty;
-                    txtQuantidade.Text = String.Empty;
-                }
-                else
-                {
-                    MessageBox.Show("Verifique se: \n 1) Os campos nome e quantidade estão corretamente preenchidos \n 2) Se o nome do item foi selecionado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-            }
-            catch (Exception erro)
-            {
-                MessageBox.Show("Erro na entrada: " + erro, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            */
+            
             _thread = new Thread(TelaSaida);
             _thread.SetApartmentState(ApartmentState.STA);
             _thread.Start();
@@ -148,42 +79,7 @@ namespace Almoxarifado
             _thread = new Thread(TelaDevolucao);
             _thread.SetApartmentState(ApartmentState.STA);
             _thread.Start();
-        /*
-            string nome = txtProcurar.Text;
-            string nomeRequisitante = txtNomeRequisitante.Text;
-            string quantidade = txtQuantidade.Text;
-            DataTable tabelaEstoque = _ctrlEstoque.Entrada(nome, quantidade);
-            string linhaSelecionada = grdEstoque.SelectedCells[0].Value.ToString();
-
-            try
-            {
-                if (tabelaEstoque != null && nome != String.Empty && quantidade != String.Empty && nome == linhaSelecionada && nomeRequisitante != String.Empty)
-                {
-                    grdEstoque.DataSource = _ctrlEstoque.Pesquisar(nome);
-                    MessageBox.Show("Devolução efetuada com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-                    _mdlHistorico.natureza = "DEVOLUÇÃO";
-                    _mdlHistorico.operador = mdlUsuarios.getNome();
-                    _mdlHistorico.quantidade = Convert.ToInt32(quantidade);
-                    _mdlHistorico.item = nome.ToUpper();
-                    _mdlHistorico.requisitante = nomeRequisitante.ToUpper();
-
-                    _ctrlHistorico.CadastrarHistorico(_mdlHistorico);
-
-                    txtProcurar.Text = String.Empty;
-                    txtQuantidade.Text = String.Empty;
-                }
-                else
-                {
-                    MessageBox.Show("Verifique se: \n 1) Os campos nome e quantidade estão corretamente preenchidos \n 2) Se o nome do item foi selecionado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-            }
-            catch (Exception erro)
-            {
-                MessageBox.Show("Erro na entrada: " + erro, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-         */
+        
         }
         private void btnOrdenar_Click_1(object sender, EventArgs e)
         {
@@ -196,27 +92,6 @@ namespace Almoxarifado
             ctrlEstoque _ctrlEstoque = new ctrlEstoque();
 
             grdEstoque.DataSource = _ctrlEstoque.ExibirZerado();
-        }
-        private void btnBuscarColaborador_Click(object sender, EventArgs e)
-        {
-            
-            try
-            {
-            int cracha = Convert.ToInt32(txtCracha.Text);
-            bool retorno = _ctrlColaboradores.pesquisarColaborador(cracha);
-
-                if (retorno == false)
-                {
-                    MessageBox.Show("Colaborador não localizado", "Não localizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }else
-                {
-                txtNomeRequisitante.Text = _ctrlColaboradores.getNome();
-                }
-            }catch (Exception)
-            {
-                MessageBox.Show("Por favor digite o número do crachá", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
         }
         private void frmEstoque_Load(object sender, EventArgs e)
         {
@@ -233,7 +108,6 @@ namespace Almoxarifado
             ctrlEstoque _ctrlEstoque = new ctrlEstoque();
             DataTable tabela = _ctrlEstoque.Exibir();
             grdEstoque.DataSource = tabela;
-            txtNomeRequisitante.Enabled = false;
             }
         }
         private void grdEstoque_CellContentClick(object sender, DataGridViewCellEventArgs e)

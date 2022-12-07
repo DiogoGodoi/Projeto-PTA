@@ -443,16 +443,17 @@ namespace RelatoriosControle
             document.Add(section);
 
             Paragraph solicitante = new Paragraph("Requisitante: "+ requisitante, fonte);
-            solicitante.Alignment = Element.ALIGN_LEFT;
+            solicitante.Alignment = Element.ALIGN_CENTER;
             document.Add(solicitante);
 
+            Paragraph cracha = new Paragraph("Cracha: " + pCracha, fonte);
+            cracha.Alignment = Element.ALIGN_CENTER;
+            document.Add(cracha);
+
             Paragraph setor = new Paragraph("Setor: " + pSetor, fonte);
-            setor.Alignment = Element.ALIGN_LEFT;
+            setor.Alignment = Element.ALIGN_CENTER;
             document.Add(setor);
 
-            Paragraph cracha = new Paragraph("Cracha: " + pCracha, fonte);
-            cracha.Alignment = Element.ALIGN_LEFT;
-            document.Add(cracha);
 
             Paragraph section2 = new Paragraph();
             section2.Add(new Paragraph(" "));

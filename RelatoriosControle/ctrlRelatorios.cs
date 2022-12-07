@@ -16,7 +16,7 @@ namespace RelatoriosControle
 {
     public class ctrlRelatorios
     {
-        private string img = @"C:\Program Files\Controle de Estoque\Application Files\logo\pacettaLogo.png";
+        private string img = @"C:\Program Files\Controle de Estoque - EPI\logo\pacettaLogo.png";
         public bool gerarRelatorioMovimentacao(string caminho, DataTable query)
         {
             Document document = new Document(PageSize.A4);
@@ -41,10 +41,6 @@ namespace RelatoriosControle
             Image imgPdf = Image.GetInstance(img);
             imgPdf.Alignment = Element.ALIGN_CENTER;
             document.Add(imgPdf);
-
-            Paragraph nav1 = new Paragraph();
-            nav1.Add(new Paragraph(" "));
-            document.Add(nav1);
 
             Paragraph header = new Paragraph("Historico de Movimentação", fonte);
             header.Alignment = Element.ALIGN_CENTER;
@@ -195,10 +191,6 @@ namespace RelatoriosControle
             imgPdf.Alignment = Element.ALIGN_CENTER;
             document.Add(imgPdf);
 
-            Paragraph nav1 = new Paragraph();
-            nav1.Add(new Paragraph(" "));
-            document.Add(nav1);
-
             Paragraph header = new Paragraph("Historico de Entradas", fonte);
             header.Alignment = Element.ALIGN_CENTER;
             document.Add(header);
@@ -260,7 +252,6 @@ namespace RelatoriosControle
 
             for (int i = 0; i < dados.Rows.Count; i++)
             {
-
                 string dataModificacao = dados.Rows[i]["dataEntrada"].ToString();
                 var dt = Convert.ToDateTime(dataModificacao);
                 var dia = dt.ToString("dd/MM/yyyy");
@@ -345,10 +336,6 @@ namespace RelatoriosControle
             Image imgPdf = Image.GetInstance(img);
             imgPdf.Alignment = Element.ALIGN_CENTER;
             document.Add(imgPdf);
-
-            Paragraph nav1 = new Paragraph();
-            nav1.Add(new Paragraph(" "));
-            document.Add(nav1);
 
             Paragraph header = new Paragraph("Itens com estoque minimo atingido", fonte);
             header.Alignment = Element.ALIGN_CENTER;
@@ -446,10 +433,6 @@ namespace RelatoriosControle
             Image imgPdf = Image.GetInstance(img);
             imgPdf.Alignment = Element.ALIGN_CENTER;
             document.Add(imgPdf);
-
-            Paragraph nav1 = new Paragraph();
-            nav1.Add(new Paragraph(" "));
-            document.Add(nav1);
 
             Paragraph header = new Paragraph(titulo+" de materiais", fonte);
             header.Alignment = Element.ALIGN_CENTER;
@@ -567,10 +550,6 @@ namespace RelatoriosControle
             Image imgPdf = Image.GetInstance(img);
             imgPdf.Alignment = Element.ALIGN_CENTER;
             document.Add(imgPdf);
-
-            Paragraph nav1 = new Paragraph();
-            nav1.Add(new Paragraph(" "));
-            document.Add(nav1);
 
             Paragraph header = new Paragraph(titulo + " de materiais", fonte);
             header.Alignment = Element.ALIGN_CENTER;
@@ -690,13 +669,9 @@ namespace RelatoriosControle
             nav.Add(new Paragraph(" "));
             document.Add(nav);
 
-            Image imgPdf = Image.GetInstance(@"C:\logoGaleria\índice.png");
+            Image imgPdf = Image.GetInstance(img);
             imgPdf.Alignment = Element.ALIGN_CENTER;
             document.Add(imgPdf);
-
-            Paragraph nav1 = new Paragraph();
-            nav1.Add(new Paragraph(" "));
-            document.Add(nav1);
 
             Paragraph header = new Paragraph("Historico de Entradas", fonte);
             header.Alignment = Element.ALIGN_CENTER;

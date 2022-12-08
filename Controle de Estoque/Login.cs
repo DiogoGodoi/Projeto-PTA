@@ -55,5 +55,10 @@ namespace Controle_de_Estoque
         {
             Application.Run(new frmMenu());
         }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

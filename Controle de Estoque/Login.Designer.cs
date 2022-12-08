@@ -38,6 +38,7 @@
             this.pctLogo = new System.Windows.Forms.PictureBox();
             this.grpTitle = new System.Windows.Forms.GroupBox();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnFechar = new System.Windows.Forms.Button();
             this.grpEntrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             this.grpTitle.SuspendLayout();
@@ -47,6 +48,7 @@
             // 
             this.grpEntrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grpEntrar.BackColor = System.Drawing.SystemColors.Control;
+            this.grpEntrar.Controls.Add(this.btnFechar);
             this.grpEntrar.Controls.Add(this.txtSenha);
             this.grpEntrar.Controls.Add(this.lblUsuario);
             this.grpEntrar.Controls.Add(this.txtUsuario);
@@ -97,7 +99,7 @@
             this.btnEntrar.BackColor = System.Drawing.Color.Navy;
             this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEntrar.ForeColor = System.Drawing.Color.White;
-            this.btnEntrar.Location = new System.Drawing.Point(216, 204);
+            this.btnEntrar.Location = new System.Drawing.Point(138, 205);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(104, 28);
             this.btnEntrar.TabIndex = 5;
@@ -150,6 +152,20 @@
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Controle de estoque";
             // 
+            // btnFechar
+            // 
+            this.btnFechar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnFechar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFechar.ForeColor = System.Drawing.Color.White;
+            this.btnFechar.Location = new System.Drawing.Point(272, 205);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(104, 28);
+            this.btnFechar.TabIndex = 10;
+            this.btnFechar.Text = "Fechar";
+            this.btnFechar.UseVisualStyleBackColor = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -183,6 +199,7 @@
         private System.Windows.Forms.PictureBox pctLogo;
         private System.Windows.Forms.GroupBox grpTitle;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Button btnFechar;
     }
 }
 

@@ -83,8 +83,13 @@ namespace EstoqueView
                 string item = txtItem.Text;
                 string quantidade = txtQuantidade.Text;
                 string operador = mdlUsuarios.getNome();
+                _ctrlEstoque.Pesquisar(item);
 
-                if (txtItem.Text == String.Empty || txtQuantidade.Text == String.Empty || txtCracha.Text == String.Empty)
+                if (item == _ctrlEstoque.getItem()) {
+
+                    MessageBox.Show("Item ja adcionado");
+
+                }else if (txtItem.Text == String.Empty || txtQuantidade.Text == String.Empty || txtCracha.Text == String.Empty)
                 {
                     MessageBox.Show("Dados incompletos");
                 }

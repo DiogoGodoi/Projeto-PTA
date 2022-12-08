@@ -82,14 +82,19 @@ namespace EstoqueView
             string operador = mdlUsuarios.getNome();
             _ctrlEstoque.Pesquisar(item);
 
-                if (txtItem.Text == String.Empty || txtQuantidade.Text == String.Empty || txtCracha.Text == String.Empty)
+                if (item == _ctrlEstoque.getItem())
+                {
+                    MessageBox.Show("Item ja adcionado");
+                }
+                else if (txtItem.Text == String.Empty || txtQuantidade.Text == String.Empty || txtCracha.Text == String.Empty)
                 {
                     MessageBox.Show("Dados incompletos");
                 }
-                else if(Convert.ToInt32(quantidade) > _ctrlEstoque.getQtd())
+                else if (Convert.ToInt32(quantidade) > _ctrlEstoque.getQtd())
                 {
                     MessageBox.Show("A quantidade solicitada para baixa é superior ao que existe em estoque");
-                }else
+                }
+                else
                 {
                     list.Add(new ctrlMovimentacao(item, quantidade, operador));
 

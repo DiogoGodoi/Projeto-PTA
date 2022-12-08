@@ -36,6 +36,7 @@
             this.grpTitulo = new System.Windows.Forms.GroupBox();
             this.lblOpcoes = new System.Windows.Forms.Label();
             this.btnCadastrarFornecedor = new System.Windows.Forms.Button();
+            this.btnAlterarInsumos = new System.Windows.Forms.Button();
             this.grpTitulo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,9 +98,9 @@
             // grpTitulo
             // 
             this.grpTitulo.Controls.Add(this.lblOpcoes);
-            this.grpTitulo.Location = new System.Drawing.Point(62, 12);
+            this.grpTitulo.Location = new System.Drawing.Point(45, 12);
             this.grpTitulo.Name = "grpTitulo";
-            this.grpTitulo.Size = new System.Drawing.Size(199, 81);
+            this.grpTitulo.Size = new System.Drawing.Size(474, 81);
             this.grpTitulo.TabIndex = 4;
             this.grpTitulo.TabStop = false;
             // 
@@ -108,7 +109,7 @@
             this.lblOpcoes.AutoSize = true;
             this.lblOpcoes.Font = new System.Drawing.Font("Bernard MT Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOpcoes.ForeColor = System.Drawing.Color.Navy;
-            this.lblOpcoes.Location = new System.Drawing.Point(53, 28);
+            this.lblOpcoes.Location = new System.Drawing.Point(192, 26);
             this.lblOpcoes.Name = "lblOpcoes";
             this.lblOpcoes.Size = new System.Drawing.Size(92, 31);
             this.lblOpcoes.TabIndex = 0;
@@ -128,11 +129,26 @@
             this.btnCadastrarFornecedor.UseVisualStyleBackColor = false;
             this.btnCadastrarFornecedor.Click += new System.EventHandler(this.btnCadastrarFornecedor_Click);
             // 
+            // btnAlterarInsumos
+            // 
+            this.btnAlterarInsumos.BackColor = System.Drawing.Color.Navy;
+            this.btnAlterarInsumos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterarInsumos.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterarInsumos.ForeColor = System.Drawing.Color.White;
+            this.btnAlterarInsumos.Location = new System.Drawing.Point(298, 303);
+            this.btnAlterarInsumos.Name = "btnAlterarInsumos";
+            this.btnAlterarInsumos.Size = new System.Drawing.Size(198, 31);
+            this.btnAlterarInsumos.TabIndex = 6;
+            this.btnAlterarInsumos.Text = "Alterar Insumos";
+            this.btnAlterarInsumos.UseVisualStyleBackColor = false;
+            this.btnAlterarInsumos.Click += new System.EventHandler(this.btnAlterarInsumos_Click);
+            // 
             // TelaSelecaoAdministracao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(319, 448);
+            this.ClientSize = new System.Drawing.Size(559, 448);
+            this.Controls.Add(this.btnAlterarInsumos);
             this.Controls.Add(this.btnCadastrarFornecedor);
             this.Controls.Add(this.grpTitulo);
             this.Controls.Add(this.button4);
@@ -157,5 +173,6 @@
         private System.Windows.Forms.GroupBox grpTitulo;
         private System.Windows.Forms.Label lblOpcoes;
         private System.Windows.Forms.Button btnCadastrarFornecedor;
+        private System.Windows.Forms.Button btnAlterarInsumos;
     }
 }

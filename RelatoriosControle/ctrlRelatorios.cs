@@ -16,6 +16,7 @@ namespace RelatoriosControle
 {
     public class ctrlRelatorios
     {
+        
         private string img = @"C:\Program Files\Controle de Estoque - EPI\logo\pacettaLogo.png";
         public bool gerarRelatorioMovimentacao(string caminho, DataTable query)
         {

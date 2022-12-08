@@ -230,7 +230,8 @@ namespace EstoqueView
         }
         private void grdEstoque_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtItem.Text = grdEstoque.SelectedCells[0].Value.ToString();
+            txtItem.Text = grdEstoque.SelectedCells[0].Value.ToString();            
         }
+
     }
 }

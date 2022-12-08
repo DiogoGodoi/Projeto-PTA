@@ -123,6 +123,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AlterarInsumoView\AlterarInsumoView.csproj">
+      <Project>{75056b67-f181-4708-a0cf-670e7a22c2af}</Project>
+      <Name>AlterarInsumoView</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CadastrarColaboradorView\CadastrarColaboradorView.csproj">
       <Project>{1fa5ddb7-e2d7-40d7-aae0-e162de13cb87}</Project>
       <Name>CadastrarColaboradorView</Name>

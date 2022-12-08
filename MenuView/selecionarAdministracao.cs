@@ -12,6 +12,7 @@ using CadastrarInsumoView;
 using CadastrarUsuarioView;
 using CadastrarColaboradorView;
 using CadastrarFornecedorView;
+using AlterarInsumoView;
 
 namespace MenuView
 {
@@ -71,6 +72,19 @@ namespace MenuView
         private void abrirJanelaCadastrarFornecedor()
         {
             Application.Run(new TelaCadastroFornecedorView());
+        }
+
+        private void abrirJanelaAlterarInsumo()
+        {
+            Application.Run(new TelaAlterarInsumo());
+        }
+
+        private void btnAlterarInsumos_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            _thread = new Thread(abrirJanelaAlterarInsumo);
+            _thread.SetApartmentState(ApartmentState.STA);
+            _thread.Start();
         }
     }
 }

@@ -12,7 +12,10 @@ namespace EstoqueControle
 {
     public class ctrlEstoque
     {
-        private int qtd; 
+        private int qtd { get; set; }
+        private int estoqMin { get; set; }
+        private int codigo { get; set; }
+        private string tipoUn { get; set; }
         private string item { get; set; }
         public bool CadastrarInsumo(mdlEstoque _mdlEstoque)
         {
@@ -133,8 +136,11 @@ namespace EstoqueControle
 
                 if(leitura.Read() == true)
                 {
-                    qtd = Convert.ToInt32(leitura["quantidade"]);
+                    codigo = Convert.ToInt32(leitura["codigo"]);
                     item = leitura["nome"].ToString();
+                    tipoUn = leitura["unidade"].ToString();
+                    qtd = Convert.ToInt32(leitura["quantidade"]);
+                    estoqMin = Convert.ToInt32(leitura["estoqueMin"]);
                     return tabela;
                 }else
                 {
@@ -228,6 +234,76 @@ namespace EstoqueControle
                 abrirConn.Close();
             }
         }
+        public bool Alterar(mdlEstoque _mdlEstoque, string item)
+        {
+            Conexao.ConexaoDB.conectar();
+            var abrirConn = Conexao.ConexaoDB.conectar();
+            try
+            {
+                abrirConn.Open();
+                string query = "UPDATE Estoque SET codigo = @codigo, nome = @nome, unidade = @unidade, quantidade = @quantidade, estoqueMin = @estoqueMin WHERE nome = @item";
+                SqlCommand comando = new SqlCommand(query, abrirConn);
+
+                var pmtCodigo = comando.CreateParameter();
+                pmtCodigo.ParameterName = "@codigo";
+                pmtCodigo.DbType = DbType.Int32;
+                pmtCodigo.Value = _mdlEstoque.codigo;
+                comando.Parameters.Add(pmtCodigo);
+
+                var pmtNome = comando.CreateParameter();
+                pmtNome.ParameterName = "@nome";
+                pmtNome.DbType = DbType.String;
+                pmtNome.Value = _mdlEstoque.nome;
+                comando.Parameters.Add(pmtNome);
+
+                var pmtUnidade = comando.CreateParameter();
+                pmtUnidade.ParameterName = "@unidade";
+                pmtUnidade.DbType = DbType.String;
+                pmtUnidade.Value = _mdlEstoque.unidade;
+                comando.Parameters.Add(pmtUnidade);
+
+                var pmtQuantidade = comando.CreateParameter();
+                pmtQuantidade.ParameterName = "@quantidade";
+                pmtQuantidade.DbType = DbType.Int32;
+                pmtQuantidade.Value = _mdlEstoque.quantidade;
+                comando.Parameters.Add(pmtQuantidade);
+
+                var pmtQuantidadeMin = comando.CreateParameter();
+                pmtQuantidadeMin.ParameterName = "@estoqueMin";
+                pmtQuantidadeMin.DbType = DbType.Int32;
+                pmtQuantidadeMin.Value = _mdlEstoque.qtdMinima;
+                comando.Parameters.Add(pmtQuantidadeMin);
+
+                var pmtItem = comando.CreateParameter();
+                pmtItem.ParameterName = "@item";
+                pmtItem.DbType = DbType.String;
+                pmtItem.Value = item;
+                comando.Parameters.Add(pmtItem);
+
+                var leitura = comando.ExecuteReader();
+
+                if (leitura.Read() == false)
+                {
+                    abrirConn.Close();
+                    return true;
+                }
+                else
+                {
+                    abrirConn.Close();
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                abrirConn.Close();
+                return false;
+                throw new Exception("Erro ao acesso a base " + ex.Message);
+            }
+            finally
+            {
+                abrirConn.Close();
+            }
+        }
         public DataTable Saida(string nome, string quantidade)
         {
             Conexao.ConexaoDB.conectar();
@@ -294,13 +370,27 @@ namespace EstoqueControle
             }
 
         }
+
+        public int getCodigo()
+        {
+            return codigo;
+        }
         public string getItem()
         {
             return item;
+        }
+        public string getTipoUn()
+        {
+            return tipoUn;
         }
         public int getQtd()
         {
             return qtd;
         }
+        public int getEstoqueMin()
+        {
+            return estoqMin;
+        }
+
     }
 }

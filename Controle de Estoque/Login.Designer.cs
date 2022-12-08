@@ -162,7 +162,7 @@
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(104, 28);
             this.btnFechar.TabIndex = 10;
-            this.btnFechar.Text = "Fechar";
+            this.btnFechar.Text = "Sair";
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 

@@ -91,6 +91,10 @@ namespace EstoqueView
                 else if (Convert.ToInt32(quantidade) > _ctrlEstoque.getQtd())
                 {
                     MessageBox.Show("A quantidade solicitada para baixa é superior ao que existe em estoque");
+                
+                }else if (item == ctrlMovimentacao.item)
+                {
+                    MessageBox.Show("Item ja adcionado");
                 }
                 else
                 {

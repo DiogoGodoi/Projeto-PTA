@@ -39,9 +39,6 @@ namespace SaidaControle
             item = pNome;
         }
         
-        public static string getItem()
-        {
-            return item;
-        }
+        
     }
 }

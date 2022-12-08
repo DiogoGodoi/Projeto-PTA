@@ -88,6 +88,10 @@ namespace EstoqueView
                 if (txtItem.Text == String.Empty || txtQuantidade.Text == String.Empty || txtCracha.Text == String.Empty)
                 {
                     MessageBox.Show("Dados incompletos");
+
+                }else if (item == ctrlMovimentacao.item)
+                {
+                    MessageBox.Show("Item ja adcionado");
                 }
                 else
                 {

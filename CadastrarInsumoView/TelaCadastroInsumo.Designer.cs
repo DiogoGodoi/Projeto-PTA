@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaCadastroInsumo));
             this.grpCadastrar = new System.Windows.Forms.GroupBox();
+            this.radPR = new System.Windows.Forms.RadioButton();
             this.txtQtdMin = new System.Windows.Forms.TextBox();
             this.lblQuantidadeMinima = new System.Windows.Forms.Label();
             this.radMt = new System.Windows.Forms.RadioButton();
@@ -49,7 +51,6 @@
             this.lblCodigo = new System.Windows.Forms.Label();
             this.grpTitulo = new System.Windows.Forms.GroupBox();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.radPR = new System.Windows.Forms.RadioButton();
             this.grpCadastrar.SuspendLayout();
             this.grpTitulo.SuspendLayout();
             this.SuspendLayout();
@@ -84,6 +85,18 @@
             this.grpCadastrar.TabIndex = 0;
             this.grpCadastrar.TabStop = false;
             this.grpCadastrar.Text = "Cadastrar";
+            // 
+            // radPR
+            // 
+            this.radPR.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.radPR.AutoSize = true;
+            this.radPR.Location = new System.Drawing.Point(102, 194);
+            this.radPR.Name = "radPR";
+            this.radPR.Size = new System.Drawing.Size(39, 20);
+            this.radPR.TabIndex = 19;
+            this.radPR.TabStop = true;
+            this.radPR.Text = "PR";
+            this.radPR.UseVisualStyleBackColor = true;
             // 
             // txtQtdMin
             // 
@@ -314,18 +327,6 @@
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Cadastrar Insumo";
             // 
-            // radPR
-            // 
-            this.radPR.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radPR.AutoSize = true;
-            this.radPR.Location = new System.Drawing.Point(102, 194);
-            this.radPR.Name = "radPR";
-            this.radPR.Size = new System.Drawing.Size(39, 20);
-            this.radPR.TabIndex = 19;
-            this.radPR.TabStop = true;
-            this.radPR.Text = "PR";
-            this.radPR.UseVisualStyleBackColor = true;
-            // 
             // TelaCadastroInsumo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,6 +334,7 @@
             this.ClientSize = new System.Drawing.Size(366, 418);
             this.Controls.Add(this.grpTitulo);
             this.Controls.Add(this.grpCadastrar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaCadastroInsumo";
             this.Text = "Cadastro";
             this.grpCadastrar.ResumeLayout(false);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaRelatorios));
             this.btnRelatorioHistorico = new System.Windows.Forms.Button();
             this.grpMovimentacoes = new System.Windows.Forms.GroupBox();
             this.btnEstoqueMin = new System.Windows.Forms.Button();
@@ -42,13 +43,14 @@
             this.btnGerarEntrada = new System.Windows.Forms.Button();
             this.txtNomeEmpresa = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnGerarEntradas = new System.Windows.Forms.Button();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.btnBuscarPorItem = new System.Windows.Forms.Button();
+            this.btnGerarSaidaPorItem = new System.Windows.Forms.Button();
             this.btnGerarTudoPorItem = new System.Windows.Forms.Button();
             this.txtItem = new System.Windows.Forms.TextBox();
             this.btnGerarDevolucaoPorItem = new System.Windows.Forms.Button();
-            this.btnGerarSaidaPorItem = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCracha = new System.Windows.Forms.TextBox();
@@ -66,7 +68,6 @@
             this.btnGerarTudoData = new System.Windows.Forms.Button();
             this.grpTitulo = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnGerarEntradas = new System.Windows.Forms.Button();
             this.grpMovimentacoes.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -277,6 +278,21 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Por item";
             // 
+            // btnGerarEntradas
+            // 
+            this.btnGerarEntradas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGerarEntradas.BackColor = System.Drawing.Color.Green;
+            this.btnGerarEntradas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGerarEntradas.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGerarEntradas.ForeColor = System.Drawing.Color.White;
+            this.btnGerarEntradas.Location = new System.Drawing.Point(26, 69);
+            this.btnGerarEntradas.Name = "btnGerarEntradas";
+            this.btnGerarEntradas.Size = new System.Drawing.Size(105, 28);
+            this.btnGerarEntradas.TabIndex = 25;
+            this.btnGerarEntradas.Text = "Gerar Entradas";
+            this.btnGerarEntradas.UseVisualStyleBackColor = false;
+            this.btnGerarEntradas.Click += new System.EventHandler(this.btnGerarEntradas_Click);
+            // 
             // lblCodigo
             // 
             this.lblCodigo.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -311,6 +327,21 @@
             this.btnBuscarPorItem.Text = "Buscar";
             this.btnBuscarPorItem.UseVisualStyleBackColor = false;
             this.btnBuscarPorItem.Click += new System.EventHandler(this.btnBuscarPorItem_Click);
+            // 
+            // btnGerarSaidaPorItem
+            // 
+            this.btnGerarSaidaPorItem.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGerarSaidaPorItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnGerarSaidaPorItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGerarSaidaPorItem.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGerarSaidaPorItem.ForeColor = System.Drawing.Color.White;
+            this.btnGerarSaidaPorItem.Location = new System.Drawing.Point(150, 69);
+            this.btnGerarSaidaPorItem.Name = "btnGerarSaidaPorItem";
+            this.btnGerarSaidaPorItem.Size = new System.Drawing.Size(102, 28);
+            this.btnGerarSaidaPorItem.TabIndex = 22;
+            this.btnGerarSaidaPorItem.Text = "Gerar Saidas";
+            this.btnGerarSaidaPorItem.UseVisualStyleBackColor = false;
+            this.btnGerarSaidaPorItem.Click += new System.EventHandler(this.btnGerarSaidaPorItem_Click);
             // 
             // btnGerarTudoPorItem
             // 
@@ -351,21 +382,6 @@
             this.btnGerarDevolucaoPorItem.Text = "Gerar Devoluções";
             this.btnGerarDevolucaoPorItem.UseVisualStyleBackColor = false;
             this.btnGerarDevolucaoPorItem.Click += new System.EventHandler(this.btnGerarDevolucaoPorItem_Click);
-            // 
-            // btnGerarSaidaPorItem
-            // 
-            this.btnGerarSaidaPorItem.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnGerarSaidaPorItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnGerarSaidaPorItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGerarSaidaPorItem.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGerarSaidaPorItem.ForeColor = System.Drawing.Color.White;
-            this.btnGerarSaidaPorItem.Location = new System.Drawing.Point(150, 69);
-            this.btnGerarSaidaPorItem.Name = "btnGerarSaidaPorItem";
-            this.btnGerarSaidaPorItem.Size = new System.Drawing.Size(102, 28);
-            this.btnGerarSaidaPorItem.TabIndex = 22;
-            this.btnGerarSaidaPorItem.Text = "Gerar Saidas";
-            this.btnGerarSaidaPorItem.UseVisualStyleBackColor = false;
-            this.btnGerarSaidaPorItem.Click += new System.EventHandler(this.btnGerarSaidaPorItem_Click);
             // 
             // groupBox3
             // 
@@ -591,21 +607,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Relatórios";
             // 
-            // btnGerarEntradas
-            // 
-            this.btnGerarEntradas.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnGerarEntradas.BackColor = System.Drawing.Color.Green;
-            this.btnGerarEntradas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGerarEntradas.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGerarEntradas.ForeColor = System.Drawing.Color.White;
-            this.btnGerarEntradas.Location = new System.Drawing.Point(26, 69);
-            this.btnGerarEntradas.Name = "btnGerarEntradas";
-            this.btnGerarEntradas.Size = new System.Drawing.Size(105, 28);
-            this.btnGerarEntradas.TabIndex = 25;
-            this.btnGerarEntradas.Text = "Gerar Entradas";
-            this.btnGerarEntradas.UseVisualStyleBackColor = false;
-            this.btnGerarEntradas.Click += new System.EventHandler(this.btnGerarEntradas_Click);
-            // 
             // TelaRelatorios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -614,6 +615,7 @@
             this.Controls.Add(this.grpTitulo);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grpMovimentacoes);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaRelatorios";
             this.Text = "Relatorios";
             this.Load += new System.EventHandler(this.TelaRelatorios_Load);

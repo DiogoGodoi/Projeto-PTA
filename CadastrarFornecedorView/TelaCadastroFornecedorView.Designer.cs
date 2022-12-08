@@ -28,9 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaCadastroFornecedorView));
             this.grpTitulo = new System.Windows.Forms.GroupBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.grpCadastrar = new System.Windows.Forms.GroupBox();
+            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.lblNumero = new System.Windows.Forms.Label();
+            this.lblCidade = new System.Windows.Forms.Label();
+            this.txtCidade = new System.Windows.Forms.TextBox();
+            this.lblBairro = new System.Windows.Forms.Label();
+            this.txtBairro = new System.Windows.Forms.TextBox();
             this.lblFormato = new System.Windows.Forms.Label();
             this.txtRua = new System.Windows.Forms.TextBox();
             this.txtNomeEmpresa = new System.Windows.Forms.TextBox();
@@ -39,12 +46,6 @@
             this.lblRua = new System.Windows.Forms.Label();
             this.lblNomeEmpresa = new System.Windows.Forms.Label();
             this.lblCnpj = new System.Windows.Forms.Label();
-            this.txtBairro = new System.Windows.Forms.TextBox();
-            this.lblBairro = new System.Windows.Forms.Label();
-            this.lblCidade = new System.Windows.Forms.Label();
-            this.txtCidade = new System.Windows.Forms.TextBox();
-            this.txtNumero = new System.Windows.Forms.TextBox();
-            this.lblNumero = new System.Windows.Forms.Label();
             this.grpTitulo.SuspendLayout();
             this.grpCadastrar.SuspendLayout();
             this.SuspendLayout();
@@ -95,6 +96,63 @@
             this.grpCadastrar.TabIndex = 4;
             this.grpCadastrar.TabStop = false;
             this.grpCadastrar.Text = "Cadastrar";
+            // 
+            // txtNumero
+            // 
+            this.txtNumero.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumero.Location = new System.Drawing.Point(309, 134);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(56, 21);
+            this.txtNumero.TabIndex = 25;
+            // 
+            // lblNumero
+            // 
+            this.lblNumero.AutoSize = true;
+            this.lblNumero.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumero.ForeColor = System.Drawing.Color.Black;
+            this.lblNumero.Location = new System.Drawing.Point(286, 135);
+            this.lblNumero.Name = "lblNumero";
+            this.lblNumero.Size = new System.Drawing.Size(17, 16);
+            this.lblNumero.TabIndex = 24;
+            this.lblNumero.Text = "Nº";
+            // 
+            // lblCidade
+            // 
+            this.lblCidade.AutoSize = true;
+            this.lblCidade.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCidade.ForeColor = System.Drawing.Color.Black;
+            this.lblCidade.Location = new System.Drawing.Point(26, 208);
+            this.lblCidade.Name = "lblCidade";
+            this.lblCidade.Size = new System.Drawing.Size(39, 16);
+            this.lblCidade.TabIndex = 23;
+            this.lblCidade.Text = "Cidade";
+            // 
+            // txtCidade
+            // 
+            this.txtCidade.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCidade.Location = new System.Drawing.Point(71, 207);
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(294, 21);
+            this.txtCidade.TabIndex = 22;
+            // 
+            // lblBairro
+            // 
+            this.lblBairro.AutoSize = true;
+            this.lblBairro.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBairro.ForeColor = System.Drawing.Color.Black;
+            this.lblBairro.Location = new System.Drawing.Point(26, 172);
+            this.lblBairro.Name = "lblBairro";
+            this.lblBairro.Size = new System.Drawing.Size(39, 16);
+            this.lblBairro.TabIndex = 21;
+            this.lblBairro.Text = "Bairro";
+            // 
+            // txtBairro
+            // 
+            this.txtBairro.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBairro.Location = new System.Drawing.Point(71, 171);
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(294, 21);
+            this.txtBairro.TabIndex = 20;
             // 
             // lblFormato
             // 
@@ -178,71 +236,15 @@
             this.lblCnpj.TabIndex = 0;
             this.lblCnpj.Text = "Cnpj";
             // 
-            // txtBairro
-            // 
-            this.txtBairro.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBairro.Location = new System.Drawing.Point(71, 171);
-            this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(294, 21);
-            this.txtBairro.TabIndex = 20;
-            // 
-            // lblBairro
-            // 
-            this.lblBairro.AutoSize = true;
-            this.lblBairro.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBairro.ForeColor = System.Drawing.Color.Black;
-            this.lblBairro.Location = new System.Drawing.Point(26, 172);
-            this.lblBairro.Name = "lblBairro";
-            this.lblBairro.Size = new System.Drawing.Size(39, 16);
-            this.lblBairro.TabIndex = 21;
-            this.lblBairro.Text = "Bairro";
-            // 
-            // lblCidade
-            // 
-            this.lblCidade.AutoSize = true;
-            this.lblCidade.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCidade.ForeColor = System.Drawing.Color.Black;
-            this.lblCidade.Location = new System.Drawing.Point(26, 208);
-            this.lblCidade.Name = "lblCidade";
-            this.lblCidade.Size = new System.Drawing.Size(39, 16);
-            this.lblCidade.TabIndex = 23;
-            this.lblCidade.Text = "Cidade";
-            // 
-            // txtCidade
-            // 
-            this.txtCidade.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCidade.Location = new System.Drawing.Point(71, 207);
-            this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(294, 21);
-            this.txtCidade.TabIndex = 22;
-            // 
-            // txtNumero
-            // 
-            this.txtNumero.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumero.Location = new System.Drawing.Point(309, 134);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(56, 21);
-            this.txtNumero.TabIndex = 25;
-            // 
-            // lblNumero
-            // 
-            this.lblNumero.AutoSize = true;
-            this.lblNumero.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumero.ForeColor = System.Drawing.Color.Black;
-            this.lblNumero.Location = new System.Drawing.Point(286, 135);
-            this.lblNumero.Name = "lblNumero";
-            this.lblNumero.Size = new System.Drawing.Size(17, 16);
-            this.lblNumero.TabIndex = 24;
-            this.lblNumero.Text = "Nº";
-            // 
-            // cadastrarFornecedorView
+            // TelaCadastroFornecedorView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(432, 509);
             this.Controls.Add(this.grpCadastrar);
             this.Controls.Add(this.grpTitulo);
-            this.Name = "cadastrarFornecedorView";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "TelaCadastroFornecedorView";
             this.Text = "Cadastrar Fornecedor";
             this.grpTitulo.ResumeLayout(false);
             this.grpTitulo.PerformLayout();

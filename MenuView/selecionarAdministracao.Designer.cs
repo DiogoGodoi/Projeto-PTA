@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaSelecaoAdministracao));
             this.btnCadastrarUsuario = new System.Windows.Forms.Button();
             this.btnCadastrarFuncionario = new System.Windows.Forms.Button();
             this.btnCadastrarInsumo = new System.Windows.Forms.Button();
@@ -138,6 +139,7 @@
             this.Controls.Add(this.btnCadastrarInsumo);
             this.Controls.Add(this.btnCadastrarFuncionario);
             this.Controls.Add(this.btnCadastrarUsuario);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaSelecaoAdministracao";
             this.Text = "Administração";
             this.grpTitulo.ResumeLayout(false);

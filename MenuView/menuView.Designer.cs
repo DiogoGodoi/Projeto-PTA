@@ -56,10 +56,9 @@
             this.btnAdm.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAdm.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdm.ForeColor = System.Drawing.Color.White;
-            this.btnAdm.Location = new System.Drawing.Point(89, 407);
-            this.btnAdm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdm.Location = new System.Drawing.Point(67, 331);
             this.btnAdm.Name = "btnAdm";
-            this.btnAdm.Size = new System.Drawing.Size(113, 28);
+            this.btnAdm.Size = new System.Drawing.Size(85, 23);
             this.btnAdm.TabIndex = 0;
             this.btnAdm.Text = "Adminsitração";
             this.btnAdm.UseVisualStyleBackColor = false;
@@ -72,10 +71,9 @@
             this.btnAlmoxarifado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAlmoxarifado.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlmoxarifado.ForeColor = System.Drawing.Color.White;
-            this.btnAlmoxarifado.Location = new System.Drawing.Point(380, 407);
-            this.btnAlmoxarifado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAlmoxarifado.Location = new System.Drawing.Point(285, 331);
             this.btnAlmoxarifado.Name = "btnAlmoxarifado";
-            this.btnAlmoxarifado.Size = new System.Drawing.Size(100, 28);
+            this.btnAlmoxarifado.Size = new System.Drawing.Size(75, 23);
             this.btnAlmoxarifado.TabIndex = 1;
             this.btnAlmoxarifado.Text = "Almoxarifado";
             this.btnAlmoxarifado.UseVisualStyleBackColor = false;
@@ -87,10 +85,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(16, 503);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(12, 409);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 20);
+            this.label1.Size = new System.Drawing.Size(87, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "Usuario Logado: ";
             // 
@@ -100,10 +97,9 @@
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblUsuario.Location = new System.Drawing.Point(133, 503);
-            this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUsuario.Location = new System.Drawing.Point(100, 409);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(0, 20);
+            this.lblUsuario.Size = new System.Drawing.Size(0, 16);
             this.lblUsuario.TabIndex = 4;
             // 
             // btnHistorico
@@ -113,10 +109,9 @@
             this.btnHistorico.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnHistorico.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistorico.ForeColor = System.Drawing.Color.White;
-            this.btnHistorico.Location = new System.Drawing.Point(659, 407);
-            this.btnHistorico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHistorico.Location = new System.Drawing.Point(494, 331);
             this.btnHistorico.Name = "btnHistorico";
-            this.btnHistorico.Size = new System.Drawing.Size(100, 28);
+            this.btnHistorico.Size = new System.Drawing.Size(75, 23);
             this.btnHistorico.TabIndex = 5;
             this.btnHistorico.Text = "Historicos";
             this.btnHistorico.UseVisualStyleBackColor = false;
@@ -129,10 +124,9 @@
             this.btnRelatorios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRelatorios.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRelatorios.ForeColor = System.Drawing.Color.White;
-            this.btnRelatorios.Location = new System.Drawing.Point(944, 407);
-            this.btnRelatorios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRelatorios.Location = new System.Drawing.Point(708, 331);
             this.btnRelatorios.Name = "btnRelatorios";
-            this.btnRelatorios.Size = new System.Drawing.Size(100, 28);
+            this.btnRelatorios.Size = new System.Drawing.Size(75, 23);
             this.btnRelatorios.TabIndex = 6;
             this.btnRelatorios.Text = "Relatorios";
             this.btnRelatorios.UseVisualStyleBackColor = false;
@@ -142,10 +136,9 @@
             // 
             this.pctAdministracao.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pctAdministracao.Image = ((System.Drawing.Image)(resources.GetObject("pctAdministracao.Image")));
-            this.pctAdministracao.Location = new System.Drawing.Point(45, 192);
-            this.pctAdministracao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pctAdministracao.Location = new System.Drawing.Point(34, 156);
             this.pctAdministracao.Name = "pctAdministracao";
-            this.pctAdministracao.Size = new System.Drawing.Size(209, 190);
+            this.pctAdministracao.Size = new System.Drawing.Size(157, 154);
             this.pctAdministracao.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctAdministracao.TabIndex = 7;
             this.pctAdministracao.TabStop = false;
@@ -154,10 +147,9 @@
             // 
             this.pictAlmoxarifado.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictAlmoxarifado.Image = ((System.Drawing.Image)(resources.GetObject("pictAlmoxarifado.Image")));
-            this.pictAlmoxarifado.Location = new System.Drawing.Point(325, 192);
-            this.pictAlmoxarifado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictAlmoxarifado.Location = new System.Drawing.Point(244, 156);
             this.pictAlmoxarifado.Name = "pictAlmoxarifado";
-            this.pictAlmoxarifado.Size = new System.Drawing.Size(209, 190);
+            this.pictAlmoxarifado.Size = new System.Drawing.Size(157, 154);
             this.pictAlmoxarifado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictAlmoxarifado.TabIndex = 8;
             this.pictAlmoxarifado.TabStop = false;
@@ -166,10 +158,9 @@
             // 
             this.pictHistoricos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictHistoricos.Image = ((System.Drawing.Image)(resources.GetObject("pictHistoricos.Image")));
-            this.pictHistoricos.Location = new System.Drawing.Point(607, 192);
-            this.pictHistoricos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictHistoricos.Location = new System.Drawing.Point(455, 156);
             this.pictHistoricos.Name = "pictHistoricos";
-            this.pictHistoricos.Size = new System.Drawing.Size(209, 190);
+            this.pictHistoricos.Size = new System.Drawing.Size(157, 154);
             this.pictHistoricos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictHistoricos.TabIndex = 10;
             this.pictHistoricos.TabStop = false;
@@ -178,10 +169,9 @@
             // 
             this.pictRelatorios.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictRelatorios.Image = ((System.Drawing.Image)(resources.GetObject("pictRelatorios.Image")));
-            this.pictRelatorios.Location = new System.Drawing.Point(884, 192);
-            this.pictRelatorios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictRelatorios.Location = new System.Drawing.Point(663, 156);
             this.pictRelatorios.Name = "pictRelatorios";
-            this.pictRelatorios.Size = new System.Drawing.Size(209, 190);
+            this.pictRelatorios.Size = new System.Drawing.Size(157, 154);
             this.pictRelatorios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictRelatorios.TabIndex = 11;
             this.pictRelatorios.TabStop = false;
@@ -190,11 +180,9 @@
             // 
             this.grpTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grpTitulo.Controls.Add(this.label2);
-            this.grpTitulo.Location = new System.Drawing.Point(54, 15);
-            this.grpTitulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpTitulo.Location = new System.Drawing.Point(40, 12);
             this.grpTitulo.Name = "grpTitulo";
-            this.grpTitulo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.grpTitulo.Size = new System.Drawing.Size(1032, 108);
+            this.grpTitulo.Size = new System.Drawing.Size(774, 88);
             this.grpTitulo.TabIndex = 12;
             this.grpTitulo.TabStop = false;
             // 
@@ -204,10 +192,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bernard MT Condensed", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(375, 32);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(281, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(292, 52);
+            this.label2.Size = new System.Drawing.Size(233, 41);
             this.label2.TabIndex = 0;
             this.label2.Text = "Menu Principal";
             // 
@@ -218,10 +205,9 @@
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSair.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.ForeColor = System.Drawing.Color.White;
-            this.btnSair.Location = new System.Drawing.Point(944, 490);
-            this.btnSair.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSair.Location = new System.Drawing.Point(708, 398);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(100, 28);
+            this.btnSair.Size = new System.Drawing.Size(75, 23);
             this.btnSair.TabIndex = 13;
             this.btnSair.Text = "Logout";
             this.btnSair.UseVisualStyleBackColor = false;
@@ -229,9 +215,9 @@
             // 
             // frmMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1136, 554);
+            this.ClientSize = new System.Drawing.Size(852, 450);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.grpTitulo);
             this.Controls.Add(this.pictRelatorios);
@@ -244,7 +230,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAlmoxarifado);
             this.Controls.Add(this.btnAdm);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMenu";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.frmMenu_Load);

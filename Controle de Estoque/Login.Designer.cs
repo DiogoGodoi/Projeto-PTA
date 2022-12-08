@@ -158,6 +158,7 @@
             this.Controls.Add(this.grpTitle);
             this.Controls.Add(this.pctLogo);
             this.Controls.Add(this.grpEntrar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Form1_Load);

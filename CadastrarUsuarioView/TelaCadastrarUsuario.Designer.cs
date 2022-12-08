@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastrarUsuario));
             this.grpTitulo = new System.Windows.Forms.GroupBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.grpCadastrar = new System.Windows.Forms.GroupBox();
@@ -47,11 +48,9 @@
             // 
             this.grpTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grpTitulo.Controls.Add(this.lblTitulo);
-            this.grpTitulo.Location = new System.Drawing.Point(48, 25);
-            this.grpTitulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpTitulo.Location = new System.Drawing.Point(36, 20);
             this.grpTitulo.Name = "grpTitulo";
-            this.grpTitulo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.grpTitulo.Size = new System.Drawing.Size(396, 64);
+            this.grpTitulo.Size = new System.Drawing.Size(297, 52);
             this.grpTitulo.TabIndex = 3;
             this.grpTitulo.TabStop = false;
             // 
@@ -61,10 +60,9 @@
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Bernard MT Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.Navy;
-            this.lblTitulo.Location = new System.Drawing.Point(88, 20);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo.Location = new System.Drawing.Point(66, 16);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(216, 36);
+            this.lblTitulo.Size = new System.Drawing.Size(179, 28);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Cadastrar Usuario";
             // 
@@ -81,11 +79,9 @@
             this.grpCadastrar.Controls.Add(this.lblCodigo);
             this.grpCadastrar.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpCadastrar.ForeColor = System.Drawing.Color.Navy;
-            this.grpCadastrar.Location = new System.Drawing.Point(48, 126);
-            this.grpCadastrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpCadastrar.Location = new System.Drawing.Point(36, 102);
             this.grpCadastrar.Name = "grpCadastrar";
-            this.grpCadastrar.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.grpCadastrar.Size = new System.Drawing.Size(396, 277);
+            this.grpCadastrar.Size = new System.Drawing.Size(297, 225);
             this.grpCadastrar.TabIndex = 2;
             this.grpCadastrar.TabStop = false;
             this.grpCadastrar.Text = "Cadastrar";
@@ -94,10 +90,9 @@
             // 
             this.radAlmoxarifado.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radAlmoxarifado.AutoSize = true;
-            this.radAlmoxarifado.Location = new System.Drawing.Point(164, 162);
-            this.radAlmoxarifado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radAlmoxarifado.Location = new System.Drawing.Point(123, 132);
             this.radAlmoxarifado.Name = "radAlmoxarifado";
-            this.radAlmoxarifado.Size = new System.Drawing.Size(77, 24);
+            this.radAlmoxarifado.Size = new System.Drawing.Size(61, 20);
             this.radAlmoxarifado.TabIndex = 10;
             this.radAlmoxarifado.TabStop = true;
             this.radAlmoxarifado.Text = "Padrão";
@@ -107,10 +102,9 @@
             // 
             this.radAdministracao.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radAdministracao.AutoSize = true;
-            this.radAdministracao.Location = new System.Drawing.Point(164, 130);
-            this.radAdministracao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radAdministracao.Location = new System.Drawing.Point(123, 106);
             this.radAdministracao.Name = "radAdministracao";
-            this.radAdministracao.Size = new System.Drawing.Size(122, 24);
+            this.radAdministracao.Size = new System.Drawing.Size(94, 20);
             this.radAdministracao.TabIndex = 9;
             this.radAdministracao.TabStop = true;
             this.radAdministracao.Text = "Administracao";
@@ -120,20 +114,18 @@
             // 
             this.txtNome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNome.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(116, 42);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNome.Location = new System.Drawing.Point(87, 34);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(244, 24);
+            this.txtNome.Size = new System.Drawing.Size(184, 21);
             this.txtNome.TabIndex = 6;
             // 
             // txtSenha
             // 
             this.txtSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSenha.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(116, 81);
-            this.txtSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSenha.Location = new System.Drawing.Point(87, 66);
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(244, 24);
+            this.txtSenha.Size = new System.Drawing.Size(184, 21);
             this.txtSenha.TabIndex = 5;
             // 
             // btnCadastrar
@@ -143,10 +135,9 @@
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCadastrar.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrar.Location = new System.Drawing.Point(141, 221);
-            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCadastrar.Location = new System.Drawing.Point(106, 180);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(131, 28);
+            this.btnCadastrar.Size = new System.Drawing.Size(98, 23);
             this.btnCadastrar.TabIndex = 4;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
@@ -158,10 +149,9 @@
             this.lblAcessos.AutoSize = true;
             this.lblAcessos.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAcessos.ForeColor = System.Drawing.Color.Black;
-            this.lblAcessos.Location = new System.Drawing.Point(90, 163);
-            this.lblAcessos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAcessos.Location = new System.Drawing.Point(68, 132);
             this.lblAcessos.Name = "lblAcessos";
-            this.lblAcessos.Size = new System.Drawing.Size(58, 20);
+            this.lblAcessos.Size = new System.Drawing.Size(42, 16);
             this.lblAcessos.TabIndex = 2;
             this.lblAcessos.Text = "Acessos";
             // 
@@ -171,10 +161,9 @@
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.Color.Black;
-            this.lblNome.Location = new System.Drawing.Point(43, 83);
-            this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNome.Location = new System.Drawing.Point(32, 67);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(51, 20);
+            this.lblNome.Size = new System.Drawing.Size(39, 16);
             this.lblNome.TabIndex = 1;
             this.lblNome.Text = "Senha:";
             // 
@@ -184,21 +173,20 @@
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.ForeColor = System.Drawing.Color.Black;
-            this.lblCodigo.Location = new System.Drawing.Point(43, 43);
-            this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCodigo.Location = new System.Drawing.Point(32, 35);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(49, 20);
+            this.lblCodigo.Size = new System.Drawing.Size(37, 16);
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Nome:";
             // 
             // frmCadastrarUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 423);
+            this.ClientSize = new System.Drawing.Size(366, 344);
             this.Controls.Add(this.grpTitulo);
             this.Controls.Add(this.grpCadastrar);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCadastrarUsuario";
             this.Text = "Cadastrar";
             this.grpTitulo.ResumeLayout(false);

@@ -198,7 +198,6 @@
             this.btnBuscarRequisitante.TabIndex = 28;
             this.btnBuscarRequisitante.Text = "Buscar";
             this.btnBuscarRequisitante.UseVisualStyleBackColor = false;
-            this.btnBuscarRequisitante.Visible = false;
             this.btnBuscarRequisitante.Click += new System.EventHandler(this.btnBuscarRequisitante_Click);
             // 
             // txtNomeRequisitante
@@ -214,7 +213,7 @@
             // 
             this.txtCracha.Location = new System.Drawing.Point(60, 32);
             this.txtCracha.Name = "txtCracha";
-            this.txtCracha.Size = new System.Drawing.Size(193, 23);
+            this.txtCracha.Size = new System.Drawing.Size(140, 23);
             this.txtCracha.TabIndex = 26;
             // 
             // lblNomeRequisitante
@@ -408,8 +407,6 @@
             this.grdEstoque.Size = new System.Drawing.Size(379, 307);
             this.grdEstoque.TabIndex = 35;
             this.grdEstoque.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdEstoque_CellContentClick);
-            this.grdEstoque.Click += new System.EventHandler(this.btnBuscarRequisitante_Click);
-            this.grdEstoque.DoubleClick += new System.EventHandler(this.btnBuscarRequisitante_Click);
             // 
             // nomeDataGridViewTextBoxColumn
             // 

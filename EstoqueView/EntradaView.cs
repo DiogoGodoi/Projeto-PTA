@@ -39,24 +39,7 @@ namespace EstoqueView
 
         private void btnBuscaEmpresa_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string cnpj = txtCnpj.Text;
-                bool retorno = _ctrlFornecedor.ProcurarPorCnpj(cnpj);
 
-                if (retorno == false)
-                {
-                    MessageBox.Show("Fornecedor não localizado", "Não localizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    txtNomeEmpresa.Text = _ctrlFornecedor.getNomeEmpresa();
-                }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Por favor digite o cnpj da empresa", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         private void btnAcrescentar_Click(object sender, EventArgs e)

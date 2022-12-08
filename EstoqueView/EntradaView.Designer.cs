@@ -221,7 +221,6 @@
             this.btnBuscaEmpresa.TabIndex = 28;
             this.btnBuscaEmpresa.Text = "Buscar";
             this.btnBuscaEmpresa.UseVisualStyleBackColor = false;
-            this.btnBuscaEmpresa.Visible = false;
             this.btnBuscaEmpresa.Click += new System.EventHandler(this.btnBuscaEmpresa_Click);
             // 
             // txtNomeEmpresa
@@ -237,7 +236,7 @@
             // 
             this.txtCnpj.Location = new System.Drawing.Point(60, 32);
             this.txtCnpj.Name = "txtCnpj";
-            this.txtCnpj.Size = new System.Drawing.Size(193, 23);
+            this.txtCnpj.Size = new System.Drawing.Size(140, 23);
             this.txtCnpj.TabIndex = 26;
             // 
             // lblNomeEmpresa
@@ -387,8 +386,6 @@
             this.grdEstoque.Size = new System.Drawing.Size(379, 307);
             this.grdEstoque.TabIndex = 33;
             this.grdEstoque.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdEstoque_CellContentClick_1);
-            this.grdEstoque.Click += new System.EventHandler(this.btnBuscaEmpresa_Click);
-            this.grdEstoque.DoubleClick += new System.EventHandler(this.btnBuscaEmpresa_Click);
             // 
             // codigo
             // 

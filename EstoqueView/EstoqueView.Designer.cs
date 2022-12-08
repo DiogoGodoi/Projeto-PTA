@@ -137,6 +137,7 @@ namespace Almoxarifado
             this.grdEstoque.Size = new System.Drawing.Size(592, 347);
             this.grdEstoque.TabIndex = 0;
             this.grdEstoque.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdEstoque_CellContentClick);
+            this.grdEstoque.DoubleClick += new System.EventHandler(this.grdEstoque_CellContentClick);
             // 
             // dataGridViewTextBoxColumn9
             // 

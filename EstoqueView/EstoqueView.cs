@@ -132,5 +132,10 @@ namespace Almoxarifado
         {
             Application.Run(new EntradaView());
         }
+
+        private void grdEstoque_CellContentClick(object sender, EventArgs e)
+        {
+            txtProcurar.Text = grdEstoque.SelectedCells[0].Value.ToString();
+        }
     }
 }

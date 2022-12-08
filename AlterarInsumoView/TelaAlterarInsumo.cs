@@ -150,7 +150,7 @@ namespace AlterarInsumoView
             int estoqueMin = Convert.ToInt32(txtEstoqueMin.Text);
 
             _mdlEstoque.codigo = codigo;
-            _mdlEstoque.nome = item;
+            _mdlEstoque.nome = item.ToUpper();
             _mdlEstoque.unidade = unidade;
             _mdlEstoque.quantidade = quantidade;
             _mdlEstoque.qtdMinima = estoqueMin;

@@ -65,7 +65,7 @@
             this.btnCadastrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCadastrarUsuario.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarUsuario.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrarUsuario.Location = new System.Drawing.Point(17, 164);
+            this.btnCadastrarUsuario.Location = new System.Drawing.Point(17, 175);
             this.btnCadastrarUsuario.Name = "btnCadastrarUsuario";
             this.btnCadastrarUsuario.Size = new System.Drawing.Size(118, 31);
             this.btnCadastrarUsuario.TabIndex = 0;
@@ -80,7 +80,7 @@
             this.btnCadastrarFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCadastrarFuncionario.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarFuncionario.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(16, 213);
+            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(16, 224);
             this.btnCadastrarFuncionario.Name = "btnCadastrarFuncionario";
             this.btnCadastrarFuncionario.Size = new System.Drawing.Size(119, 31);
             this.btnCadastrarFuncionario.TabIndex = 1;
@@ -95,7 +95,7 @@
             this.btnCadastrarInsumo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCadastrarInsumo.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarInsumo.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrarInsumo.Location = new System.Drawing.Point(16, 314);
+            this.btnCadastrarInsumo.Location = new System.Drawing.Point(16, 325);
             this.btnCadastrarInsumo.Name = "btnCadastrarInsumo";
             this.btnCadastrarInsumo.Size = new System.Drawing.Size(119, 31);
             this.btnCadastrarInsumo.TabIndex = 2;
@@ -131,7 +131,7 @@
             this.btnCadastrarFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCadastrarFornecedor.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarFornecedor.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrarFornecedor.Location = new System.Drawing.Point(16, 264);
+            this.btnCadastrarFornecedor.Location = new System.Drawing.Point(16, 275);
             this.btnCadastrarFornecedor.Name = "btnCadastrarFornecedor";
             this.btnCadastrarFornecedor.Size = new System.Drawing.Size(119, 31);
             this.btnCadastrarFornecedor.TabIndex = 5;
@@ -146,7 +146,7 @@
             this.btnAlterarInsumos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAlterarInsumos.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterarInsumos.ForeColor = System.Drawing.Color.White;
-            this.btnAlterarInsumos.Location = new System.Drawing.Point(17, 315);
+            this.btnAlterarInsumos.Location = new System.Drawing.Point(17, 326);
             this.btnAlterarInsumos.Name = "btnAlterarInsumos";
             this.btnAlterarInsumos.Size = new System.Drawing.Size(119, 31);
             this.btnAlterarInsumos.TabIndex = 6;
@@ -163,9 +163,9 @@
             this.grpCadastrar.Controls.Add(this.btnCadastrarInsumo);
             this.grpCadastrar.Controls.Add(this.btnCadastrarFornecedor);
             this.grpCadastrar.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpCadastrar.Location = new System.Drawing.Point(22, 119);
+            this.grpCadastrar.Location = new System.Drawing.Point(22, 97);
             this.grpCadastrar.Name = "grpCadastrar";
-            this.grpCadastrar.Size = new System.Drawing.Size(150, 364);
+            this.grpCadastrar.Size = new System.Drawing.Size(150, 386);
             this.grpCadastrar.TabIndex = 7;
             this.grpCadastrar.TabStop = false;
             this.grpCadastrar.Text = "Cadastrar";
@@ -190,9 +190,9 @@
             this.grpAlterar.Controls.Add(this.btnAlterarFornecedor);
             this.grpAlterar.Controls.Add(this.btnAlterarInsumos);
             this.grpAlterar.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpAlterar.Location = new System.Drawing.Point(178, 119);
+            this.grpAlterar.Location = new System.Drawing.Point(178, 97);
             this.grpAlterar.Name = "grpAlterar";
-            this.grpAlterar.Size = new System.Drawing.Size(150, 364);
+            this.grpAlterar.Size = new System.Drawing.Size(150, 386);
             this.grpAlterar.TabIndex = 8;
             this.grpAlterar.TabStop = false;
             this.grpAlterar.Text = "Alterar";
@@ -216,9 +216,9 @@
             this.grpRemover.Controls.Add(this.pictureBox1);
             this.grpRemover.Controls.Add(this.btnRemoverInsumos);
             this.grpRemover.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpRemover.Location = new System.Drawing.Point(334, 121);
+            this.grpRemover.Location = new System.Drawing.Point(334, 99);
             this.grpRemover.Name = "grpRemover";
-            this.grpRemover.Size = new System.Drawing.Size(150, 364);
+            this.grpRemover.Size = new System.Drawing.Size(150, 386);
             this.grpRemover.TabIndex = 9;
             this.grpRemover.TabStop = false;
             this.grpRemover.Text = "Remover";
@@ -240,7 +240,7 @@
             this.btnRemoverInsumos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRemoverInsumos.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoverInsumos.ForeColor = System.Drawing.Color.White;
-            this.btnRemoverInsumos.Location = new System.Drawing.Point(17, 315);
+            this.btnRemoverInsumos.Location = new System.Drawing.Point(17, 326);
             this.btnRemoverInsumos.Name = "btnRemoverInsumos";
             this.btnRemoverInsumos.Size = new System.Drawing.Size(119, 31);
             this.btnRemoverInsumos.TabIndex = 6;
@@ -254,7 +254,7 @@
             this.btnAlterarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAlterarUsuario.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterarUsuario.ForeColor = System.Drawing.Color.White;
-            this.btnAlterarUsuario.Location = new System.Drawing.Point(18, 164);
+            this.btnAlterarUsuario.Location = new System.Drawing.Point(18, 175);
             this.btnAlterarUsuario.Name = "btnAlterarUsuario";
             this.btnAlterarUsuario.Size = new System.Drawing.Size(118, 31);
             this.btnAlterarUsuario.TabIndex = 8;
@@ -268,7 +268,7 @@
             this.btnAlterarFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAlterarFuncionario.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterarFuncionario.ForeColor = System.Drawing.Color.White;
-            this.btnAlterarFuncionario.Location = new System.Drawing.Point(17, 213);
+            this.btnAlterarFuncionario.Location = new System.Drawing.Point(17, 224);
             this.btnAlterarFuncionario.Name = "btnAlterarFuncionario";
             this.btnAlterarFuncionario.Size = new System.Drawing.Size(119, 31);
             this.btnAlterarFuncionario.TabIndex = 9;
@@ -282,7 +282,7 @@
             this.btnAlterarFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAlterarFornecedor.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterarFornecedor.ForeColor = System.Drawing.Color.White;
-            this.btnAlterarFornecedor.Location = new System.Drawing.Point(17, 264);
+            this.btnAlterarFornecedor.Location = new System.Drawing.Point(17, 275);
             this.btnAlterarFornecedor.Name = "btnAlterarFornecedor";
             this.btnAlterarFornecedor.Size = new System.Drawing.Size(119, 31);
             this.btnAlterarFornecedor.TabIndex = 10;
@@ -296,7 +296,7 @@
             this.btnDeletarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDeletarUsuario.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeletarUsuario.ForeColor = System.Drawing.Color.White;
-            this.btnDeletarUsuario.Location = new System.Drawing.Point(17, 162);
+            this.btnDeletarUsuario.Location = new System.Drawing.Point(17, 173);
             this.btnDeletarUsuario.Name = "btnDeletarUsuario";
             this.btnDeletarUsuario.Size = new System.Drawing.Size(118, 31);
             this.btnDeletarUsuario.TabIndex = 10;
@@ -310,7 +310,7 @@
             this.btnDeletarFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDeletarFuncionario.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeletarFuncionario.ForeColor = System.Drawing.Color.White;
-            this.btnDeletarFuncionario.Location = new System.Drawing.Point(16, 211);
+            this.btnDeletarFuncionario.Location = new System.Drawing.Point(16, 222);
             this.btnDeletarFuncionario.Name = "btnDeletarFuncionario";
             this.btnDeletarFuncionario.Size = new System.Drawing.Size(119, 31);
             this.btnDeletarFuncionario.TabIndex = 11;
@@ -324,7 +324,7 @@
             this.btnDeletarFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDeletarFornecedor.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeletarFornecedor.ForeColor = System.Drawing.Color.White;
-            this.btnDeletarFornecedor.Location = new System.Drawing.Point(16, 262);
+            this.btnDeletarFornecedor.Location = new System.Drawing.Point(16, 273);
             this.btnDeletarFornecedor.Name = "btnDeletarFornecedor";
             this.btnDeletarFornecedor.Size = new System.Drawing.Size(119, 31);
             this.btnDeletarFornecedor.TabIndex = 12;

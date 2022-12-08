@@ -182,6 +182,8 @@
             this.grdEstoque.Size = new System.Drawing.Size(382, 238);
             this.grdEstoque.TabIndex = 38;
             this.grdEstoque.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdEstoque_CellContentClick);
+            this.grdEstoque.Click += new System.EventHandler(this.btnBuscaEmpresa_Click);
+            this.grdEstoque.DoubleClick += new System.EventHandler(this.btnBuscaEmpresa_Click);
             // 
             // nomeDataGridViewTextBoxColumn
             // 
@@ -433,13 +435,14 @@
             this.btnBuscaEmpresa.TabIndex = 28;
             this.btnBuscaEmpresa.Text = "Buscar";
             this.btnBuscaEmpresa.UseVisualStyleBackColor = false;
+            this.btnBuscaEmpresa.Visible = false;
             this.btnBuscaEmpresa.Click += new System.EventHandler(this.btnBuscaEmpresa_Click);
             // 
             // txtItem
             // 
             this.txtItem.Location = new System.Drawing.Point(60, 29);
             this.txtItem.Name = "txtItem";
-            this.txtItem.Size = new System.Drawing.Size(392, 23);
+            this.txtItem.Size = new System.Drawing.Size(468, 23);
             this.txtItem.TabIndex = 26;
             // 
             // txtCodigo

@@ -320,7 +320,7 @@
             this.btnBuscarPorItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarPorItem.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarPorItem.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarPorItem.Location = new System.Drawing.Point(203, 31);
+            this.btnBuscarPorItem.Location = new System.Drawing.Point(196, 31);
             this.btnBuscarPorItem.Name = "btnBuscarPorItem";
             this.btnBuscarPorItem.Size = new System.Drawing.Size(49, 23);
             this.btnBuscarPorItem.TabIndex = 20;

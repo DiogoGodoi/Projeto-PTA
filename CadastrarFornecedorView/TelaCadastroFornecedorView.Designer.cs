@@ -52,10 +52,11 @@
             // 
             // grpTitulo
             // 
+            this.grpTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grpTitulo.Controls.Add(this.lblTitulo);
-            this.grpTitulo.Location = new System.Drawing.Point(67, 33);
+            this.grpTitulo.Location = new System.Drawing.Point(21, 33);
             this.grpTitulo.Name = "grpTitulo";
-            this.grpTitulo.Size = new System.Drawing.Size(297, 52);
+            this.grpTitulo.Size = new System.Drawing.Size(388, 52);
             this.grpTitulo.TabIndex = 3;
             this.grpTitulo.TabStop = false;
             // 
@@ -65,7 +66,7 @@
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Bernard MT Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.Navy;
-            this.lblTitulo.Location = new System.Drawing.Point(42, 16);
+            this.lblTitulo.Location = new System.Drawing.Point(88, 16);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(216, 28);
             this.lblTitulo.TabIndex = 0;
@@ -90,15 +91,16 @@
             this.grpCadastrar.Controls.Add(this.lblCnpj);
             this.grpCadastrar.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpCadastrar.ForeColor = System.Drawing.Color.Navy;
-            this.grpCadastrar.Location = new System.Drawing.Point(22, 110);
+            this.grpCadastrar.Location = new System.Drawing.Point(21, 110);
             this.grpCadastrar.Name = "grpCadastrar";
-            this.grpCadastrar.Size = new System.Drawing.Size(388, 356);
+            this.grpCadastrar.Size = new System.Drawing.Size(388, 313);
             this.grpCadastrar.TabIndex = 4;
             this.grpCadastrar.TabStop = false;
             this.grpCadastrar.Text = "Cadastrar";
             // 
             // txtNumero
             // 
+            this.txtNumero.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNumero.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumero.Location = new System.Drawing.Point(309, 134);
             this.txtNumero.Name = "txtNumero";
@@ -107,6 +109,7 @@
             // 
             // lblNumero
             // 
+            this.lblNumero.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNumero.AutoSize = true;
             this.lblNumero.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumero.ForeColor = System.Drawing.Color.Black;
@@ -118,6 +121,7 @@
             // 
             // lblCidade
             // 
+            this.lblCidade.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCidade.AutoSize = true;
             this.lblCidade.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCidade.ForeColor = System.Drawing.Color.Black;
@@ -129,6 +133,7 @@
             // 
             // txtCidade
             // 
+            this.txtCidade.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCidade.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCidade.Location = new System.Drawing.Point(71, 207);
             this.txtCidade.Name = "txtCidade";
@@ -137,6 +142,7 @@
             // 
             // lblBairro
             // 
+            this.lblBairro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblBairro.AutoSize = true;
             this.lblBairro.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBairro.ForeColor = System.Drawing.Color.Black;
@@ -148,6 +154,7 @@
             // 
             // txtBairro
             // 
+            this.txtBairro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBairro.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBairro.Location = new System.Drawing.Point(71, 171);
             this.txtBairro.Name = "txtBairro";
@@ -156,6 +163,7 @@
             // 
             // lblFormato
             // 
+            this.lblFormato.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFormato.AutoSize = true;
             this.lblFormato.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFormato.ForeColor = System.Drawing.Color.Black;
@@ -167,6 +175,7 @@
             // 
             // txtRua
             // 
+            this.txtRua.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtRua.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRua.Location = new System.Drawing.Point(65, 134);
             this.txtRua.Name = "txtRua";
@@ -175,6 +184,7 @@
             // 
             // txtNomeEmpresa
             // 
+            this.txtNomeEmpresa.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNomeEmpresa.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomeEmpresa.Location = new System.Drawing.Point(125, 93);
             this.txtNomeEmpresa.Name = "txtNomeEmpresa";
@@ -183,6 +193,7 @@
             // 
             // txtCnpj
             // 
+            this.txtCnpj.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCnpj.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCnpj.Location = new System.Drawing.Point(65, 50);
             this.txtCnpj.Name = "txtCnpj";
@@ -191,6 +202,7 @@
             // 
             // btnCadastrar
             // 
+            this.btnCadastrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCadastrar.BackColor = System.Drawing.Color.DarkGreen;
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCadastrar.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -205,6 +217,7 @@
             // 
             // lblRua
             // 
+            this.lblRua.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblRua.AutoSize = true;
             this.lblRua.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRua.ForeColor = System.Drawing.Color.Black;
@@ -216,6 +229,7 @@
             // 
             // lblNomeEmpresa
             // 
+            this.lblNomeEmpresa.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNomeEmpresa.AutoSize = true;
             this.lblNomeEmpresa.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeEmpresa.ForeColor = System.Drawing.Color.Black;
@@ -227,6 +241,7 @@
             // 
             // lblCnpj
             // 
+            this.lblCnpj.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCnpj.AutoSize = true;
             this.lblCnpj.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCnpj.ForeColor = System.Drawing.Color.Black;
@@ -240,7 +255,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(432, 509);
+            this.ClientSize = new System.Drawing.Size(432, 458);
             this.Controls.Add(this.grpCadastrar);
             this.Controls.Add(this.grpTitulo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

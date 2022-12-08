@@ -159,6 +159,12 @@ namespace AlterarInsumoView
 
             if(retorno == true)
             {
+                txtCodigo.Text = String.Empty;
+                txtItem.Text = String.Empty;
+                txtTipoUnitario.Text = String.Empty;
+                txtQuantidade.Text = String.Empty;
+                txtEstoqueMin.Text = String.Empty;
+
                 MessageBox.Show("Alterado com sucesso", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else

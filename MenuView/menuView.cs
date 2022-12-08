@@ -62,8 +62,8 @@ namespace MenuView
         }
         private void frmMenu_Load(object sender, EventArgs e)
         {
-
-            if(mdlUsuarios.getNivel() == "1")
+            this.WindowState = FormWindowState.Maximized;
+            if (mdlUsuarios.getNivel() == "1")
             {
                 btnAdm.Enabled = true;
                 btnAlmoxarifado.Enabled = true;

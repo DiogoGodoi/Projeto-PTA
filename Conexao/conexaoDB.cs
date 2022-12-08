@@ -11,7 +11,7 @@ namespace Conexao
 {
     public class ConexaoDB
     {
-        private static string acessoDB = @"Server=tcp:dgodoi.database.windows.net,1433;Initial Catalog=dbGaleria;Persist Security Info=False;User ID=Dgodoi;Password=********;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        private static string acessoDB = @"Server=tcp:dgodoi.database.windows.net,1433;Initial Catalog=dbGaleria;Persist Security Info=False;User ID=Dgodoi;Password=****;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         public static SqlConnection conectar ()
         {
             SqlConnection conexao = new SqlConnection(acessoDB);

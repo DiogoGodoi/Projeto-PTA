@@ -168,7 +168,7 @@ namespace EstoqueView
         }
         private void DevolucaoView_Load(object sender, EventArgs e)
         {
-            
+            this.WindowState = FormWindowState.Maximized;
             try
             {
             this.estoqueTableAdapter.Fill(this.estoqueDB.Estoque);

@@ -96,6 +96,8 @@ namespace HistoricoView
         }
         private void TelaHistorico_Load(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized;
+
             try
             {
             this.historicoTableAdapter.Fill(this.dbHistorico.historico);

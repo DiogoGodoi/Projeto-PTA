@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaHistorico));
@@ -38,7 +39,7 @@
             this.naturezaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.operadorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.requisitanteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.historicoBindingSource = new System.Windows.Forms.BindingSource();
+            this.historicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dbHistorico = new HistoricoView.dbHistorico();
             this.grpPesquisar = new System.Windows.Forms.GroupBox();
             this.btnDevolucao = new System.Windows.Forms.Button();

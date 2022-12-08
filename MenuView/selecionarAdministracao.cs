@@ -86,5 +86,10 @@ namespace MenuView
             _thread.SetApartmentState(ApartmentState.STA);
             _thread.Start();
         }
+
+        private void TelaSelecaoAdministracao_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
     }
 }

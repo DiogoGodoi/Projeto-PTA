@@ -95,6 +95,8 @@ namespace Almoxarifado
         }
         private void frmEstoque_Load(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized;
+            this.WindowState = FormWindowState.Maximized;
             try
             {
             // TODO: esta linha de código carrega dados na tabela 'dbGaleria.Estoque'. Você pode movê-la ou removê-la conforme necessário.

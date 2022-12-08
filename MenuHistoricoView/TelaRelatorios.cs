@@ -378,6 +378,7 @@ namespace MenuHistoricoView
         }
         private void TelaRelatorios_Load(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized;
             txtNomeRequisitante.Enabled = false;
         }
         private void btnBuscarPorItem_Click(object sender, EventArgs e)

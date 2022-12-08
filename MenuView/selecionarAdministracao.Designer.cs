@@ -39,16 +39,16 @@
             this.grpCadastrar = new System.Windows.Forms.GroupBox();
             this.pctCadastrar = new System.Windows.Forms.PictureBox();
             this.grpAlterar = new System.Windows.Forms.GroupBox();
-            this.pctAlterar = new System.Windows.Forms.PictureBox();
-            this.grpRemover = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnRemoverInsumos = new System.Windows.Forms.Button();
             this.btnAlterarUsuario = new System.Windows.Forms.Button();
             this.btnAlterarFuncionario = new System.Windows.Forms.Button();
+            this.pctAlterar = new System.Windows.Forms.PictureBox();
             this.btnAlterarFornecedor = new System.Windows.Forms.Button();
+            this.grpRemover = new System.Windows.Forms.GroupBox();
             this.btnDeletarUsuario = new System.Windows.Forms.Button();
             this.btnDeletarFuncionario = new System.Windows.Forms.Button();
             this.btnDeletarFornecedor = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnRemoverInsumos = new System.Windows.Forms.Button();
             this.grpTitulo.SuspendLayout();
             this.grpCadastrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctCadastrar)).BeginInit();
@@ -197,56 +197,6 @@
             this.grpAlterar.TabStop = false;
             this.grpAlterar.Text = "Alterar";
             // 
-            // pctAlterar
-            // 
-            this.pctAlterar.Image = ((System.Drawing.Image)(resources.GetObject("pctAlterar.Image")));
-            this.pctAlterar.Location = new System.Drawing.Point(17, 20);
-            this.pctAlterar.Name = "pctAlterar";
-            this.pctAlterar.Size = new System.Drawing.Size(118, 125);
-            this.pctAlterar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pctAlterar.TabIndex = 9;
-            this.pctAlterar.TabStop = false;
-            // 
-            // grpRemover
-            // 
-            this.grpRemover.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.grpRemover.Controls.Add(this.btnDeletarUsuario);
-            this.grpRemover.Controls.Add(this.btnDeletarFuncionario);
-            this.grpRemover.Controls.Add(this.btnDeletarFornecedor);
-            this.grpRemover.Controls.Add(this.pictureBox1);
-            this.grpRemover.Controls.Add(this.btnRemoverInsumos);
-            this.grpRemover.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpRemover.Location = new System.Drawing.Point(334, 99);
-            this.grpRemover.Name = "grpRemover";
-            this.grpRemover.Size = new System.Drawing.Size(150, 386);
-            this.grpRemover.TabIndex = 9;
-            this.grpRemover.TabStop = false;
-            this.grpRemover.Text = "Remover";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(17, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(118, 125);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnRemoverInsumos
-            // 
-            this.btnRemoverInsumos.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRemoverInsumos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnRemoverInsumos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRemoverInsumos.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoverInsumos.ForeColor = System.Drawing.Color.White;
-            this.btnRemoverInsumos.Location = new System.Drawing.Point(17, 326);
-            this.btnRemoverInsumos.Name = "btnRemoverInsumos";
-            this.btnRemoverInsumos.Size = new System.Drawing.Size(119, 31);
-            this.btnRemoverInsumos.TabIndex = 6;
-            this.btnRemoverInsumos.Text = "Remover Insumos";
-            this.btnRemoverInsumos.UseVisualStyleBackColor = false;
-            // 
             // btnAlterarUsuario
             // 
             this.btnAlterarUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -275,6 +225,16 @@
             this.btnAlterarFuncionario.Text = "Alterar Funcionario";
             this.btnAlterarFuncionario.UseVisualStyleBackColor = false;
             // 
+            // pctAlterar
+            // 
+            this.pctAlterar.Image = ((System.Drawing.Image)(resources.GetObject("pctAlterar.Image")));
+            this.pctAlterar.Location = new System.Drawing.Point(17, 20);
+            this.pctAlterar.Name = "pctAlterar";
+            this.pctAlterar.Size = new System.Drawing.Size(118, 125);
+            this.pctAlterar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctAlterar.TabIndex = 9;
+            this.pctAlterar.TabStop = false;
+            // 
             // btnAlterarFornecedor
             // 
             this.btnAlterarFornecedor.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -288,6 +248,22 @@
             this.btnAlterarFornecedor.TabIndex = 10;
             this.btnAlterarFornecedor.Text = "Alterar Fornecedor";
             this.btnAlterarFornecedor.UseVisualStyleBackColor = false;
+            // 
+            // grpRemover
+            // 
+            this.grpRemover.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.grpRemover.Controls.Add(this.btnDeletarUsuario);
+            this.grpRemover.Controls.Add(this.btnDeletarFuncionario);
+            this.grpRemover.Controls.Add(this.btnDeletarFornecedor);
+            this.grpRemover.Controls.Add(this.pictureBox1);
+            this.grpRemover.Controls.Add(this.btnRemoverInsumos);
+            this.grpRemover.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpRemover.Location = new System.Drawing.Point(334, 99);
+            this.grpRemover.Name = "grpRemover";
+            this.grpRemover.Size = new System.Drawing.Size(150, 386);
+            this.grpRemover.TabIndex = 9;
+            this.grpRemover.TabStop = false;
+            this.grpRemover.Text = "Remover";
             // 
             // btnDeletarUsuario
             // 
@@ -331,6 +307,30 @@
             this.btnDeletarFornecedor.Text = "Deletar Fornecedor";
             this.btnDeletarFornecedor.UseVisualStyleBackColor = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(17, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(118, 125);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnRemoverInsumos
+            // 
+            this.btnRemoverInsumos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnRemoverInsumos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnRemoverInsumos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRemoverInsumos.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoverInsumos.ForeColor = System.Drawing.Color.White;
+            this.btnRemoverInsumos.Location = new System.Drawing.Point(17, 326);
+            this.btnRemoverInsumos.Name = "btnRemoverInsumos";
+            this.btnRemoverInsumos.Size = new System.Drawing.Size(119, 31);
+            this.btnRemoverInsumos.TabIndex = 6;
+            this.btnRemoverInsumos.Text = "Remover Insumos";
+            this.btnRemoverInsumos.UseVisualStyleBackColor = false;
+            // 
             // TelaSelecaoAdministracao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -343,6 +343,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaSelecaoAdministracao";
             this.Text = "Administração";
+            this.Load += new System.EventHandler(this.TelaSelecaoAdministracao_Load);
             this.grpTitulo.ResumeLayout(false);
             this.grpTitulo.PerformLayout();
             this.grpCadastrar.ResumeLayout(false);

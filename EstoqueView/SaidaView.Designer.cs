@@ -280,6 +280,7 @@
             // 
             // grdTitulo
             // 
+            this.grdTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grdTitulo.Controls.Add(this.lblTitulo);
             this.grdTitulo.Location = new System.Drawing.Point(20, 10);
             this.grdTitulo.Margin = new System.Windows.Forms.Padding(2);

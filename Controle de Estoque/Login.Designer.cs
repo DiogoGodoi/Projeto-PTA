@@ -155,6 +155,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(523, 465);
+            this.ControlBox = false;
             this.Controls.Add(this.grpTitle);
             this.Controls.Add(this.pctLogo);
             this.Controls.Add(this.grpEntrar);

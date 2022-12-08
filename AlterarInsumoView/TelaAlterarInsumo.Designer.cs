@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaAlterarInsumo));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtProcurar = new System.Windows.Forms.TextBox();
@@ -85,7 +85,7 @@
             this.groupBox1.Controls.Add(this.lblNome);
             this.groupBox1.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Navy;
-            this.groupBox1.Location = new System.Drawing.Point(738, 151);
+            this.groupBox1.Location = new System.Drawing.Point(610, 151);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(382, 77);
             this.groupBox1.TabIndex = 39;
@@ -131,46 +131,46 @@
             this.grdEstoque.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grdEstoque.BackgroundColor = System.Drawing.Color.Silver;
             this.grdEstoque.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Format = "N0";
-            dataGridViewCellStyle5.NullValue = null;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdEstoque.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Format = "N0";
+            dataGridViewCellStyle1.NullValue = null;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdEstoque.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grdEstoque.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdEstoque.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nomeDataGridViewTextBoxColumn});
             this.grdEstoque.DataSource = this.estoqueBindingSource;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.Format = "N2";
-            dataGridViewCellStyle6.NullValue = null;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdEstoque.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdEstoque.DefaultCellStyle = dataGridViewCellStyle2;
             this.grdEstoque.GridColor = System.Drawing.SystemColors.MenuHighlight;
-            this.grdEstoque.Location = new System.Drawing.Point(741, 245);
+            this.grdEstoque.Location = new System.Drawing.Point(610, 245);
             this.grdEstoque.Name = "grdEstoque";
             this.grdEstoque.ReadOnly = true;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdEstoque.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdEstoque.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.grdEstoque.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdEstoque.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdEstoque.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.grdEstoque.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.grdEstoque.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Navy;
             this.grdEstoque.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
@@ -179,7 +179,7 @@
             this.grdEstoque.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
             this.grdEstoque.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.grdEstoque.RowTemplate.Height = 15;
-            this.grdEstoque.Size = new System.Drawing.Size(379, 238);
+            this.grdEstoque.Size = new System.Drawing.Size(382, 238);
             this.grdEstoque.TabIndex = 38;
             this.grdEstoque.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdEstoque_CellContentClick);
             // 
@@ -208,7 +208,7 @@
             this.grdTitulo.Margin = new System.Windows.Forms.Padding(2);
             this.grdTitulo.Name = "grdTitulo";
             this.grdTitulo.Padding = new System.Windows.Forms.Padding(2);
-            this.grdTitulo.Size = new System.Drawing.Size(919, 81);
+            this.grdTitulo.Size = new System.Drawing.Size(952, 81);
             this.grdTitulo.TabIndex = 37;
             this.grdTitulo.TabStop = false;
             // 
@@ -218,7 +218,7 @@
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Bernard MT Condensed", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lblTitulo.Location = new System.Drawing.Point(372, 26);
+            this.lblTitulo.Location = new System.Drawing.Point(389, 26);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(201, 36);
@@ -244,7 +244,7 @@
             this.grpAlterarInsumo.ForeColor = System.Drawing.Color.Navy;
             this.grpAlterarInsumo.Location = new System.Drawing.Point(40, 151);
             this.grpAlterarInsumo.Name = "grpAlterarInsumo";
-            this.grpAlterarInsumo.Size = new System.Drawing.Size(671, 285);
+            this.grpAlterarInsumo.Size = new System.Drawing.Size(551, 235);
             this.grpAlterarInsumo.TabIndex = 35;
             this.grpAlterarInsumo.TabStop = false;
             this.grpAlterarInsumo.Text = "Alterar Insumo";
@@ -253,7 +253,7 @@
             // 
             this.lblEstoqueMin.AutoSize = true;
             this.lblEstoqueMin.ForeColor = System.Drawing.Color.Black;
-            this.lblEstoqueMin.Location = new System.Drawing.Point(451, 68);
+            this.lblEstoqueMin.Location = new System.Drawing.Point(402, 68);
             this.lblEstoqueMin.Name = "lblEstoqueMin";
             this.lblEstoqueMin.Size = new System.Drawing.Size(82, 16);
             this.lblEstoqueMin.TabIndex = 34;
@@ -262,16 +262,16 @@
             // txtEstoqueMin
             // 
             this.txtEstoqueMin.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstoqueMin.Location = new System.Drawing.Point(541, 67);
+            this.txtEstoqueMin.Location = new System.Drawing.Point(492, 67);
             this.txtEstoqueMin.Name = "txtEstoqueMin";
-            this.txtEstoqueMin.Size = new System.Drawing.Size(108, 21);
+            this.txtEstoqueMin.Size = new System.Drawing.Size(36, 21);
             this.txtEstoqueMin.TabIndex = 33;
             // 
             // lblQuantidade
             // 
             this.lblQuantidade.AutoSize = true;
             this.lblQuantidade.ForeColor = System.Drawing.Color.Black;
-            this.lblQuantidade.Location = new System.Drawing.Point(311, 67);
+            this.lblQuantidade.Location = new System.Drawing.Point(268, 67);
             this.lblQuantidade.Name = "lblQuantidade";
             this.lblQuantidade.Size = new System.Drawing.Size(63, 16);
             this.lblQuantidade.TabIndex = 32;
@@ -280,7 +280,7 @@
             // txtQuantidade
             // 
             this.txtQuantidade.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuantidade.Location = new System.Drawing.Point(378, 66);
+            this.txtQuantidade.Location = new System.Drawing.Point(335, 66);
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(61, 21);
             this.txtQuantidade.TabIndex = 31;
@@ -298,16 +298,15 @@
             this.grpTipoUnitario.Controls.Add(this.radGL);
             this.grpTipoUnitario.Location = new System.Drawing.Point(17, 103);
             this.grpTipoUnitario.Name = "grpTipoUnitario";
-            this.grpTipoUnitario.Size = new System.Drawing.Size(632, 167);
+            this.grpTipoUnitario.Size = new System.Drawing.Size(511, 117);
             this.grpTipoUnitario.TabIndex = 30;
             this.grpTipoUnitario.TabStop = false;
             this.grpTipoUnitario.Text = "Selecione o tipo unitário";
             // 
             // radPR
             // 
-            this.radPR.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radPR.AutoSize = true;
-            this.radPR.Location = new System.Drawing.Point(298, 129);
+            this.radPR.Location = new System.Drawing.Point(356, 38);
             this.radPR.Name = "radPR";
             this.radPR.Size = new System.Drawing.Size(39, 20);
             this.radPR.TabIndex = 48;
@@ -318,9 +317,8 @@
             // 
             // radUN
             // 
-            this.radUN.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radUN.AutoSize = true;
-            this.radUN.Location = new System.Drawing.Point(127, 43);
+            this.radUN.Location = new System.Drawing.Point(128, 38);
             this.radUN.Name = "radUN";
             this.radUN.Size = new System.Drawing.Size(37, 20);
             this.radUN.TabIndex = 40;
@@ -331,9 +329,8 @@
             // 
             // radMt
             // 
-            this.radMt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radMt.AutoSize = true;
-            this.radMt.Location = new System.Drawing.Point(467, 82);
+            this.radMt.Location = new System.Drawing.Point(299, 77);
             this.radMt.Name = "radMt";
             this.radMt.Size = new System.Drawing.Size(39, 20);
             this.radMt.TabIndex = 47;
@@ -344,9 +341,8 @@
             // 
             // radCL
             // 
-            this.radCL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radCL.AutoSize = true;
-            this.radCL.Location = new System.Drawing.Point(235, 43);
+            this.radCL.Location = new System.Drawing.Point(186, 38);
             this.radCL.Name = "radCL";
             this.radCL.Size = new System.Drawing.Size(35, 20);
             this.radCL.TabIndex = 41;
@@ -357,9 +353,8 @@
             // 
             // radBD
             // 
-            this.radBD.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radBD.AutoSize = true;
-            this.radBD.Location = new System.Drawing.Point(356, 82);
+            this.radBD.Location = new System.Drawing.Point(246, 77);
             this.radBD.Name = "radBD";
             this.radBD.Size = new System.Drawing.Size(39, 20);
             this.radBD.TabIndex = 46;
@@ -370,9 +365,8 @@
             // 
             // radKG
             // 
-            this.radKG.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radKG.AutoSize = true;
-            this.radKG.Location = new System.Drawing.Point(356, 43);
+            this.radKG.Location = new System.Drawing.Point(246, 38);
             this.radKG.Name = "radKG";
             this.radKG.Size = new System.Drawing.Size(39, 20);
             this.radKG.TabIndex = 42;
@@ -383,9 +377,8 @@
             // 
             // radFD
             // 
-            this.radFD.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radFD.AutoSize = true;
-            this.radFD.Location = new System.Drawing.Point(233, 82);
+            this.radFD.Location = new System.Drawing.Point(186, 77);
             this.radFD.Name = "radFD";
             this.radFD.Size = new System.Drawing.Size(37, 20);
             this.radFD.TabIndex = 45;
@@ -396,9 +389,8 @@
             // 
             // radMI
             // 
-            this.radMI.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radMI.AutoSize = true;
-            this.radMI.Location = new System.Drawing.Point(469, 43);
+            this.radMI.Location = new System.Drawing.Point(301, 38);
             this.radMI.Name = "radMI";
             this.radMI.Size = new System.Drawing.Size(37, 20);
             this.radMI.TabIndex = 43;
@@ -409,9 +401,8 @@
             // 
             // radGL
             // 
-            this.radGL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radGL.AutoSize = true;
-            this.radGL.Location = new System.Drawing.Point(127, 82);
+            this.radGL.Location = new System.Drawing.Point(128, 77);
             this.radGL.Name = "radGL";
             this.radGL.Size = new System.Drawing.Size(37, 20);
             this.radGL.TabIndex = 44;
@@ -436,9 +427,9 @@
             this.btnBuscaEmpresa.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnBuscaEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBuscaEmpresa.ForeColor = System.Drawing.Color.White;
-            this.btnBuscaEmpresa.Location = new System.Drawing.Point(602, 29);
+            this.btnBuscaEmpresa.Location = new System.Drawing.Point(459, 28);
             this.btnBuscaEmpresa.Name = "btnBuscaEmpresa";
-            this.btnBuscaEmpresa.Size = new System.Drawing.Size(47, 23);
+            this.btnBuscaEmpresa.Size = new System.Drawing.Size(69, 23);
             this.btnBuscaEmpresa.TabIndex = 28;
             this.btnBuscaEmpresa.Text = "Buscar";
             this.btnBuscaEmpresa.UseVisualStyleBackColor = false;
@@ -448,7 +439,7 @@
             // 
             this.txtItem.Location = new System.Drawing.Point(60, 29);
             this.txtItem.Name = "txtItem";
-            this.txtItem.Size = new System.Drawing.Size(536, 23);
+            this.txtItem.Size = new System.Drawing.Size(392, 23);
             this.txtItem.TabIndex = 26;
             // 
             // txtCodigo
@@ -456,7 +447,7 @@
             this.txtCodigo.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigo.Location = new System.Drawing.Point(61, 66);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(118, 21);
+            this.txtCodigo.Size = new System.Drawing.Size(86, 21);
             this.txtCodigo.TabIndex = 22;
             // 
             // lblRequisitante
@@ -472,7 +463,7 @@
             // txtTipoUnitario
             // 
             this.txtTipoUnitario.Enabled = false;
-            this.txtTipoUnitario.Location = new System.Drawing.Point(261, 66);
+            this.txtTipoUnitario.Location = new System.Drawing.Point(229, 65);
             this.txtTipoUnitario.Name = "txtTipoUnitario";
             this.txtTipoUnitario.Size = new System.Drawing.Size(32, 23);
             this.txtTipoUnitario.TabIndex = 18;
@@ -481,7 +472,7 @@
             // 
             this.lblUnidade.AutoSize = true;
             this.lblUnidade.ForeColor = System.Drawing.Color.Black;
-            this.lblUnidade.Location = new System.Drawing.Point(185, 67);
+            this.lblUnidade.Location = new System.Drawing.Point(153, 66);
             this.lblUnidade.Name = "lblUnidade";
             this.lblUnidade.Size = new System.Drawing.Size(70, 16);
             this.lblUnidade.TabIndex = 14;
@@ -497,7 +488,7 @@
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmar.Location = new System.Drawing.Point(290, 460);
+            this.btnConfirmar.Location = new System.Drawing.Point(250, 407);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(121, 23);
             this.btnConfirmar.TabIndex = 19;
@@ -509,7 +500,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1166, 520);
+            this.ClientSize = new System.Drawing.Size(1033, 520);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grdEstoque);
             this.Controls.Add(this.grdTitulo);

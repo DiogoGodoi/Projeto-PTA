@@ -282,16 +282,16 @@ namespace EstoqueControle
 
                 var leitura = comando.ExecuteReader();
 
-                if (leitura.Read() == false)
+                if(leitura.Read() == false)
                 {
                     abrirConn.Close();
                     return true;
-                }
-                else
+                }else
                 {
                     abrirConn.Close();
                     return false;
                 }
+
             }
             catch (Exception ex)
             {

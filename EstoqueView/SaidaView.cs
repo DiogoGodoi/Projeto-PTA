@@ -26,6 +26,7 @@ namespace EstoqueView
         ctrlColaboradores _ctrlColaboradores = new ctrlColaboradores();
         List<ctrlMovimentacao> list = new List<ctrlMovimentacao>();
         ListViewItem items;
+
         int contador;
         public SaidaView()
         {
@@ -80,13 +81,10 @@ namespace EstoqueView
             string item = txtItem.Text;
             string quantidade = txtQuantidade.Text;
             string operador = mdlUsuarios.getNome();
-            _ctrlEstoque.Pesquisar(item);
-
-                if (item == _ctrlEstoque.getItem())
-                {
-                    MessageBox.Show("Item ja adcionado");
-                }
-                else if (txtItem.Text == String.Empty || txtQuantidade.Text == String.Empty || txtCracha.Text == String.Empty)
+            
+                _ctrlEstoque.Pesquisar(item);
+    
+                if (txtItem.Text == String.Empty || txtQuantidade.Text == String.Empty || txtCracha.Text == String.Empty)
                 {
                     MessageBox.Show("Dados incompletos");
                 }
@@ -96,8 +94,9 @@ namespace EstoqueView
                 }
                 else
                 {
+                    
                     list.Add(new ctrlMovimentacao(item, quantidade, operador));
-
+                    
                     foreach (var i in list)
                     {
                         items = new ListViewItem(i.nome);

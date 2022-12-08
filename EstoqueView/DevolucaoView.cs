@@ -85,11 +85,7 @@ namespace EstoqueView
                 string operador = mdlUsuarios.getNome();
                 _ctrlEstoque.Pesquisar(item);
 
-                if (item == _ctrlEstoque.getItem()) {
-
-                    MessageBox.Show("Item ja adcionado");
-
-                }else if (txtItem.Text == String.Empty || txtQuantidade.Text == String.Empty || txtCracha.Text == String.Empty)
+                if (txtItem.Text == String.Empty || txtQuantidade.Text == String.Empty || txtCracha.Text == String.Empty)
                 {
                     MessageBox.Show("Dados incompletos");
                 }
@@ -143,8 +139,7 @@ namespace EstoqueView
                     txtItem.Text = String.Empty;
                     txtNomeRequisitante.Text = String.Empty;
                     txtQuantidade.Text = String.Empty;
-
-                
+        
             }
 
             var resposta = MessageBox.Show("Deseja imprimir comprovante ", "Comprovante", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

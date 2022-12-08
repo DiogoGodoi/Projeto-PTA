@@ -15,6 +15,7 @@ namespace SaidaControle
         public string quantidade;
         public string codigo;
         public string operador;
+        public static string item;
 
         public ctrlMovimentacao()
         {
@@ -23,6 +24,7 @@ namespace SaidaControle
         public ctrlMovimentacao(string pNome, string pQuantidade, string pOperador)
         {
             nome = pNome;
+            item = pNome;
             quantidade = pQuantidade;
             operador = pOperador;
         }
@@ -34,6 +36,12 @@ namespace SaidaControle
             nome = pNome;
             quantidade = pQuantidade;
             operador = pOperador;
+            item = pNome;
+        }
+        
+        public static string getItem()
+        {
+            return item;
         }
     }
 }

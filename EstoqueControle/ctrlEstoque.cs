@@ -134,7 +134,7 @@ namespace EstoqueControle
                 if(leitura.Read() == true)
                 {
                     qtd = Convert.ToInt32(leitura["quantidade"]);
-                    item = leitura["item"].ToString();
+                    item = leitura["nome"].ToString();
                     return tabela;
                 }else
                 {

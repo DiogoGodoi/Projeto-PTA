@@ -386,6 +386,7 @@
             this.grdEstoque.Size = new System.Drawing.Size(379, 307);
             this.grdEstoque.TabIndex = 33;
             this.grdEstoque.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdEstoque_CellContentClick_1);
+            this.grdEstoque.DoubleClick += new System.EventHandler(this.grdEstoque_CellContentClick_1);
             // 
             // codigo
             // 

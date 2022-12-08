@@ -407,6 +407,7 @@
             this.grdEstoque.Size = new System.Drawing.Size(376, 307);
             this.grdEstoque.TabIndex = 35;
             this.grdEstoque.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdEstoque_CellContentClick);
+            this.grdEstoque.DoubleClick += new System.EventHandler(this.grdEstoque_CellContentClick);
             // 
             // nomeDataGridViewTextBoxColumn
             // 

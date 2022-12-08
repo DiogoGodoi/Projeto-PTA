@@ -225,5 +225,10 @@ namespace EstoqueView
         {
            txtItem.Text = grdEstoque.SelectedCells[0].Value.ToString();
         }
+
+        private void grdEstoque_CellContentClick_1(object sender, EventArgs e)
+        {
+            txtItem.Text = grdEstoque.SelectedCells[0].Value.ToString();
+        }
     }
 }

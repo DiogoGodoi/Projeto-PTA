@@ -38,7 +38,7 @@
             this.txtProcurar = new System.Windows.Forms.TextBox();
             this.btnProcurar = new System.Windows.Forms.Button();
             this.lblNome = new System.Windows.Forms.Label();
-            this.grdEstoque = new System.Windows.Forms.DataGridView();
+            this.grdInsumo = new System.Windows.Forms.DataGridView();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estoqueBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.estoqueTB = new AlterarInsumoView.EstoqueTB();
@@ -69,7 +69,7 @@
             this.estoqueTableAdapter = new AlterarInsumoView.EstoqueTBTableAdapters.EstoqueTableAdapter();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdEstoque)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdInsumo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estoqueBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estoqueTB)).BeginInit();
             this.grdTitulo.SuspendLayout();
@@ -122,15 +122,15 @@
             this.lblNome.TabIndex = 3;
             this.lblNome.Text = "Nome";
             // 
-            // grdEstoque
+            // grdInsumo
             // 
-            this.grdEstoque.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
-            this.grdEstoque.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.grdEstoque.AutoGenerateColumns = false;
-            this.grdEstoque.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.grdEstoque.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.grdEstoque.BackgroundColor = System.Drawing.Color.Silver;
-            this.grdEstoque.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.grdInsumo.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
+            this.grdInsumo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.grdInsumo.AutoGenerateColumns = false;
+            this.grdInsumo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.grdInsumo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.grdInsumo.BackgroundColor = System.Drawing.Color.Silver;
+            this.grdInsumo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -140,11 +140,11 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Navy;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdEstoque.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.grdEstoque.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdEstoque.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.grdInsumo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.grdInsumo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdInsumo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nomeDataGridViewTextBoxColumn});
-            this.grdEstoque.DataSource = this.estoqueBindingSource;
+            this.grdInsumo.DataSource = this.estoqueBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -154,11 +154,11 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdEstoque.DefaultCellStyle = dataGridViewCellStyle2;
-            this.grdEstoque.GridColor = System.Drawing.SystemColors.MenuHighlight;
-            this.grdEstoque.Location = new System.Drawing.Point(610, 245);
-            this.grdEstoque.Name = "grdEstoque";
-            this.grdEstoque.ReadOnly = true;
+            this.grdInsumo.DefaultCellStyle = dataGridViewCellStyle2;
+            this.grdInsumo.GridColor = System.Drawing.SystemColors.MenuHighlight;
+            this.grdInsumo.Location = new System.Drawing.Point(610, 245);
+            this.grdInsumo.Name = "grdInsumo";
+            this.grdInsumo.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.Navy;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -166,24 +166,24 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdEstoque.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.grdEstoque.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.grdInsumo.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.grdInsumo.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdEstoque.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.grdEstoque.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.grdEstoque.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Navy;
-            this.grdEstoque.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
-            this.grdEstoque.RowTemplate.DefaultCellStyle.Format = "N0";
-            this.grdEstoque.RowTemplate.DefaultCellStyle.NullValue = null;
-            this.grdEstoque.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.grdEstoque.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdEstoque.RowTemplate.Height = 15;
-            this.grdEstoque.Size = new System.Drawing.Size(382, 238);
-            this.grdEstoque.TabIndex = 38;
-            this.grdEstoque.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdEstoque_CellContentClick);
-            this.grdEstoque.Click += new System.EventHandler(this.btnBuscaEmpresa_Click);
-            this.grdEstoque.DoubleClick += new System.EventHandler(this.btnBuscaEmpresa_Click);
+            this.grdInsumo.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.grdInsumo.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.grdInsumo.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Navy;
+            this.grdInsumo.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
+            this.grdInsumo.RowTemplate.DefaultCellStyle.Format = "N0";
+            this.grdInsumo.RowTemplate.DefaultCellStyle.NullValue = null;
+            this.grdInsumo.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.grdInsumo.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdInsumo.RowTemplate.Height = 15;
+            this.grdInsumo.Size = new System.Drawing.Size(382, 238);
+            this.grdInsumo.TabIndex = 38;
+            this.grdInsumo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdEstoque_CellContentClick);
+            this.grdInsumo.Click += new System.EventHandler(this.btnBuscaEmpresa_Click);
+            this.grdInsumo.DoubleClick += new System.EventHandler(this.btnBuscaEmpresa_Click);
             // 
             // nomeDataGridViewTextBoxColumn
             // 
@@ -505,7 +505,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1033, 520);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.grdEstoque);
+            this.Controls.Add(this.grdInsumo);
             this.Controls.Add(this.grdTitulo);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.grpAlterarInsumo);
@@ -515,7 +515,7 @@
             this.Load += new System.EventHandler(this.frmAlterarInsumo_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdEstoque)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdInsumo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estoqueBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estoqueTB)).EndInit();
             this.grdTitulo.ResumeLayout(false);
@@ -534,7 +534,7 @@
         private System.Windows.Forms.TextBox txtProcurar;
         private System.Windows.Forms.Button btnProcurar;
         private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.DataGridView grdEstoque;
+        private System.Windows.Forms.DataGridView grdInsumo;
         private System.Windows.Forms.GroupBox grdTitulo;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.GroupBox grpAlterarInsumo;

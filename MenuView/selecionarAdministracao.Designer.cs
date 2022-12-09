@@ -39,7 +39,7 @@
             this.grpCadastrar = new System.Windows.Forms.GroupBox();
             this.pctCadastrar = new System.Windows.Forms.PictureBox();
             this.grpAlterar = new System.Windows.Forms.GroupBox();
-            this.btnAlterarUsuario = new System.Windows.Forms.Button();
+            this.btnAlterarSenhaUsuario = new System.Windows.Forms.Button();
             this.btnAlterarFuncionario = new System.Windows.Forms.Button();
             this.pctAlterar = new System.Windows.Forms.PictureBox();
             this.btnAlterarFornecedor = new System.Windows.Forms.Button();
@@ -184,7 +184,7 @@
             // grpAlterar
             // 
             this.grpAlterar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.grpAlterar.Controls.Add(this.btnAlterarUsuario);
+            this.grpAlterar.Controls.Add(this.btnAlterarSenhaUsuario);
             this.grpAlterar.Controls.Add(this.btnAlterarFuncionario);
             this.grpAlterar.Controls.Add(this.pctAlterar);
             this.grpAlterar.Controls.Add(this.btnAlterarFornecedor);
@@ -197,19 +197,20 @@
             this.grpAlterar.TabStop = false;
             this.grpAlterar.Text = "Alterar";
             // 
-            // btnAlterarUsuario
+            // btnAlterarSenhaUsuario
             // 
-            this.btnAlterarUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAlterarUsuario.BackColor = System.Drawing.Color.Navy;
-            this.btnAlterarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAlterarUsuario.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterarUsuario.ForeColor = System.Drawing.Color.White;
-            this.btnAlterarUsuario.Location = new System.Drawing.Point(18, 175);
-            this.btnAlterarUsuario.Name = "btnAlterarUsuario";
-            this.btnAlterarUsuario.Size = new System.Drawing.Size(118, 31);
-            this.btnAlterarUsuario.TabIndex = 8;
-            this.btnAlterarUsuario.Text = "Alterar Usuario";
-            this.btnAlterarUsuario.UseVisualStyleBackColor = false;
+            this.btnAlterarSenhaUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAlterarSenhaUsuario.BackColor = System.Drawing.Color.Navy;
+            this.btnAlterarSenhaUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAlterarSenhaUsuario.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterarSenhaUsuario.ForeColor = System.Drawing.Color.White;
+            this.btnAlterarSenhaUsuario.Location = new System.Drawing.Point(18, 175);
+            this.btnAlterarSenhaUsuario.Name = "btnAlterarSenhaUsuario";
+            this.btnAlterarSenhaUsuario.Size = new System.Drawing.Size(118, 31);
+            this.btnAlterarSenhaUsuario.TabIndex = 8;
+            this.btnAlterarSenhaUsuario.Text = "Alterar Senha de Usuario";
+            this.btnAlterarSenhaUsuario.UseVisualStyleBackColor = false;
+            this.btnAlterarSenhaUsuario.Click += new System.EventHandler(this.btnAlterarSenhaUsuario_Click);
             // 
             // btnAlterarFuncionario
             // 
@@ -372,7 +373,7 @@
         private System.Windows.Forms.GroupBox grpRemover;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnRemoverInsumos;
-        private System.Windows.Forms.Button btnAlterarUsuario;
+        private System.Windows.Forms.Button btnAlterarSenhaUsuario;
         private System.Windows.Forms.Button btnAlterarFuncionario;
         private System.Windows.Forms.Button btnAlterarFornecedor;
         private System.Windows.Forms.Button btnDeletarUsuario;

@@ -37,13 +37,13 @@ namespace AlterarInsumoView
             {
                 ctrlEstoque _ctrlEstoque = new ctrlEstoque();
                 DataTable tabela = _ctrlEstoque.Exibir();
-                grdEstoque.DataSource = tabela;
+                grdInsumo.DataSource = tabela;
             }
         }
 
         private void grdEstoque_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtItem.Text = grdEstoque.SelectedCells[0].Value.ToString();
+            txtItem.Text = grdInsumo.SelectedCells[0].Value.ToString();
         }
 
         private void btnProcurar_Click(object sender, EventArgs e)
@@ -58,11 +58,11 @@ namespace AlterarInsumoView
                 {
                     MessageBox.Show("Item não localizado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtProcurar.Text = String.Empty;
-                    grdEstoque.DataSource = _ctrlEstoque.Exibir();
+                    grdInsumo.DataSource = _ctrlEstoque.Exibir();
                 }
                 else if (retorno != null && nome != String.Empty)
                 {
-                    grdEstoque.DataSource = _ctrlEstoque.Pesquisar(nome);
+                    grdInsumo.DataSource = _ctrlEstoque.Pesquisar(nome);
                 }
                 else
                 {

@@ -59,6 +59,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntradaControle", "EntradaC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlterarInsumoView", "AlterarInsumoView\AlterarInsumoView.csproj", "{75056B67-F181-4708-A0CF-670E7A22C2AF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlterarUsuarioView", "AlterarUsuarioView\AlterarUsuarioView.csproj", "{21F22D87-FB9F-45AF-991D-F38AB95B5203}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -165,6 +167,10 @@ Global
 		{75056B67-F181-4708-A0CF-670E7A22C2AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75056B67-F181-4708-A0CF-670E7A22C2AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75056B67-F181-4708-A0CF-670E7A22C2AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21F22D87-FB9F-45AF-991D-F38AB95B5203}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21F22D87-FB9F-45AF-991D-F38AB95B5203}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21F22D87-FB9F-45AF-991D-F38AB95B5203}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21F22D87-FB9F-45AF-991D-F38AB95B5203}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -195,6 +201,7 @@ Global
 		{0EE03F19-F068-4AE8-939A-B209DC0ECE76} = {808CD5C4-5D32-4AE6-A857-8EA3DE1E5E5D}
 		{A29B81B9-5E13-4896-B4B2-C15A7C6999EE} = {4C3B4BB3-773F-4BDC-B5BD-93F38B5BF23E}
 		{75056B67-F181-4708-A0CF-670E7A22C2AF} = {FAEFF9D8-55F6-4166-998D-8E9CBC8CAFF9}
+		{21F22D87-FB9F-45AF-991D-F38AB95B5203} = {FAEFF9D8-55F6-4166-998D-8E9CBC8CAFF9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FDCD5FBC-1A43-4A2D-A185-074A3438C354}

@@ -39,7 +39,7 @@ namespace Controle_de_Estoque
 
             string retorno = _ctrlUsuarios.logar(nome.ToUpper(), senha.ToUpper());
 
-            if(retorno == "administrador" | retorno == "almoxarifado" | retorno == "epi")
+            if(retorno == "ADMINISTRAÇÃO" | retorno == "PADRÃO")
             {
                 this.Close();
                 _thread = new Thread(abrirJanela);

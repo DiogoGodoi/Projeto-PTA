@@ -127,6 +127,10 @@
       <Project>{75056b67-f181-4708-a0cf-670e7a22c2af}</Project>
       <Name>AlterarInsumoView</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AlterarUsuarioView\AlterarUsuarioView.csproj">
+      <Project>{21f22d87-fb9f-45af-991d-f38ab95b5203}</Project>
+      <Name>AlterarUsuarioView</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CadastrarColaboradorView\CadastrarColaboradorView.csproj">
       <Project>{1fa5ddb7-e2d7-40d7-aae0-e162de13cb87}</Project>
       <Name>CadastrarColaboradorView</Name>

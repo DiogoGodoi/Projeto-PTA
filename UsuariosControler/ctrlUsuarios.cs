@@ -12,6 +12,22 @@ namespace UsuariosControler
 {
     public class ctrlUsuarios
     {
+        private string nome { get; set; }
+        private string senha { get; set; }
+        private string nivel { get; set; }
+    
+        public string getNome()
+        {
+            return nome;
+        }
+        public string getSenha()
+        {
+            return senha;
+        }
+        public string getNivel()
+        {
+            return nivel;
+        }
         public string logar(string nome, string senha)
         {
             mdlUsuarios _mdlUsuarios = new mdlUsuarios();
@@ -31,20 +47,15 @@ namespace UsuariosControler
 
                 while (leitura.Read())
                 {
-                    if (leitura["nome"].ToString() == nome && leitura["senha"].ToString() == senha && leitura["nivel"].ToString() == "1")
+                    if (leitura["nome"].ToString() == nome && leitura["senha"].ToString() == senha && leitura["nivel"].ToString() == "ADMINISTRAÇÃO")
                     {
-                        _mdlUsuarios.Autenticar(leitura["nome"].ToString(), leitura["senha"].ToString(), "1");
-                        return "administrador";
+                        _mdlUsuarios.Autenticar(leitura["nome"].ToString(), leitura["senha"].ToString(), "ADMINISTRAÇÃO");
+                        return "ADMINISTRAÇÃO";
                     }
-                    else if (leitura["nome"].ToString() == nome && leitura["senha"].ToString() == senha && leitura["nivel"].ToString() == "2")
+                    else if (leitura["nome"].ToString() == nome && leitura["senha"].ToString() == senha && leitura["nivel"].ToString() == "PADRÃO")
                     {
-                        _mdlUsuarios.Autenticar(leitura["nome"].ToString(), leitura["senha"].ToString(), "2");
-                        return "almoxarifado";
-                    }
-                    else if (leitura["nome"].ToString() == nome && leitura["senha"].ToString() == senha && leitura["nivel"].ToString() == "3")
-                    {
-                        _mdlUsuarios.Autenticar(leitura["nome"].ToString(), leitura["senha"].ToString(), "3");
-                        return "epi";
+                        _mdlUsuarios.Autenticar(leitura["nome"].ToString(), leitura["senha"].ToString(), "PADRÃO");
+                        return "PADRÃO";
                     }else
                     {
                         return "";
@@ -65,7 +76,6 @@ namespace UsuariosControler
             }
             return "";
         }
-
         public bool Cadastrar(mdlUsuarios _mdlUsuarios)
         {
             Conexao.ConexaoDB.conectar();
@@ -118,7 +128,139 @@ namespace UsuariosControler
             {
                 abrirCONN.Close();
             }
-            return false;
+        }
+        public bool Pesquisar(string pNome)
+        {
+            Conexao.ConexaoDB.conectar();
+            var abrirCONN = ConexaoDB.conectar();
+
+            try
+            {
+                abrirCONN.Open();
+                string query = "SELECT * FROM Usuarios WHERE nome=@nome";
+                SqlCommand comando = new SqlCommand(query, abrirCONN);
+                comando.Parameters.AddWithValue("@nome",pNome);
+
+                var leitra = comando.ExecuteReader();
+
+                if (leitra.Read() == true)
+                {
+                    nome = leitra["nome"].ToString();
+                    senha = leitra["senha"].ToString();
+                    nivel = leitra["nivel"].ToString();
+                    abrirCONN.Close();
+                    return true;
+                }
+                else
+                {
+                    abrirCONN.Close();
+                    return false;
+                }
+
+
+            }catch(Exception ex)
+            {
+                abrirCONN.Close();
+                return false;
+                throw new Exception("Erro interno: " + ex.Message);
+            }
+            finally
+            {
+                abrirCONN.Close();
+            }
+        }
+        public bool Alterar(mdlUsuarios _mdlUsuarios, string user)
+        {
+            Conexao.ConexaoDB.conectar();
+            var abrirCONN = ConexaoDB.conectar();
+
+            try
+            {
+                abrirCONN.Open();
+                string query = "UPDATE Usuarios SET nome = @nome, senha = @senha, nivel = @nivel WHERE nome = @user";
+                SqlCommand comando = new SqlCommand(query, abrirCONN);
+
+                var pmtNome = comando.CreateParameter();
+                pmtNome.ParameterName = "@nome";
+                pmtNome.DbType = DbType.String;
+                pmtNome.Value = mdlUsuarios.getNome();
+                comando.Parameters.Add(pmtNome);
+
+                var pmtSenha = comando.CreateParameter();
+                pmtSenha.ParameterName = "@senha";
+                pmtSenha.DbType = DbType.String;
+                pmtSenha.Value = mdlUsuarios.getSenha();
+                comando.Parameters.Add(pmtSenha);
+
+                var pmtNivel = comando.CreateParameter();
+                pmtNivel.ParameterName = "@nivel";
+                pmtNivel.DbType = DbType.String;
+                pmtNivel.Value = mdlUsuarios.getNivel();
+                comando.Parameters.Add(pmtNivel);
+
+                var pmtUser = comando.CreateParameter();
+                pmtUser.ParameterName = "@user";
+                pmtUser.DbType = DbType.String;
+                pmtUser.Value = user;
+                comando.Parameters.Add(pmtUser);
+
+                var leitura = comando.ExecuteReader();
+
+                if(leitura.Read() == true)
+                {
+                    abrirCONN.Close();
+                    return true;
+                }
+                else
+                {
+                    abrirCONN.Close();
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                abrirCONN.Close();
+                return false;
+                throw new Exception("Erro interno: "+ex.Message);
+            }
+            finally
+            {
+                abrirCONN.Close();
+            }
+        }
+
+        public DataTable Exibir()
+        {
+            Conexao.ConexaoDB.conectar();
+            var abrirCONN = ConexaoDB.conectar();
+
+            try
+            {
+                abrirCONN.Open();
+
+                string query = "SELECT * FROM Usuarios";
+                SqlCommand comando = new SqlCommand(query, abrirCONN);
+                comando.CommandType = CommandType.Text;
+                SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+                DataTable tabela = new DataTable();
+                adaptador.Fill(tabela);
+                
+                return tabela;
+                
+
+            }catch(Exception ex)
+            {
+                abrirCONN.Close();
+                return null;
+                throw new Exception("Erro interno: " + ex.Message);
+            }
+            finally
+            {
+                abrirCONN.Close();
+            }
         }
     }
+
+        
 }

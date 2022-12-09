@@ -33,12 +33,12 @@ namespace CadastrarUsuarioView
 
                     if (radAdministracao.Checked == true)
                     {
-                        nivel = "1";
+                        nivel = "ADMINISTRAÇÃO";
                         mdlUsuarios.setNivel(nivel);
                     }
                     else if (radAlmoxarifado.Checked == true)
                     {
-                        nivel = "2";
+                        nivel = "PADRÃO";
                         mdlUsuarios.setNivel(nivel);
                     }
                     

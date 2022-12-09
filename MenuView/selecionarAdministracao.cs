@@ -13,6 +13,7 @@ using CadastrarUsuarioView;
 using CadastrarColaboradorView;
 using CadastrarFornecedorView;
 using AlterarInsumoView;
+using AlterarUsuarioView;
 
 namespace MenuView
 {
@@ -91,5 +92,18 @@ namespace MenuView
         {
             this.WindowState = FormWindowState.Maximized;
         }
+
+        private void btnAlterarSenhaUsuario_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            _thread = new Thread(abrirJanelaAlterarSenha);
+            _thread.SetApartmentState(ApartmentState.STA);
+            _thread.Start();
+        }
+        private void abrirJanelaAlterarSenha()
+        {
+            Application.Run(new TelaAlterarSenha());
+        }
+
     }
 }

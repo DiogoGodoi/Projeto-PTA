@@ -63,15 +63,15 @@ namespace MenuView
         private void frmMenu_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
-            if (mdlUsuarios.getNivel() == "1")
+            if (mdlUsuarios.getNivel() == "ADMINISTRAÇÃO")
             {
                 btnAdm.Enabled = true;
                 btnAlmoxarifado.Enabled = true;
                 btnRelatorios.Enabled = true;
                 btnHistorico.Enabled = true;
-                lblUsuario.Text = mdlUsuarios.getNome();
+                lblUser.Text = mdlUsuarios.getNome();
 
-            }else if (mdlUsuarios.getNivel() == "2")
+            }else if (mdlUsuarios.getNivel() == "PADRÃO")
             {
                 btnAdm.Enabled = false;
                 btnAdm.BackColor = Color.Red;
@@ -80,7 +80,7 @@ namespace MenuView
 
                 btnHistorico.Enabled = false;
                 btnHistorico.BackColor = Color.Red;
-                lblUsuario.Text = mdlUsuarios.getNome();
+                lblUser.Text = mdlUsuarios.getNome();
             }
         }
 

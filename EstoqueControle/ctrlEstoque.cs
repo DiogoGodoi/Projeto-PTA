@@ -141,9 +141,11 @@ namespace EstoqueControle
                     tipoUn = leitura["unidade"].ToString();
                     qtd = Convert.ToInt32(leitura["quantidade"]);
                     estoqMin = Convert.ToInt32(leitura["estoqueMin"]);
+                    abrirConn.Close();
                     return tabela;
                 }else
                 {
+                    abrirConn.Close();
                     return null;
                 }
                 

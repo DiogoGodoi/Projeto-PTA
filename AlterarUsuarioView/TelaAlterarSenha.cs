@@ -16,7 +16,7 @@ namespace AlterarUsuarioView
     public partial class TelaAlterarSenha : Form
     {
         ctrlUsuarios _ctrlUsuario = new ctrlUsuarios();
-        mdlUsuarios _mdlUsuario;
+        
         public TelaAlterarSenha()
         {
             InitializeComponent();
@@ -61,27 +61,41 @@ namespace AlterarUsuarioView
 
         private void btnAlterarSenha_Click(object sender, EventArgs e)
         {
-            string nome = txtNome.Text;
-            string senha = txtNome.Text;
+            mdlUsuarios _mdlUsuarios = new mdlUsuarios();
 
-            mdlUsuarios.setNome(nome.ToUpper());
-            mdlUsuarios.setSenha(senha);
-            
+            try
+            {
+            string nome = txtNome.Text;
+            string senha = txtSenha.Text;
+            string acessos = txtAcessos.Text;
+
+            _mdlUsuarios.pNome = nome.ToUpper();
+            _mdlUsuarios.pSenha = senha.ToUpper();
+            _mdlUsuarios.pNivel = acessos.ToUpper();
+
             if (radAdministracao.Checked == true)
             {
-                mdlUsuarios.setNivel("ADMINISTRAÇÃO");
+                _mdlUsuarios.pNivel = "ADMINISTRAÇÃO";
             }else if(radAlmoxarifado.Checked == true)
             {
-                mdlUsuarios.setNivel("PADRÃO");
+                _mdlUsuarios.pNivel = "PADRÃO";
             }
 
-            bool retorno = _ctrlUsuario.Alterar(_mdlUsuario, nome);
+            bool retorno = _ctrlUsuario.Alterar(_mdlUsuarios, nome);
 
             if(retorno == true)
             {
                 MessageBox.Show("Alterado com sucesso", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtNome.Text = String.Empty;
                 txtSenha.Text = String.Empty;
+            }
+            else
+            {
+                MessageBox.Show("Erro na alteração", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Erro interno: "+ex.Message, "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

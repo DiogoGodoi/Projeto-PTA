@@ -183,19 +183,19 @@ namespace UsuariosControler
                 var pmtNome = comando.CreateParameter();
                 pmtNome.ParameterName = "@nome";
                 pmtNome.DbType = DbType.String;
-                pmtNome.Value = mdlUsuarios.getNome();
+                pmtNome.Value = _mdlUsuarios.pNome;
                 comando.Parameters.Add(pmtNome);
 
                 var pmtSenha = comando.CreateParameter();
                 pmtSenha.ParameterName = "@senha";
                 pmtSenha.DbType = DbType.String;
-                pmtSenha.Value = mdlUsuarios.getSenha();
+                pmtSenha.Value = _mdlUsuarios.pSenha;
                 comando.Parameters.Add(pmtSenha);
 
                 var pmtNivel = comando.CreateParameter();
                 pmtNivel.ParameterName = "@nivel";
                 pmtNivel.DbType = DbType.String;
-                pmtNivel.Value = mdlUsuarios.getNivel();
+                pmtNivel.Value = _mdlUsuarios.pNivel;
                 comando.Parameters.Add(pmtNivel);
 
                 var pmtUser = comando.CreateParameter();
@@ -206,7 +206,7 @@ namespace UsuariosControler
 
                 var leitura = comando.ExecuteReader();
 
-                if(leitura.Read() == true)
+                if(leitura.Read() == false)
                 {
                     abrirCONN.Close();
                     return true;

@@ -13,6 +13,10 @@ namespace UsuariosModel
         private static string senha { get; set; }
         public static string nivel { get; set; }
 
+        public string pNome { get; set; }
+        public string pSenha { get; set; }
+        public string pNivel { get; set; }
+
         public static string setNome(string paramNome)
         {
             return nome = paramNome;

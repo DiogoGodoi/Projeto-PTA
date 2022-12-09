@@ -129,7 +129,7 @@ namespace UsuariosControler
                 abrirCONN.Close();
             }
         }
-        public bool Pesquisar(string pNome)
+        public DataTable Pesquisar(string pNome)
         {
             Conexao.ConexaoDB.conectar();
             var abrirCONN = ConexaoDB.conectar();
@@ -137,9 +137,14 @@ namespace UsuariosControler
             try
             {
                 abrirCONN.Open();
-                string query = "SELECT * FROM Usuarios WHERE nome=@nome";
+                string query = "SELECT * FROM Usuarios WHERE nome LIKE @nome";
                 SqlCommand comando = new SqlCommand(query, abrirCONN);
-                comando.Parameters.AddWithValue("@nome",pNome);
+                comando.Parameters.AddWithValue("@nome",pNome + "%");
+
+                comando.CommandType = CommandType.Text;
+                SqlDataAdapter adaptdador = new SqlDataAdapter(comando);
+                DataTable tabela = new DataTable();
+                adaptdador.Fill(tabela);
 
                 var leitra = comando.ExecuteReader();
 
@@ -149,19 +154,19 @@ namespace UsuariosControler
                     senha = leitra["senha"].ToString();
                     nivel = leitra["nivel"].ToString();
                     abrirCONN.Close();
-                    return true;
+                    return tabela;
                 }
                 else
                 {
                     abrirCONN.Close();
-                    return false;
+                    return null;
                 }
 
 
             }catch(Exception ex)
             {
                 abrirCONN.Close();
-                return false;
+                return null;
                 throw new Exception("Erro interno: " + ex.Message);
             }
             finally

@@ -44,9 +44,9 @@ namespace AlterarUsuarioView
         {
             string nome = txtNome.Text;
 
-            bool retorno = _ctrlUsuario.Pesquisar(nome);
+            DataTable retorno = _ctrlUsuario.Pesquisar(nome);
 
-            if (retorno == true)
+            if (retorno != null)
             {
                 txtNome.Text = _ctrlUsuario.getNome();
                 txtSenha.Text = _ctrlUsuario.getSenha();
@@ -108,6 +108,35 @@ namespace AlterarUsuarioView
         private void radAdministracao_CheckedChanged(object sender, EventArgs e)
         {
             txtAcessos.Text = "ADMINISTRAÇÃO";
+        }
+
+        private void btnProcurar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string nome = txtProcurar.Text;
+                DataTable retorno = _ctrlUsuario.Pesquisar(nome);
+
+                if (retorno == null)
+                {
+                    MessageBox.Show("Item não localizado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtProcurar.Text = String.Empty;
+                    grdUsuarios.DataSource = _ctrlUsuario.Exibir();
+                }
+                else if (retorno != null && nome != String.Empty)
+                {
+                    grdUsuarios.DataSource = _ctrlUsuario.Pesquisar(nome);
+                }
+                else
+                {
+                    MessageBox.Show("Digite o nome do item", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Erro na pesquisa", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -37,6 +37,8 @@
             this.grpTitulo = new System.Windows.Forms.GroupBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.grpCadastrar = new System.Windows.Forms.GroupBox();
+            this.txtAcessos = new System.Windows.Forms.TextBox();
+            this.lblAcesso = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.grpAcessos = new System.Windows.Forms.GroupBox();
             this.radAlmoxarifado = new System.Windows.Forms.RadioButton();
@@ -55,8 +57,6 @@
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuariosTB = new AlterarUsuarioView.UsuariosTB();
             this.usuariosTableAdapter = new AlterarUsuarioView.UsuariosTBTableAdapters.UsuariosTableAdapter();
-            this.txtAcessos = new System.Windows.Forms.TextBox();
-            this.lblAcesso = new System.Windows.Forms.Label();
             this.grpTitulo.SuspendLayout();
             this.grpCadastrar.SuspendLayout();
             this.grpAcessos.SuspendLayout();
@@ -108,6 +108,28 @@
             this.grpCadastrar.TabIndex = 4;
             this.grpCadastrar.TabStop = false;
             this.grpCadastrar.Text = "Cadastrar";
+            // 
+            // txtAcessos
+            // 
+            this.txtAcessos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtAcessos.Enabled = false;
+            this.txtAcessos.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAcessos.Location = new System.Drawing.Point(79, 107);
+            this.txtAcessos.Name = "txtAcessos";
+            this.txtAcessos.Size = new System.Drawing.Size(142, 21);
+            this.txtAcessos.TabIndex = 16;
+            // 
+            // lblAcesso
+            // 
+            this.lblAcesso.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblAcesso.AutoSize = true;
+            this.lblAcesso.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAcesso.ForeColor = System.Drawing.Color.Black;
+            this.lblAcesso.Location = new System.Drawing.Point(24, 108);
+            this.lblAcesso.Name = "lblAcesso";
+            this.lblAcesso.Size = new System.Drawing.Size(45, 16);
+            this.lblAcesso.TabIndex = 15;
+            this.lblAcesso.Text = "Acessos:";
             // 
             // btnBuscar
             // 
@@ -179,6 +201,7 @@
             this.txtSenha.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.Location = new System.Drawing.Point(107, 66);
             this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(114, 21);
             this.txtSenha.TabIndex = 5;
             // 
@@ -256,6 +279,7 @@
             this.btnProcurar.TabIndex = 4;
             this.btnProcurar.Text = "Procurar";
             this.btnProcurar.UseVisualStyleBackColor = false;
+            this.btnProcurar.Click += new System.EventHandler(this.btnProcurar_Click);
             // 
             // label1
             // 
@@ -352,28 +376,6 @@
             // usuariosTableAdapter
             // 
             this.usuariosTableAdapter.ClearBeforeFill = true;
-            // 
-            // txtAcessos
-            // 
-            this.txtAcessos.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtAcessos.Enabled = false;
-            this.txtAcessos.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAcessos.Location = new System.Drawing.Point(79, 107);
-            this.txtAcessos.Name = "txtAcessos";
-            this.txtAcessos.Size = new System.Drawing.Size(142, 21);
-            this.txtAcessos.TabIndex = 16;
-            // 
-            // lblAcesso
-            // 
-            this.lblAcesso.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblAcesso.AutoSize = true;
-            this.lblAcesso.Font = new System.Drawing.Font("Bernard MT Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAcesso.ForeColor = System.Drawing.Color.Black;
-            this.lblAcesso.Location = new System.Drawing.Point(24, 108);
-            this.lblAcesso.Name = "lblAcesso";
-            this.lblAcesso.Size = new System.Drawing.Size(45, 16);
-            this.lblAcesso.TabIndex = 15;
-            this.lblAcesso.Text = "Acessos:";
             // 
             // TelaAlterarSenha
             // 

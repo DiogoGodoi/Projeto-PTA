@@ -74,7 +74,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox2.Controls.Add(this.codFuncionario);
             this.groupBox2.Controls.Add(this.btnBuscarRequisitante);
             this.groupBox2.Controls.Add(this.txtNomeRequisitante);
@@ -98,6 +98,7 @@
             // 
             // codFuncionario
             // 
+            this.codFuncionario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.codFuncionario.AutoSize = true;
             this.codFuncionario.ForeColor = System.Drawing.Color.Black;
             this.codFuncionario.Location = new System.Drawing.Point(15, 35);
@@ -108,6 +109,7 @@
             // 
             // btnBuscarRequisitante
             // 
+            this.btnBuscarRequisitante.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnBuscarRequisitante.BackColor = System.Drawing.Color.DarkGreen;
             this.btnBuscarRequisitante.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnBuscarRequisitante.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -122,6 +124,7 @@
             // 
             // txtNomeRequisitante
             // 
+            this.txtNomeRequisitante.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNomeRequisitante.Enabled = false;
             this.txtNomeRequisitante.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomeRequisitante.Location = new System.Drawing.Point(302, 34);
@@ -131,6 +134,7 @@
             // 
             // txtCracha
             // 
+            this.txtCracha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCracha.Location = new System.Drawing.Point(60, 32);
             this.txtCracha.Name = "txtCracha";
             this.txtCracha.Size = new System.Drawing.Size(140, 23);
@@ -138,6 +142,7 @@
             // 
             // lblNomeRequisitante
             // 
+            this.lblNomeRequisitante.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNomeRequisitante.AutoSize = true;
             this.lblNomeRequisitante.ForeColor = System.Drawing.Color.Black;
             this.lblNomeRequisitante.Location = new System.Drawing.Point(266, 35);
@@ -148,6 +153,7 @@
             // 
             // btnAcrescentar
             // 
+            this.btnAcrescentar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAcrescentar.BackColor = System.Drawing.Color.DarkGreen;
             this.btnAcrescentar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnAcrescentar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -162,6 +168,7 @@
             // 
             // txtItem
             // 
+            this.txtItem.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtItem.Enabled = false;
             this.txtItem.Font = new System.Drawing.Font("Bernard MT Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtItem.Location = new System.Drawing.Point(60, 67);
@@ -171,6 +178,7 @@
             // 
             // lblRequisitante
             // 
+            this.lblRequisitante.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblRequisitante.AutoSize = true;
             this.lblRequisitante.ForeColor = System.Drawing.Color.Black;
             this.lblRequisitante.Location = new System.Drawing.Point(15, 68);
@@ -181,6 +189,7 @@
             // 
             // btnAdcionar
             // 
+            this.btnAdcionar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAdcionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnAdcionar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAdcionar.ForeColor = System.Drawing.Color.White;
@@ -194,6 +203,7 @@
             // 
             // txtQuantidade
             // 
+            this.txtQuantidade.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtQuantidade.Location = new System.Drawing.Point(82, 103);
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(84, 23);
@@ -201,6 +211,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(14, 106);
@@ -211,6 +222,7 @@
             // 
             // btnSubtrair
             // 
+            this.btnSubtrair.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSubtrair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnSubtrair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSubtrair.ForeColor = System.Drawing.Color.White;
@@ -224,6 +236,7 @@
             // 
             // btnRemover
             // 
+            this.btnRemover.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRemover.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnRemover.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRemover.Font = new System.Drawing.Font("Bernard MT Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -238,6 +251,7 @@
             // 
             // btnConfirmar
             // 
+            this.btnConfirmar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnConfirmar.Font = new System.Drawing.Font("Bernard MT Condensed", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -263,6 +277,7 @@
             // listSaida
             // 
             this.listSaida.Alignment = System.Windows.Forms.ListViewAlignment.Default;
+            this.listSaida.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.listSaida.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader2,
             this.columnHeader3});
@@ -355,7 +370,7 @@
             // grdEstoque
             // 
             this.grdEstoque.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
-            this.grdEstoque.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.grdEstoque.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grdEstoque.AutoGenerateColumns = false;
             this.grdEstoque.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.grdEstoque.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;

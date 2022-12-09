@@ -57,8 +57,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnSubtrair = new System.Windows.Forms.Button();
             this.grdEstoque = new System.Windows.Forms.DataGridView();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estoqueBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.estoqueTB = new EstoqueView.EstoqueTB();
             this.estoqueTableAdapter = new EstoqueView.EstoqueTBTableAdapters.EstoqueTableAdapter();
@@ -66,6 +64,8 @@
             this.txtProcurar = new System.Windows.Forms.TextBox();
             this.btnProcurar = new System.Windows.Forms.Button();
             this.lblNome = new System.Windows.Forms.Label();
+            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grdTitulo.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdEstoque)).BeginInit();
@@ -347,8 +347,8 @@
             this.grdEstoque.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grdEstoque.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdEstoque.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codigo,
-            this.nomeDataGridViewTextBoxColumn});
+            this.nomeDataGridViewTextBoxColumn,
+            this.quantidade});
             this.grdEstoque.DataSource = this.estoqueBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -389,22 +389,6 @@
             this.grdEstoque.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdEstoque_CellContentClick_1);
             this.grdEstoque.DoubleClick += new System.EventHandler(this.grdEstoque_CellContentClick_1);
             // 
-            // codigo
-            // 
-            this.codigo.DataPropertyName = "codigo";
-            this.codigo.HeaderText = "codigo";
-            this.codigo.Name = "codigo";
-            this.codigo.ReadOnly = true;
-            this.codigo.Width = 79;
-            // 
-            // nomeDataGridViewTextBoxColumn
-            // 
-            this.nomeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "nome";
-            this.nomeDataGridViewTextBoxColumn.HeaderText = "Item";
-            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
-            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // estoqueBindingSource
             // 
             this.estoqueBindingSource.DataMember = "Estoque";
@@ -421,7 +405,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.txtProcurar);
             this.groupBox1.Controls.Add(this.btnProcurar);
             this.groupBox1.Controls.Add(this.lblNome);
@@ -436,6 +420,7 @@
             // 
             // txtProcurar
             // 
+            this.txtProcurar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtProcurar.Location = new System.Drawing.Point(138, 31);
             this.txtProcurar.Name = "txtProcurar";
             this.txtProcurar.Size = new System.Drawing.Size(224, 23);
@@ -443,6 +428,7 @@
             // 
             // btnProcurar
             // 
+            this.btnProcurar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnProcurar.BackColor = System.Drawing.Color.Navy;
             this.btnProcurar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnProcurar.ForeColor = System.Drawing.Color.White;
@@ -456,6 +442,7 @@
             // 
             // lblNome
             // 
+            this.lblNome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNome.AutoSize = true;
             this.lblNome.ForeColor = System.Drawing.Color.Black;
             this.lblNome.Location = new System.Drawing.Point(13, 34);
@@ -463,6 +450,22 @@
             this.lblNome.Size = new System.Drawing.Size(34, 16);
             this.lblNome.TabIndex = 3;
             this.lblNome.Text = "Nome";
+            // 
+            // nomeDataGridViewTextBoxColumn
+            // 
+            this.nomeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "Item";
+            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // quantidade
+            // 
+            this.quantidade.DataPropertyName = "quantidade";
+            this.quantidade.HeaderText = "Quantidade";
+            this.quantidade.Name = "quantidade";
+            this.quantidade.ReadOnly = true;
+            this.quantidade.Width = 114;
             // 
             // EntradaView
             // 
@@ -524,8 +527,8 @@
         private System.Windows.Forms.TextBox txtProcurar;
         private System.Windows.Forms.Button btnProcurar;
         private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label lblRequisitante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantidade;
     }
 }

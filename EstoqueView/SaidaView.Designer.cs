@@ -59,10 +59,11 @@
             this.btnProcurar = new System.Windows.Forms.Button();
             this.lblNome = new System.Windows.Forms.Label();
             this.grdEstoque = new System.Windows.Forms.DataGridView();
-            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estoqueBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.estoqueTB = new EstoqueView.estoqueTB();
             this.estoqueTableAdapter = new EstoqueView.estoqueTBTableAdapters.EstoqueTableAdapter();
+            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
             this.grdTitulo.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -305,7 +306,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.txtProcurar);
             this.groupBox1.Controls.Add(this.btnProcurar);
             this.groupBox1.Controls.Add(this.lblNome);
@@ -320,6 +321,7 @@
             // 
             // txtProcurar
             // 
+            this.txtProcurar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtProcurar.Location = new System.Drawing.Point(138, 31);
             this.txtProcurar.Name = "txtProcurar";
             this.txtProcurar.Size = new System.Drawing.Size(224, 23);
@@ -327,6 +329,7 @@
             // 
             // btnProcurar
             // 
+            this.btnProcurar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnProcurar.BackColor = System.Drawing.Color.Navy;
             this.btnProcurar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnProcurar.ForeColor = System.Drawing.Color.White;
@@ -340,6 +343,7 @@
             // 
             // lblNome
             // 
+            this.lblNome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNome.AutoSize = true;
             this.lblNome.ForeColor = System.Drawing.Color.Black;
             this.lblNome.Location = new System.Drawing.Point(13, 34);
@@ -369,7 +373,8 @@
             this.grdEstoque.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grdEstoque.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdEstoque.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nomeDataGridViewTextBoxColumn});
+            this.nomeDataGridViewTextBoxColumn,
+            this.quantidade});
             this.grdEstoque.DataSource = this.estoqueBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -410,14 +415,6 @@
             this.grdEstoque.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdEstoque_CellContentClick);
             this.grdEstoque.DoubleClick += new System.EventHandler(this.grdEstoque_CellContentClick);
             // 
-            // nomeDataGridViewTextBoxColumn
-            // 
-            this.nomeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "nome";
-            this.nomeDataGridViewTextBoxColumn.HeaderText = "Item";
-            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
-            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // estoqueBindingSource
             // 
             this.estoqueBindingSource.DataMember = "Estoque";
@@ -431,6 +428,22 @@
             // estoqueTableAdapter
             // 
             this.estoqueTableAdapter.ClearBeforeFill = true;
+            // 
+            // nomeDataGridViewTextBoxColumn
+            // 
+            this.nomeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "Item";
+            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // quantidade
+            // 
+            this.quantidade.DataPropertyName = "quantidade";
+            this.quantidade.HeaderText = "Quantidade ";
+            this.quantidade.Name = "quantidade";
+            this.quantidade.ReadOnly = true;
+            this.quantidade.Width = 118;
             // 
             // SaidaView
             // 
@@ -493,5 +506,6 @@
         private System.Windows.Forms.BindingSource estoqueBindingSource;
         private estoqueTBTableAdapters.EstoqueTableAdapter estoqueTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantidade;
     }
 }
